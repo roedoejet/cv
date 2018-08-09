@@ -150,33 +150,38 @@ awards:
     title: Dean's Outstanding Leadership Award for Academic Contribution to the Faculty of Arts
 
 skills:
-  - Mobile development:
-    - Ionic
-    - TypeScript
-    - Angular
-    - Sass
-  - Web development:
-    - HTML
-    - CSS/Sass
-    - Angular
-    - Vue
-    - Flask
-  - API development:
-    - Flask
-  - Programming:
-    - Python
-    - Racket/Scheme
-    - iPython
-  - Acoustic Analysis/Editing:
-    - Praat
-    - Wavesurfer
-    - Audacity
-    - ffmpeg
-  - Typesetting/Graphic design:
-    - Photoshop
-    - InDesign
-    - Latex
-    - Balsamiq
+  - name: Mobile development
+    programs: 
+      - Ionic
+      - TypeScript
+      - Angular
+      - Sass
+  - name: Web development
+    programs:
+      - HTML
+      - CSS/Sass
+      - Angular
+      - Flask
+  - name: API development
+    programs:
+      - Flask
+  - name: Programming
+    programs:
+      - Python
+      - Racket/Scheme
+      - iPython
+  - name: Acoustic Analysis/Editing
+    programs:
+      - Praat
+      - Wavesurfer
+      - Audacity
+      - ffmpeg
+  - name: Typesetting/Graphic design
+    programs:
+      - Photoshop
+      - InDesign
+      - \LaTeX
+      - Balsamiq
 
 presentations:
   - year: 2014
@@ -304,13 +309,22 @@ presentations:
     location: Sliammon, B.C
     type: conference
 
-  - year: 2017 & 2018
+  - year: 2017
     presenters:
       - first: Aidan
         last: Pine
     title: Practical Phonetics
-    audience: Gitsegukla, Terrace & Gitanmaax, B.C
-    location: University of British Columbia
+    audience: Adult Gitxsan Class
+    location: Gitanmaax, B.C
+    type: lecture
+
+  - year: 2018
+    presenters:
+      - first: Aidan
+        last: Pine
+    title: Practical Phonetics
+    audience: Adult Gitxsan Class
+    location: Gitsegukla, & Terrace, B.C
     type: lecture
 
   - year: 2018

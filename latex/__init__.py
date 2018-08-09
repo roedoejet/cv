@@ -5,7 +5,18 @@ import latex as lt
 import cv.data as cv
 
 def sanitize(data):
-    data = re.sub(r'(?<=[^\\])%', r'\\%', data)
+    escape_characters = ''.join(["%", "&"])
+    findall_pattern = re.compile(r'(?<=[^\\])[{}]'.format(escape_characters))
+    try:
+        matches = findall_pattern.findall(data)
+        replaced_data = data
+        for match in matches:
+            find_pattern = r'(?<=[^\\]){}'.format(match)
+            replace_pattern = r'\\{}'.format(match)
+            replaced_data = re.sub(find_pattern, replace_pattern, replaced_data)
+        return replaced_data
+    except AttributeError:
+        return data
     return data
 
 def initial(data):
@@ -32,7 +43,6 @@ class LatexTemplate():
             loader=jinja2.FileSystemLoader(self.dir)
             
         )
-        self.latexJinjaEnv.filters['sanitize'] = sanitize
         self.latexJinjaEnv.filters['initial'] = initial
         self.latexJinjaEnv.filters['alph'] = alph
         self.template = self.latexJinjaEnv.get_template('template.tex')
@@ -41,4 +51,4 @@ class LatexTemplate():
         
     def export(self):
         with open(os.path.join(self.dir, 'cv.tex'), 'w', encoding='utf8') as f:
-            f.write(self.template.render(data=self.data))
+            f.write(sanitize(self.template.render(data=self.data)))
