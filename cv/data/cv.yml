@@ -1,0 +1,475 @@
+personal:
+  first_name: Aidan
+  middle_name: Hart Ray
+  last_name: Pine
+
+education:
+  - start: Sept 2012
+    end: May 2016
+    school: University of British Columbia
+    title: B.A. Hon. Linguistics
+    minor: Minor in First Nations Languages
+    etc: 4.21 GPA (90.2% Average)
+
+publications:
+  - year: 2017
+    authors:
+      - first: Aidan
+        last: Pine
+      - first: Mark
+        last: Turin
+    title: Language Revitalization
+    booktitle: Oxford Research Encylopedia of Linguistics
+    publisher: Oxford University Press
+    editor: Mark Aronoff
+    type: bookchapter
+
+  - year: 2017
+    authors:
+      - first: Patrick
+        last: Littell
+      - first: Aidan
+        last: Pine
+      - first: Henry
+        last: Davis
+    title: "Waldayu and Waldau Mobile: Modern digital dictionary interfaces for endangered languages"
+    conference: "ComputEL-2: The 2nd Workshop on Computational Methods for Endangered Languages"
+    publisher: University of Pennsylvania
+    type: proceedings
+
+  - year: 2017
+    authors:
+      - first: Clarissa
+        last: Forbes
+      - first: Henry
+        last: Davis
+      - first: Michael
+        last: Schwan
+      - last: Gitksan Research Lab
+    title: Three Gitksan texts
+    booktitle: "University of British Columbia Working Papers in Lingusitics"
+    publisher: University of British Columbia
+    type: journal
+    vol: 45
+    pp: 47-90
+  
+  - year: 2018
+    authors:
+      - first: Kathleen
+        last: Hall
+      - first: Aidan
+        last: Pine
+      - first: Michael
+        last: Schwan
+    title: Doing Phonological Corpus Analaysis in a Fieldwork Context
+    booktitle: "Wa7 xweysas i nqwaluttenhiha: He loves the peoples' languages. Essays in honour of Henry Davis"
+    publisher: University of British Columbia
+    type: bookchapter
+  
+  - year: 2018
+    authors:
+      - first: Aidan
+        last: Pine
+      - first: Mark
+        last: Turin
+    title: "Seeing the Heiltsuk Orthography from Font Encoding through to Unicode: A Case Study Using Convertextract"
+    conference: "CCURL 2018: The 3rd Workshop on Collaboration and Computing for Under-Resourced Languages"
+    publisher: European Language Resources Association
+    type: proceedings
+  
+  - year: 2018
+    authors:
+      - first: Patrick
+        last: Littell
+      - first: Anna
+        last: Kazantseva
+      - first: Roland
+        last: Kuhn
+      - first: Aidan
+        last: Pine
+      - first: Antti
+        last: Arppe
+      - first: Christopher
+        last: Cox
+      - first: Marie-Odile
+        last: Junker
+    title: "Indigenous language technologies in Canada: Assessment, challenges, and successes"
+    conference: "COLING: The 27th International Conference on Computational Linguistics"
+    publisher: University of Pennsylvannia
+    type: proceedings
+  
+  - year: 2018
+    authors:
+      - first: Anna
+        last: Kazantseva
+      - first: Brian
+        last: Maracle
+      - first: Ronkwe'tiyohstha
+        last: Maracle
+      - first: Aidan
+        last: Pine
+    title: "Kawennon:nis: the Wordmaker for Kanyen'keha (Ohsweken Mohawk)"
+    conference: "COLING: The 27th International Conference on Computational Linguistics"
+    publisher: University of Pennsylvannia
+    type: proceedings
+
+languages:
+  - name: French
+    competency: Fluent
+    credentials: Double Dogwood High School Diploma in English & French
+  
+  - name: Danish
+    competency: Fluent
+    credentials: Prove i Dansk 3 Fluency Certificate
+  
+  - name: Gitksan
+    competency: "Reading/Writing: literate; Oral: Intermediate"
+
+  - name: "**NEEDSWORK**"
+    competency: "Intermediate"
+    credentials: UBC FNLG 101, 102, 201, 202, & 301
+
+grants:
+  - year: 2013 & 2014
+    title: UBC Work Learn
+  - year: 2014, 2015 & 2016
+    title: Jacobs Research Fund
+
+awards:
+
+
+  - year: 2014 & 2015
+    title: UBC Arts Undergraduate Research Award
+  - year: 2015
+    title: UBC Student Scholarship in Arts
+  - year: 2016
+    title: Sanderson Family Service Award
+  - year: 2016
+    title: 1st Place Oral Presentation at UBC Multidisciplinary Undergraduate Research Conference
+  - year: 2016
+    title: Dean's Outstanding Leadership Award for Academic Contribution to the Faculty of Arts
+
+skills:
+  - Mobile development:
+    - Ionic
+    - TypeScript
+    - Angular
+    - Sass
+  - Web development:
+    - HTML
+    - CSS/Sass
+    - Angular
+    - Vue
+    - Flask
+  - API development:
+    - Flask
+  - Programming:
+    - Python
+    - Racket/Scheme
+    - iPython
+  - Acoustic Analysis/Editing:
+    - Praat
+    - Wavesurfer
+    - Audacity
+    - ffmpeg
+  - Typesetting/Graphic design:
+    - Photoshop
+    - InDesign
+    - Latex
+    - Balsamiq
+
+presentations:
+  - year: 2014
+    presenters:
+      - first: Madeleine
+        last: Barois
+      - first: Katie
+        last: Bicevskis
+      - first: Kay
+        last: Cheng
+      - first: Aidan
+        last: Pine
+    title: Quantifier Scope in Gitksan
+    audience: Gitksan Research Group Research Seminar
+    location: University of British Columbia
+    type: presentation
+
+  - year: 2014
+    presenters:
+      - first: Aidan
+        last: Pine
+    title: Preferential Encliticization in Gitksan
+    audience: Linguistics Department
+    location: University of British Columbia
+    type: presentation
+  
+  - year: 2015
+    presenters:
+      - first: Aidan
+        last: Pine
+    title: "Connecting Linguistics to Language Learners: a Lesson Plan for Gitksan"
+    audience: Multidisciplinary Undergraduate Research Conference
+    location: University of British Columbia
+    type: conference
+  
+  - year: 2015
+    presenters:
+      - first: Aidan
+        last: Pine
+    title: "'Nit gwihl Jabisi'm"
+    audience: FNEL 180 Guest Lecture
+    location: University of British Columbia
+    type: lecture
+
+  - year: 2016
+    presenters:
+      - first: Aidan
+        last: Pine
+    title: "Mobilizing Language Data: An Endangered Language Dictionary App"
+    audience: Multidisciplinary Undergraduate Research Conference
+    location: University of British Columbia
+    notes: 1st Place Oral Presentation Award
+  
+  - year: 2016
+    presenters:
+      - first: Aidan
+        last: Pine
+    title: Making the most of undergraduate research
+    audience: FNEL 180 Guest Lecture
+    location: University of British Columbia
+    type: lecture
+  
+  - year: 2017
+    presenters:
+      - first: Aidan
+        last: Pine
+    title: Introducing Waldayu & Waldayu Mobile
+    audience: "ComputEL-2: The 2nd Workshop on Computational Methods for Endangered Languages"
+    location: University of Hawaii
+    type: conference
+  
+  - year: 2017
+    presenters:
+      - first: Aidan
+        last: Pine
+    title: Mobile App Development
+    audience: BC Breath of Life Institute
+    location: University of British Columbia
+    type: workshop
+  
+  - year: 2017
+    presenters:
+      - first: Aidan
+        last: Pine
+    title: Lexicography for Endangered Languages
+    audience: FNEL 382 Guest Lecture
+    location: University of British Columbia
+    type: lecture
+  
+  - year: 2017
+    presenters:
+      - first: Jane
+        last: Smith
+      - first: Aidan
+        last: Pine
+    title: "Dim liseewis Xsiwis gant Sginist wil wihl hahlaalst sit'aadiit"
+    audience: Gitksan Language Symposium
+    location: Gitksan Wet'suwet'en Education Society. Hazelton, B.C.
+    type: conference
+  
+  - year: 2017
+    presenters:
+      - first: Aidan
+        last: Pine
+    title: Ama silkw sa
+    audience: Gitksan Elders Meeting
+    location: Gitksan Elder's Center. Gitanmaax, B.C
+    type: presentation
+
+  - year: 2017
+    presenters:
+      - first: Aidan
+        last: Pine
+    title: "Sim ayeehl k'uuhl"
+    audience: FNEL 180 Guest Lecture
+    location: University of British Columbia
+    type: lecture
+  
+  - year: 2017
+    presenters:
+      - first: Aidan
+        last: Pine
+    title: "A visual presentation with Aidan Pine: The possibilities of our new app"
+    audience: Ayajuthem language conference
+    location: Sliammon, B.C
+    type: conference
+
+  - year: 2017 & 2018
+    presenters:
+      - first: Aidan
+        last: Pine
+    title: Practical Phonetics
+    audience: Gitsegukla, Terrace & Gitanmaax, B.C
+    location: University of British Columbia
+    type: lecture
+
+  - year: 2018
+    presenters:
+      - first: Aidan
+        last: Pine
+    title: Digital Kinesthetic Learning and the Gitksan Pronominal Paradigm
+    audience: Research in Indigenous Languages and Linguistics
+    location: University of Victoria
+    type: presentation
+  
+  - year: 2018
+    presenters:
+      - first: Aidan
+        last: Pine
+    title: An Introduction to Gitksan research
+    audience: LING 372 Guest Lecture
+    location: University of Victoria
+    type: lecture
+  
+  - year: 2018
+    presenters:
+      - first: Aidan
+        last: Pine
+    title: A multi-dialectal Ayajuthem talking dictionary
+    location: Sliammon, B.C
+    type: presentation
+  
+  - year: 2018
+    presenters:
+      - first: Jane
+        last: Smith
+      - first: Aidan
+        last: Pine
+    title: "Dim liseewis Xsiwis gant Sginist wil wihl hahlaalst sit'aadiit"
+    audience: Gitksan Language Symposium
+    location: Gitksan Wet'suwet'en Education Society. Hazelton, B.C.
+    type: conference
+  
+  - year: 2018
+    presenters:
+      - first: Aidan
+        last: Pine
+    title: Ama silkw sa
+    audience: Gitksan Elders Meeting
+    location: Gitksan Elder's Center. Gitanmaax, B.C
+    type: presentation
+  
+  - year: 2018
+    presenters:
+      - first: Aidan
+        last: Pine
+    title: "Seeing the Heiltsuk Orthography from Font Encoding to Unicode: A Case Study Using Convertextract"
+    audience: Conference on Collaboration and Computing of Under Resourced Langauges
+    location: Miyazaki, Japan
+    type: conference
+
+  - year: 2018
+    presenters:
+      - first: Anna
+        last: Kazantseva
+      - first: Aidan
+        last: Pine
+    title: "Kawennon:nis: The Wordmaker for Kanyen'keha"
+    audience: Onkwawenna Kentyohkwa Immersion School
+    location: Ohsweken, Ontario
+    type: presentation
+  
+  - year: 2018
+    presenters:
+      - first: Aidan
+        last: Pine
+      - first: Mark
+        last: Turin
+    title: "Developing Digital Tools for Language Revitalization: Demystifying Coding, Apps, and Web Platforms"
+    audience: CoLang
+    location: University of Florida
+    type: workshop
+  
+  - year: 2018
+    presenters:
+      - first: Aidan
+        last: Pine
+      - first: Mark
+        last: Turin
+    title: "Developing Digital Tools for Language Revitalization: Demystifying Coding, Apps, and Web Platforms"
+    audience: National Institute for Japanese Language and Linguistics
+    location: Tokyo, Japan
+    type: workshop
+
+volounteer:
+  - title: Hesquiaht Dictionary
+    start: June 2017
+    end: present
+    description: Help with data processing, web and mobile app development for the Hesquiaht language dictionary
+  - title: Python for Lexicographers Workshop Series
+    start: Jan 2016
+    end: May 2016
+    description: Teach basic Python and programming skills to undergraduate, graduate and post-graduate lexicographers at the UBC linguistics department
+  - title: xwna?elumxw sxexils Journal Review
+    start: 2014
+    end: 2016
+    description: UBC Indigenous Studies Submission Reviewer
+  - title: Doreen Jensen Memorial Gitksan Class
+    start: 2013
+    end: 2016
+    description: Assist students by explaining basic grammatical, phonological and orthographic concepts
+
+employment:
+  - title: Copy Editor & Research Assistant
+    employer: University of British Columbia
+    start: Apr 2013
+    end: Jan 2014
+    description: "Assisted in editing interlinear glossing and linguistics-related texts in the book: Written as I Remember It: Teachings (***edit)"
+  
+  - title: Translator and Computational Linguist
+    employer: SmartKYC (Remote Work)
+    start: Jan 2016
+    end: Aug 2017
+    description: Natural language processing, writing regular expressions to capture inflectional morphological rules in French and Danish. Independent contract
+  
+  - title: Software Developer
+    employer: Simon Fraser University
+    start: Oct 2016
+    end: Jan 2017
+    description: Lead programmer for the development of a number of orthography conversion tools fo Heiltsuk and Tsilhqot'in languages. Independent contract through Mother Tongues
+  
+  - title: Software Developer
+    employer: University of British Columbia
+    start: Oct 2016
+    end: present
+    description: Lead programmer for the development of four online (web and mobile) dictionaries.
+  
+  - title: Juma Food Truck Owner & Operator
+    employer: Self Employed
+    start: May 2013
+    end: present
+    description: I designed, commissioned to build, own and operate a food truck that runs seasonally on Vancouver Island and employs full time and part time staff
+  
+  - title: Technology consultant
+    employer: University of British Columbia
+    start: Jan 2015
+    end: present
+    description: Consulting and programming for the First Nations and Endangered Language program.
+  
+  - title: Web Developer
+    employer: Self Employed
+    start: May 2016
+    end: present
+    description: Freelance website design and development
+
+  - title: Software Developer
+    employer: First Peoples' Heritage and Language Council of Canada
+    start: Oct 2016
+    end: present
+    description: Lead developer for redesigning, engineering and publishing 15 of FPHLCC's mobile dictionary applications for Android and iOS. Independent contract through Mother Tongues
+
+  - title: Application Development Specialist
+    employer: National Research Council Canada
+    start: Jan 2018
+    end: present
+    description: Developer and researcher for NRC Indigenous Language Technology project
