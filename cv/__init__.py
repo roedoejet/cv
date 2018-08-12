@@ -12,4 +12,12 @@ class Config(object):
 
 app = Flask(__name__)
 
+@app.template_filter('initial')
+def initial(data):
+        return data[0]
+
+@app.template_filter('alph')
+def alph(n):
+      return chr(96 + n)
+
 import cv.views

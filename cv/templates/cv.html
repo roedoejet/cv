@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  <title>{{ data.personal.first_name }} {{ data.personal.last_name }}</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link href='//fonts.googleapis.com/css?family=Raleway:400,300,600' rel='stylesheet' type='text/css'>
+
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='cv/dist/css/normalize.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='cv/dist/css/skeleton.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='cv/css/custom.css') }}">
+
+  <!-- Scripts
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+  <link rel="stylesheet" href="{{ url_for('static', filename='cv/css/github-prettify-theme.css') }}">
+  <script src="{{ url_for('static', filename='cv/js/site.js') }}"></script>
+
+  <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+ 
+
+</head>
+
+<body class="code-snippets-visible">
+
+  <!-- Primary Page Layout
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <nav class="navbar">
+    <div class="container u-pull-right">
+      <ul class="navbar-list">
+        <li class="navbar-item">
+          <a class="navbar-link" href="#intro">Hello</a>
+        </li>
+        <li class="navbar-item">
+          <a class="navbar-link" href="#">Publications</a>
+        </li>
+        <li class="navbar-item">
+          <a class="navbar-link" href="#presentations">Presentations</a>
+        </li>
+        <li class="navbar-item">
+          <a class="navbar-link" href="#">Code</a>
+        </li>
+        <li class="navbar-item">
+          <a class="navbar-link" href="#contact">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <div class="container">
+    <section class="header">
+      <h2 class="title">Aidan Pine</h2>
+      <hr>
+
+      <h5>Linguist & Developer</h5>
+
+      <!-- <a class="button button-primary" href="https://github.com/dhg/Skeleton/releases/download/2.0.4/Skeleton-2.0.4.zip" onClick="_gaq.push(['_trackEvent', 'skeleton', 'download'])">Download</a> -->
+      <div class="value-props row">
+        <!-- <div class="twelve columns value-prop">
+          Linguist
+        </div> -->
+      </div>
+    </section>
+
+    <!-- <div class="navbar-spacer"></div> -->
+
+
+    <!-- Hello -->
+    <div class="docs-section" id="intro">
+
+      <div class="row">
+        <div class="six columns">
+          <h6 class="docs-header">Hello!</h6>
+          <p>Thanks for visiting my site. It was built using
+            <em>JavaScript</em>,
+            <em>Flask</em> and
+            <em>Skeleton</em>, it is hosted for free on
+            <em>GitHub Pages</em>. The site was generated from
+            <em>yaml</em> along with my downloadable LaTeX CV using
+            <em>Jinja2</em>
+          </p>
+        </div>
+        <img class="bio six columns" src="{{ url_for('static', filename='cv/images/cv.png') }}" />
+      </div>
+      <!-- <iframe src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwww.getskeleton.com&amp;width&amp;layout=button_count&amp;action=like&amp;show_faces=false&amp;share=true&amp;height=21&amp;appId=151131931646052" scrolling="no" frameborder="0" style="border:none; overflow:hidden; height:21px; width:140px" allowTransparency="true"></iframe> -->
+      <!-- <iframe src="http://ghbtns.com/github-btn.html?user=dhg&repo=Skeleton&type=watch&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="110" height="20"></iframe>
+      <iframe src="http://ghbtns.com/github-btn.html?user=dhg&repo=Skeleton&type=fork&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="110" height="20"></iframe> -->
+    </div>
+
+
+
+    <!-- Publications -->
+    <div class="docs-section" id="publications">
+      <h6 class="docs-header">Publications</h6>
+      <div class="row docs-example">
+        <div class="twelve columns">
+          <ol>
+            {% for p in data.publications | sort(attribute='year', reverse=True ) %} {% if p.booktitle %}
+            <li>{{ p.year }} {{ loop.index | alph }} {% for a in p.authors %} {{ a.last }}, {% if a.first %} {{ a.first[0] }}.{%
+              endif %} {% if not loop.last %},{% endif %} {% endfor %} {{ p.title }}.
+              <em> {{p.booktitle}} </em>. {{p.publisher}}. </li>
+            {% elif p.conference %}
+            <li>{{ p.year }}{{ loop.index | alph }} {% for a in p.authors %} {{ a.last }}, {% if a.first %} {{ a.first[0] }}.{%endif
+              %} {% if not loop.last %},{% endif %} {% endfor %} {{ p.title }}. In proceedings of
+              <em> {{p.conference}} </em>. {{p.publisher}}.</li>
+            {% endif %} {% endfor %}
+          </ol>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Presentations -->
+    <div class="docs-section" id="presentations">
+      <h6 class="docs-header">Presentations</h6>
+      <p>Below are some guest lectures, workshops and other presentations I have given.</p>
+      <div class="docs-example">
+        <table class="u-full-width">
+          <thead>
+            <tr>
+              <th>Title</th>
+              <th>Location</th>
+              <th>Presenters</th>
+              <th>Type</th>
+              <th>Year</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for p in data.presentations | reverse %}
+            <tr>
+              <td>{{ p.title }}</td>
+              <td>{{ p.audience }}
+                <br>
+                <strong>{{ p.location }}</strong>
+              </td>
+              <td>{% for pp in p.presenters %} {{ pp.last }}, {% if pp.first %} {{ pp.first[0] }}.{% endif %} {% if not loop.last
+                %}
+                <br>{% endif %} {% endfor %}</td>
+              <td>{{ p.type.capitalize() }}</td>
+              <td>{{ p.year }}</td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+
+    </div>
+
+    <!-- <div class="docs-section" id="code">
+        <h6 class="docs-header">Code</h6>
+        <p>Here are some open-source web and software projects I have been a part of.</p>
+        {% for c in data.code %}
+        <iframe src="{{ c.count }}" allowtransparency="true" frameborder="0" scrolling="0" width="110" height="20"></iframe>
+        {% endfor %}
+      </div> -->
+
+    <!-- Contact -->
+    <div class="docs-section" id="contact">
+
+      <div class="row">
+        <div class="six columns">
+          <h6 class="docs-header">Contact</h6>
+          <p> {{ data.personal.email }}
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- End Document
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+</body>
+
+
+
+</html>

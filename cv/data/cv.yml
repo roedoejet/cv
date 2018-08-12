@@ -2,6 +2,7 @@ personal:
   first_name: Aidan
   middle_name: Hart Ray
   last_name: Pine
+  email: info@mothertongues.org
 
 education:
   - start: Sept 2012
@@ -233,6 +234,7 @@ presentations:
     title: "Mobilizing Language Data: An Endangered Language Dictionary App"
     audience: Multidisciplinary Undergraduate Research Conference
     location: University of British Columbia
+    type: conference
     notes: 1st Place Oral Presentation Award
   
   - year: 2016
@@ -487,3 +489,7 @@ employment:
     start: Jan 2018
     end: present
     description: Developer and researcher for NRC Indigenous Language Technology project
+  
+code:
+  - title: Orthography Converter
+    count: //ghbtns.com/github-btn.html?user=roedoejet&repo=convertextract&type=watch&count=true
