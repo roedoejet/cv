@@ -114,7 +114,7 @@ publications:
         last: Maracle
       - first: Aidan
         last: Pine
-    title: "Kawennon:nis: the Wordmaker for Kanyen'keha (Ohsweken Mohawk)"
+    title: "Kawennón:nis: the Wordmaker for Kanyen'kéha (Ohsweken Mohawk)"
     conference: "COLING: The 27th International Conference on Computational Linguistics"
     publisher: University of Pennsylvannia
     type: proceedings
@@ -131,7 +131,7 @@ languages:
   - name: Gitksan
     competency: "Reading/Writing: literate; Oral: Intermediate"
 
-  - name: "**NEEDSWORK**"
+  - name: "hən̓q̓əmin̓əm"
     competency: "Intermediate"
     credentials: UBC FNLG 101, 102, 201, 202, & 301
 
@@ -284,7 +284,7 @@ presentations:
         last: Smith
       - first: Aidan
         last: Pine
-    title: "Dim liseewis Xsiwis gant Sginist wil wihl hahlaalst sit'aadiit"
+    title: "Dim liseewis Xsiwis g̲ant Sginist wil wihl hahlaalst sit'aadiit"
     audience: Gitksan Language Symposium
     location: Gitksan Wet'suwet'en Education Society. Hazelton, B.C.
     type: conference
@@ -362,17 +362,6 @@ presentations:
   
   - year: 2018
     presenters:
-      - first: Jane
-        last: Smith
-      - first: Aidan
-        last: Pine
-    title: "Dim liseewis Xsiwis gant Sginist wil wihl hahlaalst sit'aadiit"
-    audience: Gitksan Language Symposium
-    location: Gitksan Wet'suwet'en Education Society. Hazelton, B.C.
-    type: conference
-  
-  - year: 2018
-    presenters:
       - first: Aidan
         last: Pine
     title: Ama silkw sa
@@ -395,7 +384,7 @@ presentations:
         last: Kazantseva
       - first: Aidan
         last: Pine
-    title: "Kawennon:nis: The Wordmaker for Kanyen'keha"
+    title: "Kawennón:nis: The Wordmaker for Kanyén'keha"
     audience: Onkwawenna Kentyohkwa Immersion School
     location: Ohsweken, Ontario
     type: presentation
@@ -431,7 +420,7 @@ volounteer:
     start: Jan 2016
     end: May 2016
     description: Teach basic Python and programming skills to undergraduate, graduate and post-graduate lexicographers at the UBC linguistics department
-  - title: xwna?elumxw sxexils Journal Review
+  - title: xʷnaʔələmxʷ sχəχi:ls Journal Review
     start: 2014
     end: 2016
     description: UBC Indigenous Studies Submission Reviewer

@@ -9,6 +9,10 @@
   <title>{{ data.personal.first_name }} {{ data.personal.last_name }}</title>
   <meta name="description" content="">
   <meta name="author" content="">
+  <script>
+    document.write('<base href="' + document.location + '" />');
+
+  </script>
 
   <!-- Mobile Specific Metas
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -59,9 +63,9 @@
         <li class="navbar-item">
           <a class="navbar-link" href="#contact">Contact</a>
         </li>
-        <li class="navbar-item">
-            <a class="navbar-link" href="#cv">CV</a>
-          </li>
+        <!-- <li class="navbar-item">
+          <a class="navbar-link" href="#cv">CV</a>
+        </li> -->
       </ul>
     </div>
   </nav>
@@ -115,18 +119,19 @@
         <div class="twelve columns">
           <ul>
             {% for p in data.publications | sort(attribute='year', reverse=True ) %} {% if p.booktitle %}
-            <li>{{ p.title }}.
-              <em> {{p.booktitle}} </em>.
+            <li>{% if p.url %}
+              <a href="{{ p.url }}">{{ p.title }}</a>{% else %}{{ p.title }}{% endif %}.
+              <em>{{p.booktitle}}</em>.
               <br>{% for a in p.authors %} {% if a.last == 'Pine' or a.last == 'Gitksan Research Lab' %}
-              <strong>{{ a.last }}, {% if a.first %} {{ a.first[0] }}.{%endif %}{% if not loop.last %},{% endif %}</strong>
+              <strong>{{ a.last }}, {% if a.first %}{{ a.first[0] }}.{%endif %}{% if not loop.last %},{% endif %}</strong>
               {% else %} {{ a.last }}, {% if a.first %} {{ a.first[0] }}.{% endif %}{% if not loop.last %},{% endif %} {% endif %} {% endfor
               %} {{ p.year }}{{ loop.index | alph }}. {{p.publisher}}. </li>
             {% elif p.conference %}
             <li>{{ p.title }}. In proceedings of
-              <em> {{p.conference}} </em>.
+              <em>{{p.conference}}</em>.
               <br>{% for a in p.authors %} {% if a.last == 'Pine' or a.last == 'Gitksan Research Lab' %}
               <strong>{{ a.last }}, {% if a.first %} {{ a.first[0] }}.{%endif %}{% if not loop.last %},{% endif %}</strong>
-              {% else %} {{ a.last }}, {% if a.first %} {{ a.first[0] }}.{% endif %}{% if not loop.last %},{% endif %} {% endif %} {% endfor
+              {% else %} {{ a.last }}, {% if a.first %}{{ a.first[0] }}.{% endif %}{% if not loop.last %},{% endif %} {% endif %} {% endfor
               %} {{ p.year }}{{ loop.index | alph }}. {{p.publisher}}.</li>
             {% endif %} {% endfor %}
           </ul>
@@ -183,7 +188,7 @@
     </div>
 
     <!-- Contact -->
-    <div class="docs-section" id="contact">
+    <!-- <div class="docs-section" id="contact">
 
       <div class="row">
         <div class="six columns">
@@ -193,7 +198,7 @@
 
         </div>
       </div>
-    </div>
+    </div> -->
 
     <!-- End Document
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
