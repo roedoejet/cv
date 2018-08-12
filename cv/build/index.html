@@ -13,6 +13,7 @@
     document.write('<base href="' + document.location + '" />');
 
   </script>
+
   <!-- Mobile Specific Metas
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -23,15 +24,15 @@
 
   <!-- CSS
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link rel="stylesheet" href="/static/cv/dist/css/normalize.css">
-  <link rel="stylesheet" href="/static/cv/dist/css/skeleton.css">
-  <link rel="stylesheet" href="/static/cv/css/custom.css">
+  <link rel="stylesheet" href="/cv-flask/cv/build/static/cv/dist/css/normalize.css">
+  <link rel="stylesheet" href="/cv-flask/cv/build/static/cv/dist/css/skeleton.css">
+  <link rel="stylesheet" href="/cv-flask/cv/build/static/cv/css/custom.css">
 
   <!-- Scripts
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-  <link rel="stylesheet" href="/static/cv/css/github-prettify-theme.css">
-  <script src="/static/cv/js/site.js"></script>
+  <link rel="stylesheet" href="/cv-flask/cv/build/static/cv/css/github-prettify-theme.css">
+  <script src="/cv-flask/cv/build/static/cv/js/site.js"></script>
 
 
   <!-- Favicon
@@ -44,30 +45,6 @@
 
   <!-- Primary Page Layout
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <nav class="navbar">
-    <div class="container u-pull-right">
-      <ul class="navbar-list">
-        <li class="navbar-item">
-          <a class="navbar-link" href="#intro">About</a>
-        </li>
-        <li class="navbar-item">
-          <a class="navbar-link" href="#publications">Publications</a>
-        </li>
-        <li class="navbar-item">
-          <a class="navbar-link" href="#presentations">Presentations</a>
-        </li>
-        <!-- <li class="navbar-item">
-          <a class="navbar-link" href="#">Code</a>
-        </li> -->
-        <li class="navbar-item">
-          <a class="navbar-link" href="#contact">Contact</a>
-        </li>
-        <!-- <li class="navbar-item">
-          <a class="navbar-link" href="#cv">CV</a>
-        </li> -->
-      </ul>
-    </div>
-  </nav>
   <div class="container">
     <section class="header">
       <h2 class="title">Aidan Pine</h2>
@@ -83,8 +60,31 @@
       </div>
     </section>
 
-    <!-- <div class="navbar-spacer"></div> -->
-
+    <div class="navbar-spacer"></div>
+    <nav class="navbar">
+      <div class="container">
+        <ul class="navbar-list">
+          <li class="navbar-item">
+            <a class="navbar-link" href="#intro">About</a>
+          </li>
+          <li class="navbar-item">
+            <a class="navbar-link" href="#publications">Publications</a>
+          </li>
+          <li class="navbar-item">
+            <a class="navbar-link" href="#presentations">Presentations</a>
+          </li>
+          <!-- <li class="navbar-item">
+              <a class="navbar-link" href="#">Code</a>
+            </li> -->
+          <li class="navbar-item">
+            <a class="navbar-link" href="#contact">Contact</a>
+          </li>
+          <!-- <li class="navbar-item">
+              <a class="navbar-link" href="#cv">CV</a>
+            </li> -->
+        </ul>
+      </div>
+    </nav>
 
     <!-- Hello -->
     <div class="docs-section" id="intro">
@@ -102,7 +102,7 @@
             and Linguistics Department at the University of British Columbia.
           </p>
         </div>
-        <img class="bio six columns" src="/static/cv/images/cv.png" />
+        <img class="bio six columns" src="/cv-flask/cv/build/static/cv/images/cv.png" />
       </div>
       <!-- <iframe src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwww.getskeleton.com&amp;width&amp;layout=button_count&amp;action=like&amp;show_faces=false&amp;share=true&amp;height=21&amp;appId=151131931646052" scrolling="no" frameborder="0" style="border:none; overflow:hidden; height:21px; width:140px" allowTransparency="true"></iframe> -->
       <!-- <iframe src="http://ghbtns.com/github-btn.html?user=dhg&repo=Skeleton&type=watch&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="110" height="20"></iframe>
@@ -117,53 +117,52 @@
       <div class="row docs-example">
         <div class="twelve columns">
           <ul>
-
+             
             <li>
               <a href="//roedoejet.github.io/cv-flask/cv/static/cv/pdfs/hall.pdf">Doing Phonological Corpus Analaysis in a Fieldwork Context</a>.
               <em>Wa7 xweysas i nqwaluttenhiha: He loves the peoples&#39; languages. Essays in honour of Henry Davis</em>.
-              <br> Hall, K.,
+              <br>  Hall,  K.,   
               <strong>Pine, A.,</strong>
-              Schwan, M. 2018a. University of British Columbia. </li>
-
-            <li>Seeing the Heiltsuk Orthography from Font Encoding through to Unicode: A Case Study Using Convertextract. In
-              proceedings of
+                 Schwan,  M.   2018a. University of British Columbia. </li>
+              
+            <li>Seeing the Heiltsuk Orthography from Font Encoding through to Unicode: A Case Study Using Convertextract. In proceedings of
               <em>CCURL 2018: The 3rd Workshop on Collaboration and Computing for Under-Resourced Languages</em>.
-              <br>
-              <strong>Pine, A.,</strong>
-              Turin, M. 2018b. European Language Resources Association.</li>
-
+              <br> 
+              <strong>Pine,  A.,</strong>
+                 Turin, M.   2018b. European Language Resources Association.</li>
+              
             <li>Indigenous language technologies in Canada: Assessment, challenges, and successes. In proceedings of
               <em>COLING: The 27th International Conference on Computational Linguistics</em>.
-              <br> Littell, P., Kazantseva, A., Kuhn, R.,
-              <strong>Pine, A.,</strong>
-              Arppe, A., Cox, C., Junker, M. 2018c. University of Pennsylvannia.</li>
-
-            <li>KawennÃ³n:nis: the Wordmaker for Kanyen&#39;kÃ©ha (Ohsweken Mohawk). In proceedings of
+              <br>  Littell, P.,    Kazantseva, A.,    Kuhn, R.,   
+              <strong>Pine,  A.,</strong>
+                 Arppe, A.,    Cox, C.,    Junker, M.   2018c. University of Pennsylvannia.</li>
+              
+            <li>Kawennón:nis: the Wordmaker for Kanyen&#39;kéha (Ohsweken Mohawk). In proceedings of
               <em>COLING: The 27th International Conference on Computational Linguistics</em>.
-              <br> Kazantseva, A., Maracle, B., Maracle, R.,
-              <strong>Pine, A.</strong>
-              2018d. University of Pennsylvannia.</li>
-
+              <br>  Kazantseva, A.,    Maracle, B.,    Maracle, R.,   
+              <strong>Pine,  A.</strong>
+                2018d. University of Pennsylvannia.</li>
+              
             <li>
               <a href="//linguistics.oxfordre.com/view/10.1093/acrefore/9780199384655.001.0001/acrefore-9780199384655-e-8">Language Revitalization</a>.
               <em>Oxford Research Encylopedia of Linguistics</em>.
-              <br>
+              <br> 
               <strong>Pine, A.,</strong>
-              Turin, M. 2017e. Oxford University Press. </li>
-
-            <li>Waldayu and Waldau Mobile: Modern digital dictionary interfaces for endangered languages. In proceedings of
+                 Turin,  M.   2017e. Oxford University Press. </li>
+              
+            <li>Waldayu and Waldayu Mobile: Modern digital dictionary interfaces for endangered languages. In proceedings of
               <em>ComputEL-2: The 2nd Workshop on Computational Methods for Endangered Languages</em>.
-              <br> Littell, P.,
-              <strong>Pine, A.,</strong>
-              Davis, H. 2017f. University of Pennsylvania.</li>
-
+              <br>  Littell, P.,   
+              <strong>Pine,  A.,</strong>
+                 Davis, H.   2017f. University of Pennsylvania.</li>
+              
             <li>
               <a href="//roedoejet.github.io/cv-flask/cv/static/cv/pdfs/gitlab.pdf">Three Gitksan texts</a>.
               <em>University of British Columbia Working Papers in Lingusitics</em>.
-              <br> Forbes, C., Davis, H., Schwan, M.,
+              <br>  Forbes,  C.,    Davis,  H.,    Schwan,  M.,   
               <strong>Gitksan Research Lab, </strong>
-              2017g. University of British Columbia. </li>
-
+                2017g. University of British Columbia. </li>
+             
           </ul>
         </div>
       </div>
@@ -186,290 +185,288 @@
             </tr>
           </thead>
           <tbody>
-
+            
             <tr>
               <td>Developing Digital Tools for Language Revitalization: Demystifying Coding, Apps, and Web Platforms</td>
               <td>National Institute for Japanese Language and Linguistics
                 <br>
                 <strong>Tokyo, Japan</strong>
               </td>
-              <td> Pine, A.
-                <br> Turin, M. </td>
+              <td> Pine,  A. 
+                <br>  Turin,  M.  </td>
               <td>Workshop</td>
               <td>2018</td>
             </tr>
-
+            
             <tr>
               <td>Developing Digital Tools for Language Revitalization: Demystifying Coding, Apps, and Web Platforms</td>
               <td>CoLang
                 <br>
                 <strong>University of Florida</strong>
               </td>
-              <td> Pine, A.
-                <br> Turin, M. </td>
+              <td> Pine,  A. 
+                <br>  Turin,  M.  </td>
               <td>Workshop</td>
               <td>2018</td>
             </tr>
-
+            
             <tr>
-              <td>KawennÃ³n:nis: The Wordmaker for KanyÃ©n&#39;keha</td>
+              <td>Kawennón:nis: The Wordmaker for Kanyén&#39;keha</td>
               <td>Onkwawenna Kentyohkwa Immersion School
                 <br>
                 <strong>Ohsweken, Ontario</strong>
               </td>
-              <td> Kazantseva, A.
-                <br> Pine, A. </td>
+              <td> Kazantseva,  A. 
+                <br>  Pine,  A.  </td>
               <td>Presentation</td>
               <td>2018</td>
             </tr>
-
+            
             <tr>
               <td>Seeing the Heiltsuk Orthography from Font Encoding to Unicode: A Case Study Using Convertextract</td>
               <td>Conference on Collaboration and Computing of Under Resourced Langauges
                 <br>
                 <strong>Miyazaki, Japan</strong>
               </td>
-              <td> Pine, A. </td>
+              <td> Pine,  A.  </td>
               <td>Conference</td>
               <td>2018</td>
             </tr>
-
+            
             <tr>
               <td>Ama silkw sa</td>
               <td>Gitksan Elders Meeting
                 <br>
                 <strong>Gitksan Elder&#39;s Center. Gitanmaax, B.C</strong>
               </td>
-              <td> Pine, A. </td>
+              <td> Pine,  A.  </td>
               <td>Presentation</td>
               <td>2018</td>
             </tr>
-
+            
             <tr>
               <td>A multi-dialectal Ayajuthem talking dictionary</td>
               <td>
                 <br>
                 <strong>Sliammon, B.C</strong>
               </td>
-              <td> Pine, A. </td>
+              <td> Pine,  A.  </td>
               <td>Presentation</td>
               <td>2018</td>
             </tr>
-
+            
             <tr>
               <td>An Introduction to Gitksan research</td>
               <td>LING 372 Guest Lecture
                 <br>
                 <strong>University of Victoria</strong>
               </td>
-              <td> Pine, A. </td>
+              <td> Pine,  A.  </td>
               <td>Lecture</td>
               <td>2018</td>
             </tr>
-
+            
             <tr>
               <td>Digital Kinesthetic Learning and the Gitksan Pronominal Paradigm</td>
               <td>Research in Indigenous Languages and Linguistics
                 <br>
                 <strong>University of Victoria</strong>
               </td>
-              <td> Pine, A. </td>
+              <td> Pine,  A.  </td>
               <td>Presentation</td>
               <td>2018</td>
             </tr>
-
+            
             <tr>
               <td>Practical Phonetics</td>
               <td>Adult Gitxsan Class
                 <br>
                 <strong>Gitsegukla, &amp; Terrace, B.C</strong>
               </td>
-              <td> Pine, A. </td>
+              <td> Pine,  A.  </td>
               <td>Lecture</td>
               <td>2018</td>
             </tr>
-
+            
             <tr>
               <td>Practical Phonetics</td>
               <td>Adult Gitxsan Class
                 <br>
                 <strong>Gitanmaax, B.C</strong>
               </td>
-              <td> Pine, A. </td>
+              <td> Pine,  A.  </td>
               <td>Lecture</td>
               <td>2017</td>
             </tr>
-
+            
             <tr>
               <td>A visual presentation with Aidan Pine: The possibilities of our new app</td>
               <td>Ayajuthem language conference
                 <br>
                 <strong>Sliammon, B.C</strong>
               </td>
-              <td> Pine, A. </td>
+              <td> Pine,  A.  </td>
               <td>Conference</td>
               <td>2017</td>
             </tr>
-
+            
             <tr>
               <td>Sim ayeehl k&#39;uuhl</td>
               <td>FNEL 180 Guest Lecture
                 <br>
                 <strong>University of British Columbia</strong>
               </td>
-              <td> Pine, A. </td>
+              <td> Pine,  A.  </td>
               <td>Lecture</td>
               <td>2017</td>
             </tr>
-
+            
             <tr>
               <td>Ama silkw sa</td>
               <td>Gitksan Elders Meeting
                 <br>
                 <strong>Gitksan Elder&#39;s Center. Gitanmaax, B.C</strong>
               </td>
-              <td> Pine, A. </td>
+              <td> Pine,  A.  </td>
               <td>Presentation</td>
               <td>2017</td>
             </tr>
-
+            
             <tr>
-              <td>Dim liseewis Xsiwis gÌ²ant Sginist wil wihl hahlaalst sit&#39;aadiit</td>
+              <td>Dim liseewis Xsiwis g̲ant Sginist wil wihl hahlaalst sit&#39;aadiit</td>
               <td>Gitksan Language Symposium
                 <br>
                 <strong>Gitksan Wet&#39;suwet&#39;en Education Society. Hazelton, B.C.</strong>
               </td>
-              <td> Smith, J.
-                <br> Pine, A. </td>
+              <td> Smith,  J. 
+                <br>  Pine,  A.  </td>
               <td>Conference</td>
               <td>2017</td>
             </tr>
-
+            
             <tr>
               <td>Lexicography for Endangered Languages</td>
               <td>FNEL 382 Guest Lecture
                 <br>
                 <strong>University of British Columbia</strong>
               </td>
-              <td> Pine, A. </td>
+              <td> Pine,  A.  </td>
               <td>Lecture</td>
               <td>2017</td>
             </tr>
-
+            
             <tr>
               <td>Mobile App Development</td>
               <td>BC Breath of Life Institute
                 <br>
                 <strong>University of British Columbia</strong>
               </td>
-              <td> Pine, A. </td>
+              <td> Pine,  A.  </td>
               <td>Workshop</td>
               <td>2017</td>
             </tr>
-
+            
             <tr>
               <td>Introducing Waldayu &amp; Waldayu Mobile</td>
               <td>ComputEL-2: The 2nd Workshop on Computational Methods for Endangered Languages
                 <br>
                 <strong>University of Hawaii</strong>
               </td>
-              <td> Pine, A. </td>
+              <td> Pine,  A.  </td>
               <td>Conference</td>
               <td>2017</td>
             </tr>
-
+            
             <tr>
               <td>Making the most of undergraduate research</td>
               <td>FNEL 180 Guest Lecture
                 <br>
                 <strong>University of British Columbia</strong>
               </td>
-              <td> Pine, A. </td>
+              <td> Pine,  A.  </td>
               <td>Lecture</td>
               <td>2016</td>
             </tr>
-
+            
             <tr>
               <td>Mobilizing Language Data: An Endangered Language Dictionary App</td>
               <td>Multidisciplinary Undergraduate Research Conference
                 <br>
                 <strong>University of British Columbia</strong>
               </td>
-              <td> Pine, A. </td>
+              <td> Pine,  A.  </td>
               <td>Conference</td>
               <td>2016</td>
             </tr>
-
+            
             <tr>
               <td>&#39;Nit gwihl Jabisi&#39;m</td>
               <td>FNEL 180 Guest Lecture
                 <br>
                 <strong>University of British Columbia</strong>
               </td>
-              <td> Pine, A. </td>
+              <td> Pine,  A.  </td>
               <td>Lecture</td>
               <td>2015</td>
             </tr>
-
+            
             <tr>
               <td>Connecting Linguistics to Language Learners: a Lesson Plan for Gitksan</td>
               <td>Multidisciplinary Undergraduate Research Conference
                 <br>
                 <strong>University of British Columbia</strong>
               </td>
-              <td> Pine, A. </td>
+              <td> Pine,  A.  </td>
               <td>Conference</td>
               <td>2015</td>
             </tr>
-
+            
             <tr>
               <td>Preferential Encliticization in Gitksan</td>
               <td>Linguistics Department
                 <br>
                 <strong>University of British Columbia</strong>
               </td>
-              <td> Pine, A. </td>
+              <td> Pine,  A.  </td>
               <td>Presentation</td>
               <td>2014</td>
             </tr>
-
+            
             <tr>
               <td>Quantifier Scope in Gitksan</td>
               <td>Gitksan Research Group Research Seminar
                 <br>
                 <strong>University of British Columbia</strong>
               </td>
-              <td> Barois, M.
-                <br> Bicevskis, K.
-                <br> Cheng, K.
-                <br> Pine, A. </td>
+              <td> Barois,  M. 
+                <br>  Bicevskis,  K. 
+                <br>  Cheng,  K. 
+                <br>  Pine,  A.  </td>
               <td>Presentation</td>
               <td>2014</td>
             </tr>
-
+            
           </tbody>
         </table>
       </div>
 
     </div>
 
-    <div class="docs-section" id="code">
+    <!-- <div class="docs-section" id="code">
       <h6 class="docs-header">Code</h6>
       <p>I'm interested in all manner of open source language revitalization software.
       </p>
       <p>Here are some open-source web and software projects I have been a part of.</p>
+      
+      <iframe src="//ghbtns.com/github-btn.html?user=roedoejet&amp;repo=convertextract&amp;type=watch&amp;count=true" allowtransparency="true" frameborder="0" scrolling="0" width="110" height="20"></iframe>
+      
+      <iframe src="//ghbtns.com/github-btn.html?user=roedoejet&amp;repo=cv-flask&amp;type=watch&amp;count=true" allowtransparency="true" frameborder="0" scrolling="0" width="110" height="20"></iframe>
+      
 
-      <iframe src="//ghbtns.com/github-btn.html?user=roedoejet&amp;repo=convertextract&amp;type=watch&amp;count=true" allowtransparency="true"
-        frameborder="0" scrolling="0" width="110" height="20"></iframe>
-
-      <iframe src="//ghbtns.com/github-btn.html?user=roedoejet&amp;repo=cv-flask&amp;type=watch&amp;count=true" allowtransparency="true"
-        frameborder="0" scrolling="0" width="110" height="20"></iframe>
-
-
-    </div>
+    </div> -->
 
     <!-- Contact -->
-    <!-- <div class="docs-section" id="contact">
+    <div class="docs-section" id="contact">
 
       <div class="row">
         <div class="six columns">
@@ -479,7 +476,7 @@
 
         </div>
       </div>
-    </div> -->
+    </div>
 
     <!-- End Document
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->

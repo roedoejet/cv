@@ -227,3 +227,6 @@
 img.bio {
   border-radius: 5px;
 }
+li.u-pull-right {
+  float: right !important;
+}
