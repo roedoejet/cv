@@ -1,0 +1,8 @@
+recursive-include cv/templates *
+recursive-include cv/static *
+recursive-include cv/data *
+include MANIFEST.in
+exclude .gitignore
+recursive-exclude * *.py[co]
+recursive-exclude * *~ 
+recursive-exclude * *.orig
