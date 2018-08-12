@@ -21,16 +21,16 @@
         \begin{cvlist}{Publications}
             \jblock{ for p in data.publications | sort(attribute='year', reverse=True)}
                 \jblock{ if p.booktitle }
-                    \item[\jvar{ p.year }\jvar{ loop.index | alph }] \jblock{ for a in p.authors } \jvar{ a.last }, \jblock{ if a.first } \jvar{ a.first[0] }.\jblock{ endif } \jblock{ if not loop.last },\jblock{ endif } \jblock{ endfor } \jvar{ p.title }. \textit{ \jvar{p.booktitle} }. \jvar{p.publisher}.  
+                    \item[\jvar{ p.year }\jvar{ loop.index | alph }] \jblock{ for a in p.authors } \jvar{ a.last }, \jblock{ if a.first } \jvar{ a.first[0] }.\jblock{ endif }\jblock{ if not loop.last },\jblock{ endif } \jblock{ endfor } \jvar{ p.title }. \textit{ \jvar{p.booktitle} }. \jvar{p.publisher}.  
                 \jblock{ elif p.conference }
-                    \item[\jvar{ p.year }\jvar{ loop.index | alph }] \jblock{ for a in p.authors } \jvar{ a.last }, \jblock{ if a.first } \jvar{ a.first[0] }.\jblock{ endif } \jblock{ if not loop.last },\jblock{ endif } \jblock{ endfor } \jvar{ p.title }. In proceedings of \textit{ \jvar{p.conference} }. \jvar{p.publisher}.  
+                    \item[\jvar{ p.year }\jvar{ loop.index | alph }] \jblock{ for a in p.authors }\jvar{ a.last }, \jblock{ if a.first }\jvar{ a.first[0] }.\jblock{ endif }\jblock{ if not loop.last },\jblock{ endif } \jblock{ endfor } \jvar{ p.title }. In proceedings of \textit{ \jvar{p.conference} }. \jvar{p.publisher}.  
                 \jblock{ endif }
         \jblock{ endfor }
         \end{cvlist}
 
         \begin{cvlist}{Presentations \& Guest Lectures}
         \jblock{ for p in data.presentations | sort(attribute='year', reverse=True)}
-            \item[\jvar{ p.year }\jvar{ loop.index | alph }] \jblock{ for a in p.presenters } \jvar{ a.last }, \jblock{ if a.first } \jvar{ a.first[0] }.\jblock{ endif } \jblock{ if not loop.last },\jblock{ endif } \jblock{ endfor } \textit{\jvar{ p.title }}.\jvar{p.audience} . \jvar{ p.location }.  
+            \item[\jvar{ p.year }\jvar{ loop.index | alph }] \jblock{ for a in p.presenters } \jvar{ a.last }, \jblock{ if a.first } \jvar{ a.first[0] }.\jblock{ endif } \jblock{ if not loop.last },\jblock{ endif } \jblock{ endfor } \textit{\jvar{ p.title }}. \jvar{p.audience}. \jvar{ p.location }.  
         \jblock{ endfor }
            
         \end{cvlist}
@@ -42,7 +42,7 @@
         
          \begin{cvlist}{Skills}
             \jblock{ for s in data.skills }
-            \item \jvar{s.name} with \jblock{ for p in s.programs } \textit{\jvar{p}} \jblock{ if not loop.last },\jblock{ else }, and\jblock{ endif } \jblock{ endfor }
+            \item \jvar{s.name} with \jblock{ for p in s.programs } \textit{\jvar{p}}\jblock{ if not loop.last },\jblock{ endif } \jblock{ endfor }
             \jblock{ endfor }
          \end{cvlist}
 

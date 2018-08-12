@@ -3,6 +3,7 @@ import jinja2
 import re
 import latex as lt
 import cv.data as cv
+from pylatexenc.latexencode import utf8tolatex
 
 def sanitize(data):
     escape_characters = ''.join(["%", "&"])
@@ -51,4 +52,4 @@ class LatexTemplate():
         
     def export(self):
         with open(os.path.join(self.dir, 'cv.tex'), 'w', encoding='utf8') as f:
-            f.write(sanitize(self.template.render(data=self.data)))
+            f.write(utf8tolatex(sanitize(self.template.render(data=self.data)), non_ascii_only=True))

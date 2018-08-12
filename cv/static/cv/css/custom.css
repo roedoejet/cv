@@ -230,3 +230,6 @@ img.bio {
 li.u-pull-right {
   float: right !important;
 }
+a {
+  color: #105b72;
+}
