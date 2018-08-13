@@ -8,7 +8,6 @@ def latex():
     ltx.export()
 
 def freeze():
-    app.config['FREEZER_BASE_URL'] = 'https://roedoejet.github.io/cv/'
     freezer = Freezer(app)
     freezer.freeze()
     local('rm -r docs/*')
