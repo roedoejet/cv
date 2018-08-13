@@ -39,7 +39,7 @@ publications:
     conference: "ComputEL-2: The 2nd Workshop on Computational Methods for Endangered Languages"
     publisher: University of Pennsylvania
     type: proceedings
-    url: //roedoejet.github.io/cv-flask/cv/static/cv/pdfs/computel.pdf
+    url: //roedoejet.github.io/cv-flask/static/cv/pdfs/computel.pdf
 
   - year: 2017
     authors:
@@ -56,7 +56,7 @@ publications:
     type: journal
     vol: 45
     pp: 47-90
-    url: //roedoejet.github.io/cv-flask/cv/static/cv/pdfs/gitlab.pdf
+    url: //roedoejet.github.io/cv-flask/static/cv/pdfs/gitlab.pdf
   
   - year: 2018
     authors:
@@ -70,7 +70,7 @@ publications:
     booktitle: "Wa7 xweysás i nqwaluttenhíha: He loves the peoples' languages. Essays in honour of Henry Davis"
     publisher: University of British Columbia
     type: bookchapter
-    url: //roedoejet.github.io/cv-flask/cv/static/cv/pdfs/hall.pdf
+    url: //roedoejet.github.io/cv-flask/static/cv/pdfs/hall.pdf
   
   - year: 2018
     authors:
@@ -82,7 +82,7 @@ publications:
     conference: "CCURL 2018: The 3rd Workshop on Collaboration and Computing for Under-Resourced Languages"
     publisher: European Language Resources Association
     type: proceedings
-    url: //roedoejet.github.io/cv-flask/cv/static/cv/pdfs/Pine-Turin-Convertextract-2018.pdf
+    url: //roedoejet.github.io/cv-flask/static/cv/pdfs/Pine-Turin-Convertextract-2018.pdf
   
   - year: 2018
     authors:
@@ -104,7 +104,7 @@ publications:
     conference: "COLING: The 27th International Conference on Computational Linguistics"
     publisher: University of Pennsylvannia
     type: proceedings
-    url: //roedoejet.github.io/cv-flask/cv/static/cv/pdfs/coling.pdf
+    url: //roedoejet.github.io/cv-flask/static/cv/pdfs/coling.pdf
   
   - year: 2018
     authors:
@@ -120,7 +120,7 @@ publications:
     conference: "COLING: The 27th International Conference on Computational Linguistics"
     publisher: University of Pennsylvannia
     type: proceedings
-    url: //roedoejet.github.io/cv-flask/cv/static/cv/pdfs/kawe.pdf
+    url: //roedoejet.github.io/cv-flask/static/cv/pdfs/kawe.pdf
 
 languages:
   - name: French
