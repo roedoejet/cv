@@ -10,5 +10,6 @@ def latex():
 def freeze():
     freezer = Freezer(app)
     freezer.freeze()
-    local('rm -r docs/*')
+    local('rm -r docs/static/*')
+    local('rm docs/index.html')
     local('cp -r cv/build/* docs/')
