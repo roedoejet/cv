@@ -150,7 +150,7 @@
               <br>{% for a in p.authors %} {% if a.last == 'Pine' or a.last == 'Gitksan Research Lab' %}
               <strong>{{ a.last }}, {% if a.first %}{{ a.first[0] }}.{%endif %}{% if not loop.last %},{% endif %}</strong>
               {% else %} {{ a.last }}, {% if a.first %} {{ a.first[0] }}.{% endif %}{% if not loop.last %},{% endif %} {% endif %} {% endfor
-              %} {{ p.year }}. {% if p.publisher %}{{p.publisher}}.{% endif %} </li>
+              %} {{ k }}. {% if p.publisher %}{{p.publisher}}.{% endif %} </li>
             {% elif p.conference %}
             <li>{% if p.url %}
               <a href="{{ p.url }}">{{ p.title }}</a>{% else %}{{ p.title }}{% endif %}. In proceedings of
@@ -158,7 +158,7 @@
               <br>{% for a in p.authors %} {% if a.last == 'Pine' or a.last == 'Gitksan Research Lab' %}
               <strong>{{ a.last }}, {% if a.first %} {{ a.first[0] }}.{%endif %}{% if not loop.last %},{% endif %}</strong>
               {% else %} {{ a.last }}, {% if a.first %}{{ a.first[0] }}.{% endif %}{% if not loop.last %},{% endif %} {% endif %} {% endfor
-              %} {{ p.year }}. {% if p.publisher %}{{p.publisher}}.{% endif %} </li>
+              %} {{ k }}. {% if p.publisher %}{{p.publisher}}.{% endif %} </li>
             {% endif %} {% endfor %} {% endfor %}
           </ul>
         </div>
@@ -213,7 +213,7 @@
             <br> a) static, so I could host for free on GitHub Pages
             <br> b) able to generate LaTeX
             <br> c) pulled from simple markup like yaml</p>
-          <p>So, I wrote my CV data in yaml, and use Flask, Flask-Freeze, Jinja2, Skeleton and Fabric to generate a static site
+          <p>So, I wrote my CV data in yaml, and use Flask, Frozen-Flask, Jinja2, Skeleton and Fabric to generate a static site
             and LaTeX CV. I host for free on GitHub, use Cloudflare for free SSL and Mailgun for free email. I slapped an
             MIT license on the
             <a href="//github.com/roedoejet/cv">code</a>, so if you think it would be useful to you, go for it!</p>

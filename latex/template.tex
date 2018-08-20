@@ -19,18 +19,20 @@
 
         
         \begin{cvlist}{Publications}
-            \jblock{ for p in data.publications | sort(attribute='year', reverse=True)}
-                \jblock{ if p.booktitle }
-                    \item[\jvar{ p.year }\jvar{ loop.index | alph }] \jblock{ for a in p.authors } \jvar{ a.last }, \jblock{ if a.first } \jvar{ a.first[0] }.\jblock{ endif }\jblock{ if not loop.last },\jblock{ endif } \jblock{ endfor } \jvar{ p.title }. \textit{ \jvar{p.booktitle} }. \jvar{p.publisher}.  
-                \jblock{ elif p.conference }
-                    \item[\jvar{ p.year }\jvar{ loop.index | alph }] \jblock{ for a in p.authors }\jvar{ a.last }, \jblock{ if a.first }\jvar{ a.first[0] }.\jblock{ endif }\jblock{ if not loop.last },\jblock{ endif } \jblock{ endfor } \jvar{ p.title }. In proceedings of \textit{ \jvar{p.conference} }. \jvar{p.publisher}.  
-                \jblock{ endif }
-        \jblock{ endfor }
+            \jblock{ for k,v in data.publications.items() | reverse}
+                \jblock{ for p in v | sort(attribute="order") }
+                    \jblock{ if p.booktitle }
+                        \item[\jvar{ k }\jvar{ p.order | alph }] \jblock{ for a in p.authors } \jvar{ a.last }, \jblock{ if a.first } \jvar{ a.first[0] }.\jblock{ endif }\jblock{ if not loop.last },\jblock{ endif } \jblock{ endfor } \jvar{ p.title }. \textit{ \jvar{p.booktitle} }. \jblock{ if p.publisher } \jvar{p.publisher}. \jblock{ endif } 
+                    \jblock{ elif p.conference }
+                        \item[\jvar{ k }\jvar{ p.order | alph }] \jblock{ for a in p.authors }\jvar{ a.last }, \jblock{ if a.first }\jvar{ a.first[0] }.\jblock{ endif }\jblock{ if not loop.last },\jblock{ endif } \jblock{ endfor } \jvar{ p.title }. In proceedings of \textit{ \jvar{p.conference} }. \jblock{ if p.publisher } \jvar{p.publisher}. \jblock{ endif } 
+                    \jblock{ endif }
+                \jblock{ endfor }
+            \jblock{ endfor }
         \end{cvlist}
 
         \begin{cvlist}{Presentations \& Guest Lectures}
         \jblock{ for p in data.presentations | sort(attribute='year', reverse=True)}
-            \item[\jvar{ p.year }\jvar{ loop.index | alph }] \jblock{ for a in p.presenters } \jvar{ a.last }, \jblock{ if a.first } \jvar{ a.first[0] }.\jblock{ endif } \jblock{ if not loop.last },\jblock{ endif } \jblock{ endfor } \textit{\jvar{ p.title }}. \jvar{p.audience}. \jvar{ p.location }.  
+            \item[\jvar{ p.year }] \jblock{ for a in p.presenters } \jvar{ a.last }, \jblock{ if a.first } \jvar{ a.first[0] }.\jblock{ endif } \jblock{ if not loop.last },\jblock{ endif } \jblock{ endfor } \textit{\jvar{ p.title }}. \jvar{p.audience}. \jvar{ p.location }.  
         \jblock{ endfor }
            
         \end{cvlist}
@@ -47,8 +49,8 @@
          \end{cvlist}
 
          \begin{cvlist}{Employment}
-            \jblock{ for e in data.employment }
-                \item[\jvar{e.start} - \jvar{e.end}] \textbf{\jvar{e.title} - \jvar{e.employer}}
+            \jblock{ for e in data.employment | sort(attribute="start.month", reverse=True)| sort(attribute="start.year", reverse=True)}
+                \item[\jvar{e.start.month | month} \jvar{ e.start.year } - \jblock{ if e.end.month == 0 } Present \jblock{ else } \jvar{ e.end.month | month } \jvar{ e.end.year } \jblock{ endif }] \textbf{\jvar{e.title} - \jvar{e.employer}}
                 \newline \jvar{e.description}
             \jblock{ endfor }
         \end{cvlist}
@@ -61,7 +63,7 @@
         \end{cvlist}
 
         \begin{cvlist}{Awards \& Grants}
-            \jblock{ for a in data.awards }
+            \jblock{ for a in data.awards | sort(attribute="year", reverse=True)}
             \item[\jvar{ a.year }] \jvar{a.title}
             \jblock{ endfor }
         \end{cvlist}

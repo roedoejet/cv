@@ -4,6 +4,7 @@ import re
 import latex as lt
 import cv.data as cv
 from pylatexenc.latexencode import utf8tolatex
+from calendar import month_abbr
 
 def sanitize(data):
     escape_characters = ''.join(["%", "&"])
@@ -26,6 +27,9 @@ def initial(data):
 def alph(n):
     return chr(96 + n)
 
+def month(n):
+    return month_abbr[n]
+
 
 class LatexTemplate():
     def __init__(self):
@@ -46,6 +50,7 @@ class LatexTemplate():
         )
         self.latexJinjaEnv.filters['initial'] = initial
         self.latexJinjaEnv.filters['alph'] = alph
+        self.latexJinjaEnv.filters['month'] = month
         self.template = self.latexJinjaEnv.get_template('template.tex')
         
         self.data = cv.DATA
