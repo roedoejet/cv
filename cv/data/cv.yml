@@ -15,6 +15,7 @@ education:
 
 publications:
   - year: 2017
+    order: 1
     authors:
       - first: Aidan
         last: Pine
@@ -28,6 +29,7 @@ publications:
     url: //linguistics.oxfordre.com/view/10.1093/acrefore/9780199384655.001.0001/acrefore-9780199384655-e-8
 
   - year: 2017
+    order: 2
     authors:
       - first: Patrick
         last: Littell
@@ -37,11 +39,12 @@ publications:
         last: Davis
     title: "Waldayu and Waldayu Mobile: Modern digital dictionary interfaces for endangered languages"
     conference: "ComputEL-2: The 2nd Workshop on Computational Methods for Endangered Languages"
-    publisher: University of Pennsylvania
+    publisher: 
     type: proceedings
     url: //roedoejet.github.io/cv/static/cv/pdfs/computel.pdf
 
   - year: 2017
+    order: 3
     authors:
       - first: Clarissa
         last: Forbes
@@ -59,6 +62,7 @@ publications:
     url: //roedoejet.github.io/cv/static/cv/pdfs/gitlab.pdf
   
   - year: 2018
+    order: 1
     authors:
       - first: Kathleen
         last: Hall
@@ -73,6 +77,7 @@ publications:
     url: //roedoejet.github.io/cv/static/cv/pdfs/hall.pdf
   
   - year: 2018
+    order: 2
     authors:
       - first: Aidan
         last: Pine
@@ -85,6 +90,7 @@ publications:
     url: //roedoejet.github.io/cv/static/cv/pdfs/Pine-Turin-Convertextract-2018.pdf
   
   - year: 2018
+    order: 4
     authors:
       - first: Patrick
         last: Littell
@@ -102,11 +108,12 @@ publications:
         last: Junker
     title: "Indigenous language technologies in Canada: Assessment, challenges, and successes"
     conference: "COLING: The 27th International Conference on Computational Linguistics"
-    publisher: University of Pennsylvannia
+    publisher: 
     type: proceedings
     url: //roedoejet.github.io/cv/static/cv/pdfs/coling.pdf
   
   - year: 2018
+    order: 3
     authors:
       - first: Anna
         last: Kazantseva
@@ -118,7 +125,7 @@ publications:
         last: Pine
     title: "Kawennón:nis: the Wordmaker for Kanyen'kéha (Ohsweken Mohawk)"
     conference: "COLING: The 27th International Conference on Computational Linguistics"
-    publisher: University of Pennsylvannia
+    publisher: 
     type: proceedings
     url: //roedoejet.github.io/cv/static/cv/pdfs/kawe.pdf
 
