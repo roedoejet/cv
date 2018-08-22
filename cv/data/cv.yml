@@ -125,13 +125,13 @@ publications:
       url: //roedoejet.github.io/cv/static/cv/pdfs/kawe.pdf
 
 languages:
+  - name: Danish
+    competency: Fluent
+    credentials: Prøve i Dansk 3 Fluency Certificate
+
   - name: French
     competency: Fluent
     credentials: Double Dogwood High School Diploma in English & French
-  
-  - name: Danish
-    competency: Fluent
-    credentials: Prove i Dansk 3 Fluency Certificate
   
   - name: Gitksan
     competency: "Reading/Writing: literate; Oral: Intermediate"
