@@ -112,8 +112,8 @@
             methodologies, and computer science.
           </p>
           <p> Currently, I am a full-time application development specialist working on the
-            <a href="https://www.nrc-cnrc.gc.ca/eng/solutions/collaborative/indigenous_languages/index.html">Indigenous Language Technology</a> project of the National Research Council, the founder and lead developer of
-            <a href="//mothertongues.org">
+            <a href="https://www.nrc-cnrc.gc.ca/eng/solutions/collaborative/indigenous_languages/index.html" target="_blank">Indigenous Language Technology</a> project of the National Research Council, the founder and lead developer of
+            <a href="//mothertongues.org" target="_blank">
               <em>Mother Tongues</em>
             </a>, and part-time technology consultant for the First Nations & Endangered Languages Program and Linguistics Department
             at the University of British Columbia.
@@ -145,7 +145,7 @@
             {% for p in v | sort(attribute="order", reverse=True) %} {% if p.booktitle %}
 
             <li>{% if p.url %}
-              <a href="{{ p.url }}">{{ p.title }}</a>{% else %}{{ p.title }}{% endif %}.
+              <a href="{{ p.url }}" target="_blank">{{ p.title }}</a>{% else %}{{ p.title }}{% endif %}.
               <em>{{p.booktitle}}</em>.
               <br>{% for a in p.authors %} {% if a.last == 'Pine' or a.last == 'Gitksan Research Lab' %}
               <strong>{{ a.last }}, {% if a.first %}{{ a.first[0] }}.{%endif %}{% if not loop.last %},{% endif %}</strong>
@@ -153,7 +153,7 @@
               %} {{ k }}. {% if p.publisher %}{{p.publisher}}.{% endif %} </li>
             {% elif p.conference %}
             <li>{% if p.url %}
-              <a href="{{ p.url }}">{{ p.title }}</a>{% else %}{{ p.title }}{% endif %}. In proceedings of
+              <a href="{{ p.url }}" target="_blank">{{ p.title }}</a>{% else %}{{ p.title }}{% endif %}. In proceedings of
               <em>{{p.conference}}</em>.
               <br>{% for a in p.authors %} {% if a.last == 'Pine' or a.last == 'Gitksan Research Lab' %}
               <strong>{{ a.last }}, {% if a.first %} {{ a.first[0] }}.{%endif %}{% if not loop.last %},{% endif %}</strong>
@@ -216,7 +216,7 @@
           <p>So, I wrote my CV data in yaml, and use Flask, Frozen-Flask, Jinja2, Skeleton and Fabric to generate a static site
             and LaTeX CV. I host for free on GitHub, use Cloudflare for free SSL and Mailgun for free email. I slapped an
             MIT license on the
-            <a href="//github.com/roedoejet/cv">code</a>, so if you think it would be useful to you, go for it!</p>
+            <a href="//github.com/roedoejet/cv" target="_blank">code</a>, so if you think it would be useful to you, go for it!</p>
         </div>
       </div>
     </div>
