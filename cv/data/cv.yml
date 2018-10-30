@@ -356,7 +356,7 @@ presentations:
     presenters:
       - first: Aidan
         last: Pine
-    title: An Introduction to Gitksan research
+    title: An Introduction to Gitksan Research
     audience: LING 372 Guest Lecture
     location: University of Victoria
     type: lecture
@@ -419,6 +419,15 @@ presentations:
     audience: National Institute for Japanese Language and Linguistics
     location: Tokyo, Japan
     type: workshop
+
+  - year: 2018
+    presenters:
+      - first: Aidan
+        last: Pine
+    title: An Introduction to Gitksan Research
+    audience: LING 372 Guest Lecture
+    location: University of Victoria
+    type: lecture
 
 volounteer:
   - title: Hesquiaht Dictionary
