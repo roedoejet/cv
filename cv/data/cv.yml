@@ -429,6 +429,56 @@ presentations:
     location: University of Victoria
     type: lecture
 
+  - year: 2019
+    presenters:
+      - first: Aidan
+        last: Pine
+      - first: Mark
+        last: Turin
+    title: How to Make a 'Mother Tongues' Digital Dictionary
+    audience: ICLDC 6
+    location: University of Hawaii
+    type: workshop
+
+  - year: 2019
+    presenters:
+      - first: Aidan
+        last: Pine
+    title: Digital Kinesthetic Learning and the Gitksan Pronominal Paradigm
+    audience: ICLDC 6
+    location: University of Hawaii
+    type: presentation
+
+  - year: 2019
+    presenters:
+      - first: Anna
+        last: Kazantseva
+      - first: Rohahíyo Jordan
+        last: Brant
+      - first: Owennatekha Brian
+        last: Maracle
+      - first: Ronkwe'tiyóhstha Josiah
+        last: Maracle
+      - first: Aidan
+        last: Pine
+    title: "Kawennón:nis: An Online Tool for Learning Verbal Morphology in Kanyen'kéha"
+    audience: ICLDC 6
+    location: University of Hawaii
+    type: technology showcase
+
+  - year: 2019
+    presenters:
+      - first: Aidan
+        last: Pine
+      - first: Patrick
+        last: Littell
+      - first: Ronkwe'tiyóhstha Josiah
+        last: Maracle
+    title: "Mohawk O'Clock: Limited Domain Speech Synthesis in Kanyen'kéha"
+    audience: ICLDC 6
+    location: University of Hawaii
+    type: technology showcase
+
 volounteer:
   - title: Hesquiaht Dictionary
     start: June 2017
