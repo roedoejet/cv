@@ -491,6 +491,15 @@ presentations:
     audience: "50th Anniversay of the UBC Linguistics Department"
     type: panel discussion
     location: University of British Columbia
+  
+  - year: 2019
+    presenters:
+      - first: Aidan
+        last: Pine
+    title: "Language Revitalization & the Role of Technology"
+    audience: "Nerd Nite YYJ"
+    type: talk
+    location: Victoria Event Centre
 
 volounteer:
   - title: Hesquiaht Dictionary
