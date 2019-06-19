@@ -13,6 +13,26 @@ education:
     minor: Minor in First Nations Languages
     etc: 4.21 GPA (90.2% Average)
 
+projects:
+  - link: https://kawennonnis.ca
+    description: A collaboration between NRC and Onkwawenna Kentyohkwa immersion school.
+  - link: https://github.com/roedoejet/convertextract
+    description: A Python library for performing text transformations on Microsoft Office documents.
+    badges:
+      - https://img.shields.io/pypi/v/convertextract.svg
+  - link: https://mothertongues.org
+    description: Mother Tongues
+    badges:
+      - https://img.shields.io/pypi/v/mothertongues.svg
+  # - g2p
+  # - readalongs
+  # - wordweaver
+  # - kaska cards
+  # - xtractor
+  # - hdld
+  # - keyboards
+  # - TTS
+
 publications:
   2017:
     - order: 1
