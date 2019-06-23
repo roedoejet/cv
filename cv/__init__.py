@@ -1,5 +1,6 @@
 from flask import Flask
 import os
+from slugify import slugify
 
 VERSION = '1.0'
 
@@ -19,5 +20,9 @@ def initial(data):
 @app.template_filter('alph')
 def alph(n):
       return chr(96 + n)
+
+@app.template_filter('slug')
+def slug(s):
+    return slugify(s)
 
 import cv.views

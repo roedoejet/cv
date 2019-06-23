@@ -49,12 +49,6 @@ projects:
     collaborators:
       - name: UBC
         link: https://blogs.ubc.ca/gitksanlab/about/
-  - title: St'at'imc Dictionary
-    collaborators:
-      - name: UBC
-  - title: Nuu-chah-nulth Dictionary
-    collaborators:
-        - name: UBC
   - title: Ayajuthem Dictionary
     links:
       web: https://mothertongues.org/ayajuthem
@@ -62,9 +56,6 @@ projects:
       ios: https://itunes.apple.com/ca/app/ayajuthem/id1357846901
     collaborators:
       - name: UBC
-  - title: Squamish Dictionary
-    collaborators:
-      - Peter Jacobs (SFU)
   - title: Ucwalmícwts Dictionary
     links:
       web: https://mothertongues.org/lilwat
@@ -140,7 +131,6 @@ projects:
       ios: https://itunes.apple.com/ca/app/northern-st-%C3%A1t-imcets/id500539220?mt=8
     collaborators:
       - name: FPCC
-  - title: Ditidaht Dictionary
   - title: Xeni Gwet'in Dictionary
     links:
       web: https://mothertongues.org/xeni
@@ -160,6 +150,21 @@ projects:
       ios: https://apps.apple.com/ca/app/nazko-dakelh/id592978430
     collaborators:
         - name: FPCC
+  - title: Xtractor
+    links:
+      web: https://roedoejet.github.io/xtractor/dist/
+  - title: Squamish Dictionary
+    collaborators:
+      - Peter Jacobs (SFU)
+  - title: St'at'imc Dictionary
+    collaborators:
+      - name: UBC
+  - title: Nuu-chah-nulth Dictionary
+    collaborators:
+        - name: UBC
+  - title: Ditidaht Dictionary
+    collaborators:
+      - name: FPCC
   - title: Barkley Sound Nuu-chah-nulth Dictionary
     collaborators:
       - name: FPCC
@@ -179,8 +184,8 @@ projects:
     collaborators:
       - name: FPCC
   - title: G2P
-    links:
-      - repo: https://github.com/roedoejet/g2p
+    # links:
+    #   - repo: https://github.com/roedoejet/g2p
     description: A Python library for creating lookup tables. Bundles with the 'G2P Studio' which uses block programming language Blockly to create an interactive web app for creating tables and converting text.
   - title: ReadAlongs-Studio
     collaborators:
@@ -188,8 +193,8 @@ projects:
         affiliation: Nuance
       - name: Patrick Littell
         affiliation: NRC
-    links:
-      repo: https://github.com/dhdaines/ReadAlong-Studio
+    # links:
+    #   repo: https://github.com/dhdaines/ReadAlong-Studio
   - title: ReadAlongs-WebComponent
     collaborators:
       - name: David Daines
@@ -197,29 +202,26 @@ projects:
       - name: Patrick Littell
         affiliation: NRC
     description: A web-component for embedding interactive, audio/text-aligned stories in any website or hybrid app.
-    links:
-      repo: https://github.com/roedoejet/ReadAlong-Web-Component
+    # links:
+    #   repo: https://github.com/roedoejet/ReadAlong-Web-Component
   - title: WordWeaver
     description: WordWeaver is a tool for creating a RESTful API from a finite state transducer language model. It is geared towards language models of inflectional verbal morphology in Iroquoian languages.
     collaborators:
       - name: Anna Kazantseva
         affiliation: NRC
-    links:
-      repo: https://github.com/roedoejet/wordweaver
+    # links:
+    #   repo: https://github.com/roedoejet/wordweaver
   - title: WordWeaver-GUI
     collaborators:
       - name: Anna Kazantseva
         affiliation: NRC
     description: The visualization/UI component of WordWeaver. This tool visualizes data served from WordWeaver.
-    links:
-      repo: https://github.com/roedoejet/wordweaver-GUI
+    # links:
+      # repo: https://github.com/roedoejet/wordweaver-GUI
   - title: Kaska Cards
     collaborators:
       - name: UBC
     description: A Kaska flashcard app using a realtime database. Users can create their own flashcards with images and audio and share them in decks with other users.
-  - title: Xtractor
-    links:
-      web: https://roedoejet.github.io/xtractor/dist/
   # - title: Heiltsuk Digital Language Database (HDLD)
   # - title: Keyboards
   # - title: TTS

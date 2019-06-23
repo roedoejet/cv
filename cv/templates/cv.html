@@ -109,16 +109,21 @@
 
         <div class="six columns">
           <p>My name is Aidan Pine. I'm a settler of European ancestry born in Victoria, B.C. and I developed this
-            <a href="#site">site</a> in order to bring together the various language revitalization and open-source software projects that
+            <a href="#site">site</a> in order to bring together the various language revitalization and open-source
+            software projects that
             I am involved in.</p>
-          <p> I fell in love with language revitalization work as a way of combining my interests in language, linguistics, anti-colonial/decolonial
+          <p> I fell in love with language revitalization work as a way of combining my interests in language,
+            linguistics, anti-colonial/decolonial
             methodologies, and computer science.
           </p>
           <p> Currently, I am a full-time application development specialist working on the
-            <a href="https://www.nrc-cnrc.gc.ca/eng/solutions/collaborative/indigenous_languages/index.html" target="_blank">Indigenous Language Technology</a> project of the National Research Council, the founder and lead developer of
+            <a href="https://www.nrc-cnrc.gc.ca/eng/solutions/collaborative/indigenous_languages/index.html"
+              target="_blank">Indigenous Language Technology</a> project of the National Research Council, the founder
+            and lead developer of
             <a href="//mothertongues.org" target="_blank">
               <em>Mother Tongues</em>
-            </a>, and part-time technology consultant for the First Nations & Endangered Languages Program and Linguistics Department
+            </a>, and part-time technology consultant for the First Nations & Endangered Languages Program and
+            Linguistics Department
             at the University of British Columbia.
           </p>
           <!-- Mother Tongues has supported the development of around 30 digital dictionaries, including the
@@ -151,16 +156,21 @@
               <a href="{{ p.url }}" target="_blank">{{ p.title }}</a>{% else %}{{ p.title }}{% endif %}.
               <em>{{p.booktitle}}</em>.
               <br>{% for a in p.authors %} {% if a.last == 'Pine' or a.last == 'Gitksan Research Lab' %}
-              <strong>{{ a.last }}, {% if a.first %}{{ a.first[0] }}.{%endif %}{% if not loop.last %},{% endif %}</strong>
-              {% else %} {{ a.last }}, {% if a.first %} {{ a.first[0] }}.{% endif %}{% if not loop.last %},{% endif %} {% endif %} {% endfor
+              <strong>{{ a.last }},
+                {% if a.first %}{{ a.first[0] }}.{%endif %}{% if not loop.last %},{% endif %}</strong>
+              {% else %} {{ a.last }}, {% if a.first %} {{ a.first[0] }}.{% endif %}{% if not loop.last %},{% endif %}
+              {% endif %} {% endfor
               %} {{ k }}. {% if p.publisher %}{{p.publisher}}.{% endif %} </li>
             {% elif p.conference %}
             <li>{% if p.url %}
-              <a href="{{ p.url }}" target="_blank">{{ p.title }}</a>{% else %}{{ p.title }}{% endif %}. In proceedings of
+              <a href="{{ p.url }}" target="_blank">{{ p.title }}</a>{% else %}{{ p.title }}{% endif %}. In proceedings
+              of
               <em>{{p.conference}}</em>.
               <br>{% for a in p.authors %} {% if a.last == 'Pine' or a.last == 'Gitksan Research Lab' %}
-              <strong>{{ a.last }}, {% if a.first %} {{ a.first[0] }}.{%endif %}{% if not loop.last %},{% endif %}</strong>
-              {% else %} {{ a.last }}, {% if a.first %}{{ a.first[0] }}.{% endif %}{% if not loop.last %},{% endif %} {% endif %} {% endfor
+              <strong>{{ a.last }}, {% if a.first %}
+                {{ a.first[0] }}.{%endif %}{% if not loop.last %},{% endif %}</strong>
+              {% else %} {{ a.last }}, {% if a.first %}{{ a.first[0] }}.{% endif %}{% if not loop.last %},{% endif %}
+              {% endif %} {% endfor
               %} {{ k }}. {% if p.publisher %}{{p.publisher}}.{% endif %} </li>
             {% endif %} {% endfor %} {% endfor %}
           </ul>
@@ -173,7 +183,48 @@
     <div class="docs-section" id="projects">
       <h6 class="docs-header">Projects</h6>
       <p>Below are some of the various software projects I have been involved in.</p>
-      <div class="docs-example">
+      <div class="docs-example limit">
+        <div class='container projects'>
+          {% for project in data.projects %}
+          <div class='row project'>
+            {% if 'links' in project %}
+            <!-- {% if loop.index % 2 == 0 %} -->
+            <div class='seven columns project__img'><img
+                src="{{ url_for( 'static', filename='cv/images/' + (project['title']|slug) + '.png' ) }}"></div>
+            <div class='five columns project__text'>
+              <h6><b>{{ project.title }}</b></h6>
+              <p>{{ project.description }}</p>
+              {% if 'badges' in project %}
+              {% for badge in project['badges'] %}
+              <img src={{badge}}>
+              {% endfor %}
+              {% endif %}
+            </div>
+            <!-- {% else %}
+            <div class='five columns project__text'>
+              <h6><b>{{ project.title }}</b></h6>
+            </div>
+            <div class='seven columns project__img'><img
+                src="{{ url_for( 'static', filename='cv/images/' + (project['title']|slug) + '.png' ) }}"></div>
+            {% endif %} -->
+            {% else %}
+            <div class='four columns project__title'>
+              <h6><b>{{ project.title }}</b></h6>
+              {% if 'badges' in project %}
+              {% for badge in project['badges'] %}
+              <img src=badge>
+              {% endfor %}
+              {% endif %}
+            </div>
+            <div class='eight columns project__text'>
+              <p>{{ project.description }}</p>
+            </div>
+            {% endif %}
+
+          </div>
+          {% endfor %}
+        </div>
+
       </div>
 
     </div>
@@ -220,16 +271,20 @@
       <div class="row">
         <div class="twelve columns">
           <h6 class="docs-header">This site</h6>
-          <p>There were a lot of really cool CV templates and things out there, but I ended up building my own because I wanted
+          <p>There were a lot of really cool CV templates and things out there, but I ended up building my own because I
+            wanted
             something that was:
             <br>
             <br> a) static, so I could host for free on GitHub Pages
             <br> b) able to generate LaTeX
             <br> c) pulled from simple markup like yaml</p>
-          <p>So, I wrote my CV data in yaml, and use Flask, Frozen-Flask, Jinja2, Skeleton and Fabric to generate a static site
-            and LaTeX CV. I host for free on GitHub, use Cloudflare for free SSL and Mailgun for free email. I slapped an
+          <p>So, I wrote my CV data in yaml, and use Flask, Frozen-Flask, Jinja2, Skeleton and Fabric to generate a
+            static site
+            and LaTeX CV. I host for free on GitHub, use Cloudflare for free SSL and Mailgun for free email. I slapped
+            an
             MIT license on the
-            <a href="//github.com/roedoejet/cv" target="_blank">code</a>, so if you think it would be useful to you, go for it!</p>
+            <a href="//github.com/roedoejet/cv" target="_blank">code</a>, so if you think it would be useful to you, go
+            for it!</p>
         </div>
       </div>
     </div>
