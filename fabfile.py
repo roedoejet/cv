@@ -2,6 +2,10 @@ from latex import LatexTemplate
 from flask_frozen import Freezer
 from cv import app
 from fabric.api import local
+from screenshot_gen import getScreenshots
+
+def screens():
+    getScreenshots()
 
 def latex():
     ltx = LatexTemplate()

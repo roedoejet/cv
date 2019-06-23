@@ -14,24 +14,215 @@ education:
     etc: 4.21 GPA (90.2% Average)
 
 projects:
-  - link: https://kawennonnis.ca
-    description: A collaboration between NRC and Onkwawenna Kentyohkwa immersion school.
-  - link: https://github.com/roedoejet/convertextract
+  - title: "Kawennón:nis: The wordmaker for Kanyen'kéha"
+    links: 
+      web: https://kawennonnis.ca
+    description: A collaboration between NRC and Onkwawenna Kentyohkwa immersion school. This is an instance of the WordWeaver software.
+    collaborators:
+      - name: Anna Kazantseva
+        affiliation: NRC
+      - name: Owennatekha Brian Maracle
+        affiliation: Onkwawenna Kentyohkwa
+      - name: Rohahíyo Jordan Brant
+        affiliation: Onkwawenna Kentyohkwa
+      - name: Ronkwetiyóhstha Josiah Maracle
+        affiliation: Onkwawenna Kentyohkwa
+      - name: Ryan DeCaire
+        affiliation: 
+          - Onkwawenna Kentyohkwa
+          - University of Toronto
+  - title: Convertextract
+    links: 
+      repo: https://github.com/roedoejet/convertextract
     description: A Python library for performing text transformations on Microsoft Office documents.
     badges:
       - https://img.shields.io/pypi/v/convertextract.svg
-  - link: https://mothertongues.org
+  - title: Mother Tongues
+    links: 
+      web: https://mothertongues.org
     description: Mother Tongues
     badges:
       - https://img.shields.io/pypi/v/mothertongues.svg
-  # - g2p
-  # - readalongs
-  # - wordweaver
-  # - kaska cards
-  # - xtractor
-  # - hdld
-  # - keyboards
-  # - TTS
+  - title: Gitksan Dictionary
+    links: 
+      web: https://mothertongues.org/gitksan
+    collaborators:
+      - name: UBC
+        link: https://blogs.ubc.ca/gitksanlab/about/
+  - title: St'at'imc Dictionary
+    collaborators:
+      - name: UBC
+  - title: Nuu-chah-nulth Dictionary
+    collaborators:
+        - name: UBC
+  - title: Ayajuthem Dictionary
+    links:
+      web: https://mothertongues.org/ayajuthem
+      android: https://play.google.com/store/apps/details?id=org.mothertongues.ayajuthem
+      ios: https://itunes.apple.com/ca/app/ayajuthem/id1357846901
+    collaborators:
+      - name: UBC
+  - title: Squamish Dictionary
+    collaborators:
+      - Peter Jacobs (SFU)
+  - title: Ucwalmícwts Dictionary
+    links:
+      web: https://mothertongues.org/lilwat
+      android: https://play.google.com/store/apps/details?id=com.firstvoices.lilwat
+      ios: https://itunes.apple.com/us/app/lilwat-ucwalmicwts/id1184833633?mt=8
+    collaborators:
+      - name: FPCC
+  - title: Halq'eméylem Dictionary
+    links:
+      web: https://mothertongues.org/stolo
+      android: https://play.google.com/store/apps/details?id=com.firstvoices.stolo
+      ios: https://itunes.apple.com/ca/app/halqemeylem/id467923981?mt=8
+    collaborators:
+      - name: FPCC
+  - title: SENĆOŦEN Dictionary
+    links:
+      web: https://mothertongues.org/sencoten
+      android: https://play.google.com/store/apps/details?id=com.firstvoices.sencoten
+      ios: https://itunes.apple.com/ca/app/sencoten/id467922659?mt=8
+    collaborators:
+      - name: FPCC
+  - title: Nisga'a Dictionary
+    links:
+      web: https://mothertongues.org/nisga
+      android: https://play.google.com/store/apps/details?id=com.firstvoices.nisga
+      ios: https://itunes.apple.com/ca/app/nisgaa/id490034233?mt=8
+  - title: Ehattesaht Dictionary
+    links:
+      web: https://mothertongues.org/ehattesaht
+      android: https://play.google.com/store/apps/details?id=com.firstvoices.ehattesaht
+      ios: https://itunes.apple.com/ca/app/ehattesaht/id494454336?mt=8
+    collaborators:
+      - name: FPCC
+  - title: Kwak'wala Dictionary
+    links:
+      web: https://mothertongues.org/kwakwala/
+      android: https://play.google.com/store/apps/details?id=com.firstvoices.kwakwala
+      ios: https://itunes.apple.com/ca/app/kwakwala/id490451367?mt=8
+    collaborators:
+      - name: FPCC
+  - title: Skidegate Haida Dictionary
+    links:
+      web: https://mothertongues.org/skidegate
+      android: https://play.google.com/store/apps/details?id=com.firstvoices.xaaydakil&hl=en
+      ios: https://itunes.apple.com/app/hlgaagilda-xaayda-kil/id474664985?mt=8
+    collaborators:
+      - name: FPCC
+  - title: Secwepemc Dictionary
+    links:
+      web: https://mothertongues.org/sces
+      android: https://play.google.com/store/apps/details?id=com.firstvoices.secwepemc&hl=en
+      ios: https://itunes.apple.com/ca/app/secw%C3%A9pemc/id594400637?mt=8
+    collaborators:
+      - name: FPCC
+  - title: Sliammon Dictionary
+    links:
+      web: https://mothertongues.org/sliammon
+      android: https://play.google.com/store/apps/details?id=com.firstvoices.sliammon&hl=en
+      ios: https://itunes.apple.com/ca/app/sliammon/id500541180?mt=8
+    collaborators:
+      - name: FPCC
+  - title: Ktunaxa Dictionary
+    links:
+      web: https://mothertongues.org/ktunaxa
+      android: https://play.google.com/store/apps/details?id=com.firstvoices.ktunaxa&hl=en
+      ios: https://itunes.apple.com/ua/app/ktunaxa/id490447781?mt=8
+    collaborators:
+      - name: FPCC
+  - title: Northern St'at'imcets Dictionary
+    links:
+      web: https://mothertongues.org/nstat
+      android: https://play.google.com/store/apps/details?id=com.firstvoices.nstat&hl=en
+      ios: https://itunes.apple.com/ca/app/northern-st-%C3%A1t-imcets/id500539220?mt=8
+    collaborators:
+      - name: FPCC
+  - title: Ditidaht Dictionary
+  - title: Xeni Gwet'in Dictionary
+    links:
+      web: https://mothertongues.org/xeni
+      android: https://play.google.com/store/apps/details?id=com.firstvoices.tsilhqotin&hl=en
+      ios: https://itunes.apple.com/ca/app/xeni-gwetin/id592984503?mt=8
+    collaborators:
+        - name: FPCC
+  - title: Híɫzaqv Dictionary
+    links:
+      web: https://mothertongues.org/heiltsuk
+    collaborators:
+      - name: Heiltsuk Language and Culture Mobilization Partnership
+        link: https://heiltsuk.arts.ubc.ca/
+  - title: Nazko Dakelh Dictionary
+    links: 
+      android: https://play.google.com/store/apps/details?id=com.firstvoices.dakelh&hl=en
+      ios: https://apps.apple.com/ca/app/nazko-dakelh/id592978430
+    collaborators:
+        - name: FPCC
+  - title: Barkley Sound Nuu-chah-nulth Dictionary
+    collaborators:
+      - name: FPCC
+  - title: Sechelt Dictionary
+    collaborators:
+      - name: FPCC
+  - title: Nuxalk Dictionary
+    collaborators:
+      - name: FPCC
+  - title: Nsyilxcen Dictionary
+    collaborators:
+      - name: FPCC
+  - title: Tse'Khene Dictionary
+    collaborators:
+      - name: FPCC
+  - title: Klahoose Dictionary
+    collaborators:
+      - name: FPCC
+  - title: G2P
+    links:
+      - repo: https://github.com/roedoejet/g2p
+    description: A Python library for creating lookup tables. Bundles with the 'G2P Studio' which uses block programming language Blockly to create an interactive web app for creating tables and converting text.
+  - title: ReadAlongs-Studio
+    collaborators:
+      - name: David Daines
+        affiliation: Nuance
+      - name: Patrick Littell
+        affiliation: NRC
+    links:
+      repo: https://github.com/dhdaines/ReadAlong-Studio
+  - title: ReadAlongs-WebComponent
+    collaborators:
+      - name: David Daines
+        affiliation: Nuance
+      - name: Patrick Littell
+        affiliation: NRC
+    description: A web-component for embedding interactive, audio/text-aligned stories in any website or hybrid app.
+    links:
+      repo: https://github.com/roedoejet/ReadAlong-Web-Component
+  - title: WordWeaver
+    description: WordWeaver is a tool for creating a RESTful API from a finite state transducer language model. It is geared towards language models of inflectional verbal morphology in Iroquoian languages.
+    collaborators:
+      - name: Anna Kazantseva
+        affiliation: NRC
+    links:
+      repo: https://github.com/roedoejet/wordweaver
+  - title: WordWeaver-GUI
+    collaborators:
+      - name: Anna Kazantseva
+        affiliation: NRC
+    description: The visualization/UI component of WordWeaver. This tool visualizes data served from WordWeaver.
+    links:
+      repo: https://github.com/roedoejet/wordweaver-GUI
+  - title: Kaska Cards
+    collaborators:
+      - name: UBC
+    description: A Kaska flashcard app using a realtime database. Users can create their own flashcards with images and audio and share them in decks with other users.
+  - title: Xtractor
+    links:
+      web: https://roedoejet.github.io/xtractor/dist/
+  # - title: Heiltsuk Digital Language Database (HDLD)
+  # - title: Keyboards
+  # - title: TTS
 
 publications:
   2017:
