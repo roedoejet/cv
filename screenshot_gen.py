@@ -6,7 +6,7 @@ import os
 from PIL import Image
 
 
-def getScreenshots(DRIVER='/Users/pinea/chromedriver', SIZE=(360, 250)):
+def getScreenshots(DRIVER='/usr/local/bin/chromedriver', SIZE=(360, 250)):
     driver = webdriver.Chrome(DRIVER)
     driver.set_window_size(1366, 768)
     for project in DATA['projects']:

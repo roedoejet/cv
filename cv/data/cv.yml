@@ -40,15 +40,22 @@ projects:
   - title: Mother Tongues
     links: 
       web: https://mothertongues.org
-    description: Mother Tongues
+    description: Mother Tongues is an organization the releases open-source software for language revitalization. Most notable is Mother Tongues Dictionaries (MTD). MTD is the only dictionary app that is free and open-source, can be used for any language, has customizeable approximate search, and is available for the Web, Android & iOS.
     badges:
       - https://img.shields.io/pypi/v/mothertongues.svg
   - title: Gitksan Dictionary
     links: 
       web: https://mothertongues.org/gitksan
+      android: https://play.google.com/store/apps/details?id=org.mothertongues.gitksan
+      ios: https://apps.apple.com/us/app/gitksan/id1373109847
     collaborators:
       - name: UBC
-        link: https://blogs.ubc.ca/gitksanlab/about/
+        links: 
+          https://blogs.ubc.ca/gitksanlab/about/
+  - title: Mohawk Verb Quiz
+    link: 
+      web: https://mohverbquiz.herokuapp.com/
+    description: This is a website to assist teacher Zoe Hopkins in teaching Mohawk to online learners. The site uses the Google Sheets API so that Zoe can add verbs into a Google Sheet and have the site automatically updated. I built it in half a day on Zoe's request, so there are likely some bugs/areas for improvement!
   - title: Ayajuthem Dictionary
     links:
       web: https://mothertongues.org/ayajuthem
@@ -57,6 +64,7 @@ projects:
     collaborators:
       - name: UBC
   - title: Ucwalmícwts Dictionary
+    description: This app was built for FirstVoices using Mother Tongues Dictionaries.
     links:
       web: https://mothertongues.org/lilwat
       android: https://play.google.com/store/apps/details?id=com.firstvoices.lilwat
@@ -64,6 +72,7 @@ projects:
     collaborators:
       - name: FPCC
   - title: Halq'eméylem Dictionary
+    description: This app was built for FirstVoices using Mother Tongues Dictionaries.
     links:
       web: https://mothertongues.org/stolo
       android: https://play.google.com/store/apps/details?id=com.firstvoices.stolo
@@ -71,6 +80,7 @@ projects:
     collaborators:
       - name: FPCC
   - title: SENĆOŦEN Dictionary
+    description: This app was built for FirstVoices using Mother Tongues Dictionaries.
     links:
       web: https://mothertongues.org/sencoten
       android: https://play.google.com/store/apps/details?id=com.firstvoices.sencoten
@@ -78,11 +88,13 @@ projects:
     collaborators:
       - name: FPCC
   - title: Nisga'a Dictionary
+    description: This app was built for FirstVoices using Mother Tongues Dictionaries.
     links:
       web: https://mothertongues.org/nisga
       android: https://play.google.com/store/apps/details?id=com.firstvoices.nisga
       ios: https://itunes.apple.com/ca/app/nisgaa/id490034233?mt=8
   - title: Ehattesaht Dictionary
+    description: This app was built for FirstVoices using Mother Tongues Dictionaries.
     links:
       web: https://mothertongues.org/ehattesaht
       android: https://play.google.com/store/apps/details?id=com.firstvoices.ehattesaht
@@ -90,6 +102,7 @@ projects:
     collaborators:
       - name: FPCC
   - title: Kwak'wala Dictionary
+    description: This app was built for FirstVoices using Mother Tongues Dictionaries.
     links:
       web: https://mothertongues.org/kwakwala/
       android: https://play.google.com/store/apps/details?id=com.firstvoices.kwakwala
@@ -97,6 +110,7 @@ projects:
     collaborators:
       - name: FPCC
   - title: Skidegate Haida Dictionary
+    description: This app was built for FirstVoices using Mother Tongues Dictionaries.
     links:
       web: https://mothertongues.org/skidegate
       android: https://play.google.com/store/apps/details?id=com.firstvoices.xaaydakil&hl=en
@@ -104,6 +118,7 @@ projects:
     collaborators:
       - name: FPCC
   - title: Secwepemc Dictionary
+    description: This app was built for FirstVoices using Mother Tongues Dictionaries.
     links:
       web: https://mothertongues.org/sces
       android: https://play.google.com/store/apps/details?id=com.firstvoices.secwepemc&hl=en
@@ -111,6 +126,7 @@ projects:
     collaborators:
       - name: FPCC
   - title: Sliammon Dictionary
+    description: This app was built for FirstVoices using Mother Tongues Dictionaries.
     links:
       web: https://mothertongues.org/sliammon
       android: https://play.google.com/store/apps/details?id=com.firstvoices.sliammon&hl=en
@@ -118,6 +134,7 @@ projects:
     collaborators:
       - name: FPCC
   - title: Ktunaxa Dictionary
+    description: This app was built for FirstVoices using Mother Tongues Dictionaries.
     links:
       web: https://mothertongues.org/ktunaxa
       android: https://play.google.com/store/apps/details?id=com.firstvoices.ktunaxa&hl=en
@@ -125,6 +142,7 @@ projects:
     collaborators:
       - name: FPCC
   - title: Northern St'at'imcets Dictionary
+    description: This app was built for FirstVoices using Mother Tongues Dictionaries.
     links:
       web: https://mothertongues.org/nstat
       android: https://play.google.com/store/apps/details?id=com.firstvoices.nstat&hl=en
@@ -132,6 +150,7 @@ projects:
     collaborators:
       - name: FPCC
   - title: Xeni Gwet'in Dictionary
+    description: This app was built for FirstVoices using Mother Tongues Dictionaries.
     links:
       web: https://mothertongues.org/xeni
       android: https://play.google.com/store/apps/details?id=com.firstvoices.tsilhqotin&hl=en
@@ -139,62 +158,66 @@ projects:
     collaborators:
         - name: FPCC
   - title: Híɫzaqv Dictionary
+    description: This dictionary uses data from the HDD and was developed through the Heiltsuk Language and Culture Mobilization Partnership
     links:
       web: https://mothertongues.org/heiltsuk
     collaborators:
       - name: Heiltsuk Language and Culture Mobilization Partnership
         link: https://heiltsuk.arts.ubc.ca/
   - title: Nazko Dakelh Dictionary
+    description: This app was built for FirstVoices using Mother Tongues Dictionaries.
     links: 
       android: https://play.google.com/store/apps/details?id=com.firstvoices.dakelh&hl=en
       ios: https://apps.apple.com/ca/app/nazko-dakelh/id592978430
     collaborators:
         - name: FPCC
   - title: Xtractor
+    description: This small web app was a fun project that I made to try and give users a sort of grammar "sandbox" to play around with Gitksan syntax. It has a draggable UI which models extraction morphosyntax in the language and is intended to help learners with the notoriously complex pronominal system.
     links:
       web: https://roedoejet.github.io/xtractor/dist/
-  - title: Squamish Dictionary
-    collaborators:
-      - Peter Jacobs (SFU)
-  - title: St'at'imc Dictionary
-    collaborators:
-      - name: UBC
-  - title: Nuu-chah-nulth Dictionary
-    collaborators:
-        - name: UBC
-  - title: Ditidaht Dictionary
-    collaborators:
-      - name: FPCC
-  - title: Barkley Sound Nuu-chah-nulth Dictionary
-    collaborators:
-      - name: FPCC
-  - title: Sechelt Dictionary
-    collaborators:
-      - name: FPCC
-  - title: Nuxalk Dictionary
-    collaborators:
-      - name: FPCC
-  - title: Nsyilxcen Dictionary
-    collaborators:
-      - name: FPCC
-  - title: Tse'Khene Dictionary
-    collaborators:
-      - name: FPCC
-  - title: Klahoose Dictionary
-    collaborators:
-      - name: FPCC
+  # - title: Squamish Dictionary
+  #   collaborators:
+  #     - Peter Jacobs (SFU)
+  # - title: St'at'imc Dictionary
+  #   collaborators:
+  #     - name: UBC
+  # - title: Nuu-chah-nulth Dictionary
+  #   collaborators:
+  #       - name: UBC
+  # - title: Ditidaht Dictionary
+  #   collaborators:
+  #     - name: FPCC
+  # - title: Barkley Sound Nuu-chah-nulth Dictionary
+  #   collaborators:
+  #     - name: FPCC
+  # - title: Sechelt Dictionary
+  #   collaborators:
+  #     - name: FPCC
+  # - title: Nuxalk Dictionary
+  #   collaborators:
+  #     - name: FPCC
+  # - title: Nsyilxcen Dictionary
+  #   collaborators:
+  #     - name: FPCC
+  # - title: Tse'Khene Dictionary
+  #   collaborators:
+  #     - name: FPCC
+  # - title: Klahoose Dictionary
+  #   collaborators:
+  #     - name: FPCC
   - title: G2P
-    # links:
-    #   - repo: https://github.com/roedoejet/g2p
-    description: A Python library for creating lookup tables. Bundles with the 'G2P Studio' which uses block programming language Blockly to create an interactive web app for creating tables and converting text.
-  - title: ReadAlongs-Studio
+    links:
+      repo: https://github.com/roedoejet/g2p
+    description: A Python library for creating lookup tables. Bundles with the 'G2P Studio' which uses visual programming language Blockly to create an interactive web app for creating G2P lookup tables and converting text.
+  - title: ReadAlong-Studio
     collaborators:
       - name: David Daines
         affiliation: Nuance
       - name: Patrick Littell
         affiliation: NRC
-    # links:
-    #   repo: https://github.com/dhdaines/ReadAlong-Studio
+    description: ReadAlong-Studio is a Python package and web application for doing zero-shot forced text/audio alignment. In other words, given text and audio in a language for which you have no training data, you can create the alignment (time stamps) between the text and audio. You can export this either as SMIL (which can be used to visualize the alignment through the ReadAlong Web Component), as an EPUB for viewing on an e-reader or SRT/WebVTT subtitle formats.
+    links:
+      repo: https://github.com/dhdaines/ReadAlong-Studio
   - title: ReadAlongs-WebComponent
     collaborators:
       - name: David Daines
@@ -209,8 +232,8 @@ projects:
     collaborators:
       - name: Anna Kazantseva
         affiliation: NRC
-    # links:
-    #   repo: https://github.com/roedoejet/wordweaver
+    links:
+      repo: https://github.com/nrc-cnrc/wordweaver
   - title: WordWeaver-GUI
     collaborators:
       - name: Anna Kazantseva
@@ -336,6 +359,18 @@ publications:
       publisher: 
       type: proceedings
       url: //roedoejet.github.io/cv/static/cv/pdfs/kawe.pdf
+
+  2019:
+    - order: 1
+      authors:
+        - first: Mark
+          last: Turin
+        - first: Aidan
+          last: Pine
+      title: "Using technology to help revitalize Indigenous languages"
+      publisher: Oxford University Press
+      type: the Oxford University Press Blog
+      url: https://blog.oup.com/2019/06/using-technology-help-revitalize-indigenous-languages/
 
 languages:
   - name: Danish
@@ -600,7 +635,7 @@ presentations:
       - first: Aidan
         last: Pine
     title: "Seeing the Heiltsuk Orthography from Font Encoding to Unicode: A Case Study Using Convertextract"
-    audience: Conference on Collaboration and Computing of Under Resourced Langauges
+    audience: Conference on Collaboration and Computing of Under Resourced Languages
     location: Miyazaki, Japan
     type: conference
 
@@ -714,6 +749,85 @@ presentations:
     type: talk
     location: Victoria Event Centre
 
+  - year: 2019
+    presenters:
+      - first: Aidan
+        last: Pine
+    title: "Language Revitalization, technology, and making the most of your undergraduate experience"
+    audience: FNEL 180
+    type: lecture
+    location: University of British Columbia
+
+  - year: 2019
+    presenters:
+      - first: Aidan
+        last: Pine
+    title: "Language Revitalization & Technology"
+    audience: "ASTU 402 - Living Language: Science & Society"
+    type: lecture
+    location: University of British Columbia
+
+  - year: 2019
+    presenters:
+      - first: Aidan
+        last: Pine
+    title: "Kawennón:nis the Word Maker for Kanyen'kéha"
+    audience: Kanyen'kéha Mohawk 101R
+    type: lecture
+    location: Renison University College at University of Waterloo
+
+  - year: 2019
+    presenters:
+      - first: Aidan
+        last: Pine
+    title: "Kawennón:nis the Word Maker for Kanyen'kéha"
+    audience: Kanyenn'kéha Mohawk Class
+    type: talk
+    location: Tsi Tyónnheht Onkwawén:na, Tyendinaga
+
+  - year: 2019
+    presenters:
+      - first: Aidan
+        last: Pine
+      - first: Anna
+        last: Kazantseva
+    title: "Supplementing text-based Indigenous language applications with synthetic speech"
+    audience: Ottawa AI
+    type: poster
+    location: NRC Sussex, Ottawa
+
+  - year: 2019
+    presenters:
+      - first: David Huggins
+        last: Daines
+      - first: Patrick
+        last: Littell
+      - first: Aidan
+        last: Pine
+      - first: Eric
+        last: Joanis
+      - first: Delasie
+        last: Torkoronoo
+    title: "ReadAlong Studio: Zero-shot Text/Speech Alignment for Indigenous Language Audiobooks"
+    audience: Ottawa AI
+    type: system demonstration
+    location: NRC Sussex, Ottawa
+    
+  - year: 2019
+    presenters:
+      - first: Aidan
+        last: Pine
+      - first: Nathan
+        last: Brinklow
+      - first: Heather
+        last: Souter
+      - first: Delaney
+        last: Lothian
+    title: "Canadian National Research Council's Indigenous	Language Technology Project"
+    audience: "International Conference on Language Technologies for All"
+    type: poster
+    location: UNESCO HQ, Paris
+  
 volounteer:
   - title: Hesquiaht Dictionary
     start: June 2017

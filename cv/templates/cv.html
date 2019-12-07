@@ -121,8 +121,7 @@
               target="_blank">Indigenous Language Technology</a> project of the National Research Council, the founder
             and lead developer of
             <a href="//mothertongues.org" target="_blank">
-              <em>Mother Tongues</em>
-            </a>, and part-time technology consultant for the First Nations & Endangered Languages Program and
+              Mother Tongues</a>, and part-time technology consultant for the First Nations & Endangered Languages Program and
             Linguistics Department
             at the University of British Columbia.
           </p>
@@ -172,68 +171,26 @@
               {% else %} {{ a.last }}, {% if a.first %}{{ a.first[0] }}.{% endif %}{% if not loop.last %},{% endif %}
               {% endif %} {% endfor
               %} {{ k }}. {% if p.publisher %}{{p.publisher}}.{% endif %} </li>
+            {% else %}
+            <li>{% if p.url %}
+              <a href="{{ p.url }}" target="_blank">{{ p.title }}</a>{% else %}{{ p.title }}{% endif %}. In
+              <em>{{ p.type }}</em>.
+              <br>{% for a in p.authors %} {% if a.last == 'Pine' or a.last == 'Gitksan Research Lab' %}
+              <strong>{{ a.last }}, {% if a.first %}
+                {{ a.first[0] }}.{%endif %}{% if not loop.last %},{% endif %}</strong>
+              {% else %} {{ a.last }}, {% if a.first %}{{ a.first[0] }}.{% endif %}{% if not loop.last %},{% endif %}
+              {% endif %} {% endfor
+              %} {{ k }}. {% if p.publisher %}{{p.publisher}}.{% endif %} </li>
             {% endif %} {% endfor %} {% endfor %}
           </ul>
         </div>
       </div>
     </div>
 
-
-    <!-- Projects -->
-    <div class="docs-section" id="projects">
-      <h6 class="docs-header">Projects</h6>
-      <p>Below are some of the various software projects I have been involved in.</p>
-      <div class="docs-example limit">
-        <div class='container projects'>
-          {% for project in data.projects %}
-          <div class='row project'>
-            {% if 'links' in project %}
-            <!-- {% if loop.index % 2 == 0 %} -->
-            <div class='seven columns project__img'><img
-                src="{{ url_for( 'static', filename='cv/images/' + (project['title']|slug) + '.png' ) }}"></div>
-            <div class='five columns project__text'>
-              <h6><b>{{ project.title }}</b></h6>
-              <p>{{ project.description }}</p>
-              {% if 'badges' in project %}
-              {% for badge in project['badges'] %}
-              <img src={{badge}}>
-              {% endfor %}
-              {% endif %}
-            </div>
-            <!-- {% else %}
-            <div class='five columns project__text'>
-              <h6><b>{{ project.title }}</b></h6>
-            </div>
-            <div class='seven columns project__img'><img
-                src="{{ url_for( 'static', filename='cv/images/' + (project['title']|slug) + '.png' ) }}"></div>
-            {% endif %} -->
-            {% else %}
-            <div class='four columns project__title'>
-              <h6><b>{{ project.title }}</b></h6>
-              {% if 'badges' in project %}
-              {% for badge in project['badges'] %}
-              <img src=badge>
-              {% endfor %}
-              {% endif %}
-            </div>
-            <div class='eight columns project__text'>
-              <p>{{ project.description }}</p>
-            </div>
-            {% endif %}
-
-          </div>
-          {% endfor %}
-        </div>
-
-      </div>
-
-    </div>
-
-
     <!-- Presentations -->
     <div class="docs-section" id="presentations">
       <h6 class="docs-header">Presentations</h6>
-      <p>Below are some guest lectures, workshops and other presentations I have given.</p>
+      <p>Below are some guest lectures, workshops and other presentations I have given. The list is scrollable.</p>
       <div class="docs-example limit">
         <table class="u-full-width">
           <thead>
@@ -262,6 +219,80 @@
             {% endfor %}
           </tbody>
         </table>
+      </div>
+
+    </div>
+
+    <!-- Projects -->
+    <div class="docs-section" id="projects">
+      <h6 class="docs-header">Projects</h6>
+      <p>Below are some of the various software projects I have been involved in.</p>
+      <div class="docs-example">
+        <div class='container projects'>
+          {% for project in data.projects %}
+          <div class='row project'>
+            {% if 'links' in project %}
+            {% if loop.index % 2 %}
+            <div class='seven columns project__img'>
+              <img src="{{ url_for( 'static', filename='cv/images/' + (project['title']|slug) + '.png' ) }}"></div>
+            <div class='five columns project__text'>
+              <h6><b>{{ project.title }}</b></h6>
+              <p>{{ project.description }}</p>
+
+              {% if project.links.keys() %}
+              <h6>Links:</h6>
+               <ul>
+              {% for link in project.links.keys() %}
+             <li><a href='{{ project.links[link] }}'>{{ link }}</a></li>
+              {% endfor %}
+              </ul>
+              {% endif %}
+              {% if 'badges' in project %}
+              {% for badge in project['badges'] %}
+              <img src={{badge}}>
+              {% endfor %}
+              {% endif %}
+            </div>
+            {% else %}
+            <div class='five columns project__text'>
+              <h6><b>{{ project.title }}</b></h6>
+              <p>{{ project.description }}</p>
+
+              {% if project.links.keys() %}
+              <h6>Links:</h6>
+               <ul>
+              {% for link in project.links.keys() %}
+             <li><a href='{{ project.links[link] }}'>{{ link }}</a></li>
+              {% endfor %}
+              </ul>
+              {% endif %}
+              {% if 'badges' in project %}
+              {% for badge in project['badges'] %}
+              <img src={{badge}}>
+              {% endfor %}
+              {% endif %}
+            </div>
+            <div class='seven columns project__img'>
+              <img src="{{ url_for( 'static', filename='cv/images/' + (project['title']|slug) + '.png' ) }}"></div>
+            {% endif %}
+            {% else %}
+            <div class='four columns project__title'>
+              <h6><b>{{ project.title }}</b></h6>
+              {% if 'badges' in project %}
+              {% for badge in project['badges'] %}
+              <img src=badge>
+              {% endfor %}
+              {% endif %}
+            </div>
+            <div class='eight columns project__text'>
+              <p>{{ project.description }}</p>
+            </div>
+            {% endif %}
+
+          </div>
+          {% endfor %}
+        </div>
+
       </div>
 
     </div>

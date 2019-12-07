@@ -239,3 +239,9 @@ a {
   overflow: auto;
   padding-right: 20px;
 }
+
+.row.project {
+  padding-bottom: 25px;
+  margin-bottom: 50px;
+  border-bottom: 1px solid black;
+}
