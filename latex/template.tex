@@ -7,16 +7,16 @@
     \begin{document}
         \begin{cv}{ \jvar{ data.personal.first_name } \jvar{ data.personal.middle_name } \jvar{ data.personal.last_name }  \space - \space   Curriculum Vitae}
         \vspace{1mm}
-
-        \jblock{ for e in data.education }
-            \begin{cvlist}{Education}
-                \item[\jvar{ e.start } - \jvar{ e.end }] \textbf{\jvar{ e.school }}
-            \newline \jvar{ e.title }
-            \newline \jvar{ e.minor }
-            \newline \jvar{ e.etc }
-            \end{cvlist}
-        \jblock{ endfor }
-
+      \begin{cvlist}{Education}
+            \jblock{ for e in data.education }
+            
+                    \item[\jvar{ e.start } - \jvar{ e.end }] \textbf{\jvar{ e.school }}
+                \newline \jvar{ e.title }
+                \newline \jvar{ e.minor }
+                \newline \jvar{ e.etc }
+        
+            \jblock{ endfor }
+        \end{cvlist}
         
         \begin{cvlist}{Publications}
             \jblock{ for k,v in data.publications.items() | reverse}
@@ -55,8 +55,8 @@
             \jblock{ endfor }
         \end{cvlist}
         
-        \begin{cvlist}{Volounteer}
-            \jblock{ for v in data.volounteer }
+        \begin{cvlist}{Volunteer}
+            \jblock{ for v in data.volunteer }
                 \item[\jvar{v.start} - \jvar{v.end}] \textbf{\jvar{v.title}}
                 \newline \jvar{v.description}
             \jblock{ endfor }
