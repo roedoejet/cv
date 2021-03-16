@@ -377,7 +377,7 @@ publications:
       url: https://blog.oup.com/2019/06/using-technology-help-revitalize-indigenous-languages/
   
   2020:
-    - order: 1
+    - order: 2
       authors:
         - first: Roland
           last: Kuhn
@@ -436,8 +436,6 @@ publications:
       booktitle: Technical Report
       type: bookchapter
       url: https://nrc-publications.canada.ca/eng/view/object/?id=d4f10144-c711-43c5-b80b-5ace7df5e68b
-
-  forthcoming:
     - order: 1
       authors:
         - first: Nathan Thanyehtenhas
@@ -454,7 +452,7 @@ publications:
       publisher: UNESCO
       type: proceedings
       conference: "International Conference Language Technologies for All (LT4All): Enabling Linguistic Diversity and Multilingualism Worldwide"
-      url: //roedoejet.github.io/cv/static/cv/pdfs/220-edits.pdf
+      url: //lt4all.elra.info/proceedings/lt4all2019/pdf/2019.lt4all-1.100.pdf
 
 languages:
   - name: Danish
@@ -955,6 +953,26 @@ presentations:
     audience: "FNEL 382"
     type: lecture
     location: University of British Columbia
+
+  - year: 2020
+    presenters:
+      - first: Aidan
+        last: Pine
+    title: "Language Revitalization & Technology"
+    audience: "ASTU 402"
+    type: lecture
+    location: University of British Columbia
+  
+  - year: 2020
+    presenters:
+      - first: Aidan
+        last: Pine
+    title: "G2P (grapheme-to-phoneme) the 'what', 'so what', and 'now what'"
+    audience: "Continual Workshops in Indigenous Language Technology (CWILTs)"
+    type: talk
+    location: Virtual
+
+
   
 volunteer:
   - title: Hesquiaht Dictionary
