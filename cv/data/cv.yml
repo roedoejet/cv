@@ -16,10 +16,11 @@ education:
     end: Sept 2021
     school: University of Edinburgh
     title: M.Sc. Speech & Language Processing
+    minor: 1st Class Honours (80% Coursework Average, Dissertation forthcoming)
 
 projects:
   - title: "Kawennón:nis: The wordmaker for Kanyen'kéha"
-    links: 
+    links:
       web: https://kawennonnis.ca
     description: A collaboration between NRC and Onkwawenna Kentyohkwa immersion school. This is an instance of the WordWeaver software.
     collaborators:
@@ -32,32 +33,31 @@ projects:
       - name: Ronkwetiyóhstha Josiah Maracle
         affiliation: Onkwawenna Kentyohkwa
       - name: Ryan DeCaire
-        affiliation: 
+        affiliation:
           - Onkwawenna Kentyohkwa
           - University of Toronto
   - title: Convertextract
-    links: 
+    links:
       repo: https://github.com/roedoejet/convertextract
     description: A Python library for performing text transformations on Microsoft Office documents.
     badges:
       - https://img.shields.io/pypi/v/convertextract.svg
   - title: Mother Tongues
-    links: 
+    links:
       web: https://mothertongues.org
     description: Mother Tongues is an organization the releases open-source software for language revitalization. Most notable is Mother Tongues Dictionaries (MTD). MTD is the only dictionary app that is free and open-source, can be used for any language, has customizeable approximate search, and is available for the Web, Android & iOS.
     badges:
       - https://img.shields.io/pypi/v/mothertongues.svg
   - title: Gitksan Dictionary
-    links: 
+    links:
       web: https://mothertongues.org/gitksan
       android: https://play.google.com/store/apps/details?id=org.mothertongues.gitksan
       ios: https://apps.apple.com/us/app/gitksan/id1373109847
     collaborators:
       - name: UBC
-        links: 
-          https://blogs.ubc.ca/gitksanlab/about/
+        links: https://blogs.ubc.ca/gitksanlab/about/
   - title: Mohawk Verb Quiz
-    link: 
+    link:
       web: https://mohverbquiz.herokuapp.com/
     description: This is a website to assist teacher Zoe Hopkins in teaching Mohawk to online learners. The site uses the Google Sheets API so that Zoe can add verbs into a Google Sheet and have the site automatically updated. I built it in half a day on Zoe's request, so there are likely some bugs/areas for improvement!
   - title: Ayajuthem Dictionary
@@ -160,7 +160,7 @@ projects:
       android: https://play.google.com/store/apps/details?id=com.firstvoices.tsilhqotin&hl=en
       ios: https://itunes.apple.com/ca/app/xeni-gwetin/id592984503?mt=8
     collaborators:
-        - name: FPCC
+      - name: FPCC
   - title: Híɫzaqv Dictionary
     description: This dictionary uses data from the HDD and was developed through the Heiltsuk Language and Culture Mobilization Partnership
     links:
@@ -170,11 +170,11 @@ projects:
         link: https://heiltsuk.arts.ubc.ca/
   - title: Nazko Dakelh Dictionary
     description: This app was built for FirstVoices using Mother Tongues Dictionaries.
-    links: 
+    links:
       android: https://play.google.com/store/apps/details?id=com.firstvoices.dakelh&hl=en
       ios: https://apps.apple.com/ca/app/nazko-dakelh/id592978430
     collaborators:
-        - name: FPCC
+      - name: FPCC
   - title: Xtractor
     description: This small web app was a fun project that I made to try and give users a sort of grammar "sandbox" to play around with Gitksan syntax. It has a draggable UI which models extraction morphosyntax in the language and is intended to help learners with the notoriously complex pronominal system.
     links:
@@ -244,7 +244,7 @@ projects:
         affiliation: NRC
     description: The visualization/UI component of WordWeaver. This tool visualizes data served from WordWeaver.
     # links:
-      # repo: https://github.com/roedoejet/wordweaver-GUI
+    # repo: https://github.com/roedoejet/wordweaver-GUI
   - title: Kaska Cards
     collaborators:
       - name: UBC
@@ -278,7 +278,7 @@ publications:
           last: Davis
       title: "Waldayu and Waldayu Mobile: Modern digital dictionary interfaces for endangered languages"
       conference: "ComputEL-2: The 2nd Workshop on Computational Methods for Endangered Languages"
-      publisher: 
+      publisher:
       type: proceedings
       url: //roedoejet.github.io/cv/static/cv/pdfs/computel.pdf
 
@@ -292,13 +292,13 @@ publications:
           last: Schwan
         - last: Gitksan Research Lab
       title: Three Gitksan texts
-      booktitle: "University of British Columbia Working Papers in Lingusitics"
+      booktitle: "University of British Columbia Working Papers in Linguistics"
       publisher: University of British Columbia
       type: journal
       vol: 45
       pp: 47-90
       url: //roedoejet.github.io/cv/static/cv/pdfs/gitlab.pdf
-  
+
   2018:
     - order: 1
       authors:
@@ -313,7 +313,7 @@ publications:
       publisher: University of British Columbia
       type: bookchapter
       url: //roedoejet.github.io/cv/static/cv/pdfs/hall.pdf
-  
+
     - order: 2
       authors:
         - first: Aidan
@@ -325,7 +325,7 @@ publications:
       publisher: European Language Resources Association
       type: proceedings
       url: //roedoejet.github.io/cv/static/cv/pdfs/Pine-Turin-Convertextract-2018.pdf
-  
+
     - order: 4
       authors:
         - first: Patrick
@@ -344,10 +344,10 @@ publications:
           last: Junker
       title: "Indigenous language technologies in Canada: Assessment, challenges, and successes"
       conference: "COLING: The 27th International Conference on Computational Linguistics"
-      publisher: 
+      publisher:
       type: proceedings
       url: //roedoejet.github.io/cv/static/cv/pdfs/coling.pdf
-  
+
     - order: 3
       authors:
         - first: Anna
@@ -360,7 +360,7 @@ publications:
           last: Pine
       title: "Kawennón:nis: the Wordmaker for Kanyen'kéha (Ohsweken Mohawk)"
       conference: "COLING: The 27th International Conference on Computational Linguistics"
-      publisher: 
+      publisher:
       type: proceedings
       url: //roedoejet.github.io/cv/static/cv/pdfs/kawe.pdf
 
@@ -375,7 +375,7 @@ publications:
       publisher: Oxford University Press
       type: the Oxford University Press Blog
       url: https://blog.oup.com/2019/06/using-technology-help-revitalize-indigenous-languages/
-  
+
   2020:
     - order: 2
       authors:
@@ -454,6 +454,25 @@ publications:
       conference: "International Conference Language Technologies for All (LT4All): Enabling Linguistic Diversity and Multilingualism Worldwide"
       url: //lt4all.elra.info/proceedings/lt4all2019/pdf/2019.lt4all-1.100.pdf
 
+  2022:
+    - order: 1
+      authors:
+        - first: Aidan
+          last: Pine
+        - first: Dan
+          last: Wells
+        - first: Nathan Thanyehtenhas
+          last: Brinklow
+        - first: Patrick
+          last: Littell
+        - first: Korin
+          last: Richmond
+      title: "Requirements and motivations of low-resource speech synthesis for language revitalization"
+      publisher: ACL 2022
+      type: proceedings
+      conference: "60th Annual Meeting of the Association for Computational Linguistics"
+      url:
+
 languages:
   - name: Danish
     competency: Fluent
@@ -462,7 +481,7 @@ languages:
   - name: French
     competency: Fluent
     credentials: Double Dogwood High School Diploma in English & French
-  
+
   - name: Gitksan
     competency: "Reading/Writing: literate; Oral: Intermediate"
 
@@ -477,8 +496,6 @@ grants:
     title: Jacobs Research Fund
 
 awards:
-
-
   - year: 2014
     title: UBC Arts Undergraduate Research Award
   - year: 2015
@@ -498,7 +515,7 @@ awards:
 
 skills:
   - name: Mobile development
-    programs: 
+    programs:
       - Ionic
       - TypeScript
       - Angular
@@ -513,11 +530,13 @@ skills:
   - name: API development
     programs:
       - Flask
+      - Fastapi
   - name: Programming
     programs:
       - Python
       - Racket/Scheme
       - iPython
+      - Pytorch
   - name: Acoustic Analysis/Editing
     programs:
       - Praat
@@ -527,6 +546,8 @@ skills:
   - name: Speech Synthesis
     programs:
       - Festival
+      - FastSpeech2
+      - Tacotron2
   - name: Typesetting/Graphic design
     programs:
       - Photoshop
@@ -558,7 +579,7 @@ presentations:
     audience: Linguistics Department
     location: University of British Columbia
     type: presentation
-  
+
   - year: 2015
     presenters:
       - first: Aidan
@@ -567,7 +588,7 @@ presentations:
     audience: Multidisciplinary Undergraduate Research Conference
     location: University of British Columbia
     type: conference
-  
+
   - year: 2015
     presenters:
       - first: Aidan
@@ -586,7 +607,7 @@ presentations:
     location: University of British Columbia
     type: conference
     notes: 1st Place Oral Presentation Award
-  
+
   - year: 2016
     presenters:
       - first: Aidan
@@ -595,7 +616,7 @@ presentations:
     audience: FNEL 180 Guest Lecture
     location: University of British Columbia
     type: lecture
-  
+
   - year: 2017
     presenters:
       - first: Aidan
@@ -604,7 +625,7 @@ presentations:
     audience: "ComputEL-2: The 2nd Workshop on Computational Methods for Endangered Languages"
     location: University of Hawaii
     type: conference
-  
+
   - year: 2017
     presenters:
       - first: Aidan
@@ -613,7 +634,7 @@ presentations:
     audience: BC Breath of Life Institute
     location: University of British Columbia
     type: workshop
-  
+
   - year: 2017
     presenters:
       - first: Aidan
@@ -622,7 +643,7 @@ presentations:
     audience: FNEL 382 Guest Lecture
     location: University of British Columbia
     type: lecture
-  
+
   - year: 2017
     presenters:
       - first: Jane
@@ -633,7 +654,7 @@ presentations:
     audience: Gitksan Language Symposium
     location: Gitksan Wet'suwet'en Education Society. Hazelton, B.C.
     type: conference
-  
+
   - year: 2017
     presenters:
       - first: Aidan
@@ -651,7 +672,7 @@ presentations:
     audience: FNEL 180 Guest Lecture
     location: University of British Columbia
     type: lecture
-  
+
   - year: 2017
     presenters:
       - first: Aidan
@@ -687,7 +708,7 @@ presentations:
     audience: Research in Indigenous Languages and Linguistics
     location: University of Victoria
     type: presentation
-  
+
   - year: 2018
     presenters:
       - first: Aidan
@@ -696,7 +717,7 @@ presentations:
     audience: LING 372 Guest Lecture
     location: University of Victoria
     type: lecture
-  
+
   - year: 2018
     presenters:
       - first: Aidan
@@ -704,7 +725,7 @@ presentations:
     title: A multi-dialectal Ayajuthem talking dictionary
     location: Sliammon, B.C
     type: presentation
-  
+
   - year: 2018
     presenters:
       - first: Aidan
@@ -713,7 +734,7 @@ presentations:
     audience: Gitksan Elders Meeting
     location: Gitksan Elder's Center. Gitanmaax, B.C
     type: presentation
-  
+
   - year: 2018
     presenters:
       - first: Aidan
@@ -733,7 +754,7 @@ presentations:
     audience: Onkwawenna Kentyohkwa Immersion School
     location: Ohsweken, Ontario
     type: presentation
-  
+
   - year: 2018
     presenters:
       - first: Aidan
@@ -744,7 +765,7 @@ presentations:
     audience: CoLang
     location: University of Florida
     type: workshop
-  
+
   - year: 2018
     presenters:
       - first: Aidan
@@ -823,7 +844,7 @@ presentations:
     audience: "50th Anniversay of the UBC Linguistics Department"
     type: panel discussion
     location: University of British Columbia
-  
+
   - year: 2019
     presenters:
       - first: Aidan
@@ -896,7 +917,7 @@ presentations:
     audience: Ottawa AI
     type: system demonstration
     location: NRC Sussex, Ottawa
-    
+
   - year: 2019
     presenters:
       - first: Aidan
@@ -920,7 +941,7 @@ presentations:
     audience: Centre for Speech Technology Research (CSTR)
     type: talk
     location: University of Edinburgh
-  
+
   - year: 2020
     presenters:
       - first: David
@@ -935,7 +956,7 @@ presentations:
     audience: "52nd Algonquian Conference"
     type: talk
     location: University of Wisconsin - Madison
-  
+
   - year: 2020
     presenters:
       - first: Aidan
@@ -944,7 +965,7 @@ presentations:
     audience: "FNEL 180"
     type: lecture
     location: University of British Columbia
-  
+
   - year: 2020
     presenters:
       - first: Aidan
@@ -962,7 +983,7 @@ presentations:
     audience: "ASTU 402"
     type: lecture
     location: University of British Columbia
-  
+
   - year: 2020
     presenters:
       - first: Aidan
@@ -972,8 +993,6 @@ presentations:
     type: talk
     location: Virtual
 
-
-  
 volunteer:
   - title: Hesquiaht Dictionary
     start: June 2017
@@ -981,7 +1000,7 @@ volunteer:
     description: Help with data processing, web and mobile app development for the Hesquiaht language dictionary
   - title: Squamish Dictionary
     start: May 2016
-    end: present
+    end: September 2020
     description: Help with publishing online 'talking dictionary' for Squamish language in partnership with Peter Jacobs
   # - title: Dictionary maintenance
   #   start: May 2016
@@ -1003,70 +1022,70 @@ volunteer:
 employment:
   - title: Copy Editor & Research Assistant
     employer: University of British Columbia
-    start: 
-        month: 4
-        year: 2013
+    start:
+      month: 4
+      year: 2013
     end:
-        month: 1
-        year: 2014
+      month: 1
+      year: 2014
     description: "Assisted in editing interlinear glossing and linguistics-related texts in the book: Written as I Remember It: Teachings (ʔəms taʔaw) from the Life of a Sliammon Elder."
-  
+
   - title: Translator and Computational Linguist
     employer: SmartKYC (Remote Work)
-    start: 
+    start:
       month: 1
       year: 2016
-    end: 
+    end:
       month: 8
       year: 2017
     description: Natural language processing, writing regular expressions to capture inflectional morphological rules in French and Danish. Independent contract
-  
+
   - title: Software Developer
     employer: Simon Fraser University
-    start: 
+    start:
       month: 8
       year: 2016
-    end: 
+    end:
       month: 1
       year: 2017
     description: Lead programmer for the development of a number of orthography conversion tools fo Heiltsuk and Tsilhqot'in languages. Independent contract through Mother Tongues
-  
+
   - title: Software Developer
     employer: University of British Columbia
-    start: 
+    start:
       month: 10
       year: 2016
-    end: 
+    end:
       month: 6
       year: 2019
     description: Lead programmer for the development of four online (web and mobile) dictionaries.
-  
+
   - title: Juma Food Truck Owner & Operator
     employer: Self Employed
-    start: 
+    start:
       month: 5
       year: 2013
-    end: 
+    end:
       month: 9
       year: 2019
     description: I designed, commissioned to build, own and operate a food truck that runs seasonally on Vancouver Island and employs full time and part time staff
-  
+
   - title: Technology consultant
     employer: University of British Columbia
-    start: 
+    start:
       month: 1
       year: 2015
-    end: 
+    end:
       month: 6
       year: 2019
     description: Consulting and programming for the First Nations and Endangered Language program.
-  
+
   - title: Web Developer
     employer: Self Employed
-    start: 
+    start:
       month: 5
       year: 2016
-    end: 
+    end:
       month: 0
     description: Freelance website design and development
 
@@ -1075,22 +1094,21 @@ employment:
     start:
       month: 10
       year: 2016
-    end: 
+    end:
       month: 0
     description: Lead developer for redesigning, engineering and publishing 15 of FPHLCC's mobile dictionary applications for Android and iOS. Independent contract through Mother Tongues
 
   - title: Application Development Specialist
     employer: National Research Council Canada
-    start: 
+    start:
       month: 1
       year: 2018
-    end: 
+    end:
       month: 0
     description: Developer and researcher for NRC Indigenous Language Technology project
-  
+
 code:
   - title: Orthography Converter
     count: //ghbtns.com/github-btn.html?user=roedoejet&repo=convertextract&type=watch&count=true
   - title: My CV
     count: //ghbtns.com/github-btn.html?user=roedoejet&repo=cv&type=watch&count=true
-
