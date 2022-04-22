@@ -471,7 +471,34 @@ publications:
       publisher: ACL 2022
       type: proceedings
       conference: "60th Annual Meeting of the Association for Computational Linguistics"
-      url:
+      url: //roedoejet.github.io/cv/static/cv/pdfs/acl2022.pdf
+    - order: 2
+      authors:
+        - first: Aidan
+          last: Pine
+        - first: Patrick
+          last: Littell
+        - first: Eric
+          last: Joanis
+        - first: David
+          last: Huggins-Daines
+        - first: Christopher
+          last: Cox
+        - first: Fineen
+          last: Davis
+        - first: Eddie
+          last: Santos
+        - first: Shankhalika
+          last: Srikanth
+        - first: Delasie
+          last: Torkornoo
+        - first: Sabrina
+          last: Yu
+      title: "Gᵢ2Pᵢ: Rule-based, index-preserving grapheme-to-phoneme transformations"
+      publisher: ComputEl-5
+      type: proceedings
+      conference: "5th Workshop on the Use of Computational Methods in the Study of Endangered Languages"
+      url: //roedoejet.github.io/cv/static/cv/pdfs/g2p-submitted.pdf
 
 languages:
   - name: Danish
@@ -992,6 +1019,24 @@ presentations:
     audience: "Continual Workshops in Indigenous Language Technology (CWILTs)"
     type: talk
     location: Virtual
+
+  - year: 2021
+    presenters:
+      - first: Aidan
+        last: Pine
+    title: "Low Resource Speech Synthesis"
+    audience: "NLP Seminar"
+    type: talk
+    location: National Research Council Canada
+
+  - year: 2022
+    presenters:
+      - first: Aidan
+        last: Pine
+    title: "Speech Technology & Language Reclamation"
+    type: lecture
+    audience: "FNEL 180"
+    location: University of British Columbia
 
 volunteer:
   - title: Hesquiaht Dictionary
