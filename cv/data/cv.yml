@@ -472,6 +472,7 @@ publications:
       type: proceedings
       conference: "60th Annual Meeting of the Association for Computational Linguistics"
       url: //roedoejet.github.io/cv/static/cv/pdfs/acl2022.pdf
+      pp: 7346-7359
     - order: 2
       authors:
         - first: Aidan
@@ -497,8 +498,29 @@ publications:
       title: "Gᵢ2Pᵢ: Rule-based, index-preserving grapheme-to-phoneme transformations"
       publisher: ComputEl-5
       type: proceedings
+      pp: 52-60
       conference: "5th Workshop on the Use of Computational Methods in the Study of Endangered Languages"
       url: //roedoejet.github.io/cv/static/cv/pdfs/g2p-submitted.pdf
+    - order: 3
+      authors:
+        - first: Patrick
+          last: Littell
+        - first: Eric
+          last: Joanis
+        - first: Aidan
+          last: Pine
+        - first: Marc
+          last: Tessier
+        - first: David
+          last: Huggins-Daines
+        - first: Delasie
+          last: Torkornoo
+      title: "ReadAlong Studio: Practical Zero-Shot Text-Speech Alignment for Indigenous Language Audiobooks"
+      publisher: European Language Resources Association (ELRA)
+      type: proceedings
+      conference: "SIGUL2022 @ LREC2022"
+      url: http://www.lrec-conf.org/proceedings/lrec2022/workshops/SIGUL/pdf/2022.sigul-1.4.pdf
+      pp: 23-32
 
 languages:
   - name: Danish
@@ -1037,6 +1059,42 @@ presentations:
     type: lecture
     audience: "FNEL 180"
     location: University of British Columbia
+
+  - year: 2022
+    presenters:
+      - first: Aidan
+        last: Pine
+    title: "Requirements and Motivations of Low-Resource Speech Synthesis for Language Revitalization"
+    type: talk
+    audience: "Best Papers Award Session Plenary at ACL 2022"
+    location: Dublin
+
+  - year: 2022
+    presenters:
+      - first: Aidan
+        last: Pine
+    title: "Gᵢ2Pᵢ: Rule-based, index-preserving grapheme-to-phoneme transformations"
+    type: talk
+    audience: "ComputEL-5"
+    location: Dublin
+
+  - year: 2022
+    presenters:
+      - first: Aidan
+        last: Pine
+    title: "Requirements and Motivations of Low-Resource Speech Synthesis for Language Revitalization"
+    type: talk
+    audience: "Centre for Speech Technology Research"
+    location: Edinburgh
+
+  - year: 2022
+    presenters:
+      - first: Aidan
+        last: Pine
+    title: "Developing Speech & Language Technologies for Indigenous Language Revitalization"
+    type: talk
+    audience: "Domain Adaptation Group"
+    location: University of Toronto
 
 volunteer:
   - title: Hesquiaht Dictionary
