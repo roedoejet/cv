@@ -558,9 +558,15 @@ awards:
   - year: 2016
     title: Dean's Outstanding Leadership Award for Academic Contribution to the Faculty of Arts
   - year: 2018
-    title: National Research Council Digital Technology 'Value for Canada' award
+    title: National Research Council Digital Technology 'Value for Canada' Award
   - year: 2020
     title: Scotland's Saltire Scholarship
+  - year: 2022
+    title: NRC IP Achievement Award (as part of Indigenous Language Technology Project)
+  - year: 2022
+    title: ACL2022 Best Special Theme Paper
+  - year: 2022
+    title: National Research Council Digital Technology 'Research & Technology Breakthrough' Award
 
 skills:
   - name: Mobile development
@@ -1095,6 +1101,44 @@ presentations:
     type: talk
     audience: "Domain Adaptation Group"
     location: University of Toronto
+  
+  - year: 2022
+    presenters:
+      - first: Aidan
+        last: Pine
+      - first: David
+        last: Huggins-Daines
+      - first: Eric
+        last: Joanis
+      - first: Patrick
+        last: Littell
+      - first: Marc
+        last: Tessier
+      - first: Delasie
+        last: Torkornoo
+    title: "“Watch me Speak!” Interactive Storytelling using ReadAlong-Studio"
+    type: workshop
+    audience: "Community Workshop for Indigenous Language Technology (CWILTs Series)"
+    location: Virtual (National Research Council)
+  
+  - year: 2022
+    presenters:
+      - first: Aidan
+        last: Pine
+      - first: David
+        last: Huggins-Daines
+      - first: Eric
+        last: Joanis
+      - first: Patrick
+        last: Littell
+      - first: Marc
+        last: Tessier
+      - first: Delasie
+        last: Torkornoo
+    title: "“Watch me Speak!” Interactive Storytelling using ReadAlong-Studio"
+    type: workshop
+    audience: "ICLDC 2023: Centering Justice in Language Work"
+    location: Virtual (University of Hawai'i)
 
 volunteer:
   - title: Hesquiaht Dictionary
