@@ -1,3 +1,4 @@
+fabric<2.0
 Flask
 selenium
 coloredlogs
