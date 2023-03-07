@@ -64,7 +64,6 @@ projects:
     links:
       web: https://mothertongues.org/ayajuthem
       android: https://play.google.com/store/apps/details?id=org.mothertongues.ayajuthem
-      ios: https://itunes.apple.com/ca/app/ayajuthem/id1357846901
     collaborators:
       - name: UBC
   - title: Ucwalmícwts Dictionary
@@ -266,7 +265,7 @@ publications:
       publisher: Oxford University Press
       editor: Mark Aronoff
       type: bookchapter
-      url: //linguistics.oxfordre.com/view/10.1093/acrefore/9780199384655.001.0001/acrefore-9780199384655-e-8
+      url: //doi.org/10.1093/acrefore/9780199384655.013.8
 
     - order: 2
       authors:

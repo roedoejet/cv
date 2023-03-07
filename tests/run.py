@@ -1,8 +1,6 @@
 import os
 from unittest import TestLoader, TextTestRunner, TestSuite
 
-from . import __file__ as TEST_DIR
-
 # Unit tests
 from test_urls import URLsTest
 
@@ -16,9 +14,9 @@ data_tests = [
 def run_tests(suite):
     if suite == 'dev':
         suite = TestSuite(data_tests)
-    elif suite == 'prod' or suite == 'all':
-        suite = loader.discover(os.path.dirname(TEST_DIR))
-        
+    elif suite in ['prod', 'all']:
+        suite = loader.discover(os.path.dirname(__file__))
+
     runner = TextTestRunner(verbosity=3)
     runner.run(suite)
 
