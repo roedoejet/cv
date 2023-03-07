@@ -1,5 +1,9 @@
-fabric<2.0
-Flask
-selenium
-coloredlogs
-slugify
+Fabric==1.15.0
+Flask==2.2.3
+Frozen-Flask==0.18
+coloredlogs==15.0.1
+python-slugify==8.0.1
+PyYAML==6.0
+selenium==4.8.2
+Pillow==9.4.0
+pylatexenc==2.10
