@@ -1138,6 +1138,24 @@ presentations:
     type: workshop
     audience: "ICLDC 2023: Centering Justice in Language Work"
     location: Virtual (University of Hawai'i)
+  - year: 2023
+    presenters:
+      - first: Aidan
+        last: Pine
+    title: "“Watch me Speak!” Interactive Storytelling using ReadAlong-Studio"
+    type: talk
+    audience: "Linguistics Department"
+    location: Virtual (University of California Santa Barbara)
+  - year: 2023
+    presenters:
+      - first: Patrick
+        last: Littell
+      - first: Aidan
+        last: Pine
+    title: "Interactive Storytelling & Practical Zero-Shot Text-Speech Alignment using ReadAlong-Studio"
+    type: talk
+    audience: "Lanfrica Talk Series"
+    location: Virtual (Masakhane)
 
 volunteer:
   - title: Hesquiaht Dictionary
