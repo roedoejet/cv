@@ -16,7 +16,7 @@ education:
     end: Sept 2021
     school: University of Edinburgh
     title: M.Sc. Speech & Language Processing
-    minor: 1st Class Honours (80% Coursework Average, Dissertation forthcoming)
+    minor: 1st Class Honours (80% Coursework Average, 90% Dissertation)
 
 projects:
   - title: "Kawennón:nis: The wordmaker for Kanyen'kéha"
@@ -520,7 +520,34 @@ publications:
       conference: "SIGUL2022 @ LREC2022"
       url: http://www.lrec-conf.org/proceedings/lrec2022/workshops/SIGUL/pdf/2022.sigul-1.4.pdf
       pp: 23-32
-
+  2023:
+    - order: 1
+      authors:
+        - first: Aidan
+          last: Pine
+        - first: David
+          last: Huggins-Daines
+        - first: Eric
+          last: Joanis
+        - first: Patrick
+          last: Littell
+        - first: Marc
+          last: Tessier
+        - first: Delasie
+          last: Torkornoo
+        - first: Rebecca
+          last: Knowles
+        - first: Roland
+          last: Kuhn
+        - first: Delaney
+          last: Lothian
+      title: "ReadAlong Studio Web Interface for Digital Interactive Storytelling"
+      publisher: ACL 2023
+      type: proceedings
+      conference: "8th Workshop on Innovative Use of NLP for Building Educational Applications"
+      url: //aclanthology.org/2023.bea-1.14/
+      pp: 163-172
+    
 languages:
   - name: Danish
     competency: Fluent
@@ -566,6 +593,8 @@ awards:
     title: ACL2022 Best Special Theme Paper
   - year: 2022
     title: National Research Council Digital Technology 'Research & Technology Breakthrough' Award
+  - year: 2024
+    title: National Research Council Digital Technology 'Value for Canada' Award
 
 skills:
   - name: Mobile development
@@ -1156,6 +1185,22 @@ presentations:
     type: talk
     audience: "Lanfrica Talk Series"
     location: Virtual (Masakhane)
+  - year: 2023
+    presenters:
+      - first: Aidan
+        last: Pine
+    title: "Language Revitalization & Speech Technology"
+    type: lecture
+    audience: "ASTU 402 Living Language: Science & Society Guest Lecture"
+    location: Virtual (University of British Columbia)
+  - year: 2023
+    presenters:
+      - first: Aidan
+        last: Pine
+    title: "Language Revitalization & Speech Technology"
+    type: talk
+    audience: "Knowledge, Information and Technology Services (KITS)"
+    location: Virtual
 
 volunteer:
   - title: Hesquiaht Dictionary
