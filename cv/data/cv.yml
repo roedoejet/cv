@@ -622,6 +622,14 @@ publications:
       authors:
         - first: Patrick
           last: Littell
+        - first: Darlene
+          last: Stewart
+        - first: Fineen
+          last: Davis
+        - first: Aidan
+          last: Pine
+        - first: Roland
+          last: Kuhn
       title: "Gramble: A Tabular Programming Language for Collaborative Linguistic Modeling"
       publisher: ACL
       type: proceedings
