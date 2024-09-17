@@ -547,6 +547,87 @@ publications:
       conference: "8th Workshop on Innovative Use of NLP for Building Educational Applications"
       url: //aclanthology.org/2023.bea-1.14/
       pp: 163-172
+  2024:
+    - order: 1
+      authors:
+        - first: Dan
+          last: Wells
+        - first: Andrea Lorena Aldana
+          last: Blanco
+        - first: Cassia
+          last: Valentini
+        - first: Erica
+          last: Cooper
+        - first: Aidan
+          last: Pine
+        - first: Junichi
+          last: Yamagishi
+        - first: Korin
+          last: Richmond
+      title: "Experimental evaluation of MOS, AB and BWS listening test designs"
+      publisher: ISCA
+      type: proceedings
+      conference: "Interspeech 2024"
+      url: https://www.isca-archive.org/interspeech_2024/wells24_interspeech.html
+      pp: 2695-2699
+    - order: 2
+      authors:
+        - first: Miku
+          last: Nishihara
+        - first: Dan
+          last: Wells
+        - first: Korin
+          last: Richmond
+        - first: Aidan
+          last: Pine
+      title: "Low-dimensional Style Token Control for Hyperarticulated Speech Synthesis"
+      publisher: ISCA
+      type: proceedings
+      conference: "Interspeech 2024"
+      url: https://www.isca-archive.org/interspeech_2024/nishihara24_interspeech.html
+      pp: 3385--3389
+    - order: 3
+      authors:
+        - first: Cheng
+          last: Gong
+        - first: Erica
+          last: Cooper
+        - first: Xin
+          last: Wang
+        - first: Chunyu
+          last: Qiang
+        - first: Mengzhe
+          last: Geng
+        - first: Dan
+          last: Wells
+        - first: Longbiao
+          last: Wang
+        - first: Jianwu
+          last: Dang
+        - first: Marc
+          last: Tessier
+        - first: Aidan
+          last: Pine
+        - first: Korin
+          last: Richmond
+        - first: Junichi
+          last: Yamagishi
+      title: "An Initial Investigation of Language Adaptation for TTS Systems under Low-resource Scenarios"
+      publisher: ISCA
+      type: proceedings
+      conference: "Interspeech 2024"
+      url: https://www.isca-archive.org/interspeech_2024/gong24c_interspeech.html
+      pp: 4963--4967
+    - order: 4
+      authors:
+        - first: Patrick
+          last: Littell
+      title: "Gramble: A Tabular Programming Language for Collaborative Linguistic Modeling"
+      publisher: ACL
+      type: proceedings
+      conference: LREC-COLING 2024
+      url: //aclanthology.org/2024.lrec-main.697/
+      pp: 7913–7925
     
 languages:
   - name: Danish
