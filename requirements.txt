@@ -1,5 +1,5 @@
 Fabric==1.15.0
-Flask==2.2.3
+Flask==2.2.5
 Frozen-Flask==0.18
 coloredlogs==15.0.1
 python-slugify==8.0.1
