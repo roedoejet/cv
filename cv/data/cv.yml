@@ -636,6 +636,153 @@ publications:
       conference: LREC-COLING 2024
       url: //aclanthology.org/2024.lrec-main.697/
       pp: 7913–7925
+  2025:
+    - order: 1
+      authors:
+        - first: Mengzhe
+          last: Geng
+        - first: Patrick
+          last: Littell
+        - first: Aidan
+          last: Pine
+        - first: PENÁĆ
+          last: 
+        - first: Marc
+          last: Tessier
+        - first: Roland
+          last: Kuhn
+      title: "Supporting SENĆOŦEN Language Documentation Efforts with Automatic Speech Recognition"
+      publisher: ACL
+      type: proceedings
+      conference: ComputEL-8 2025
+      url: //aclanthology.org/2025.computel-main.4/
+      pp: 29-39
+    - order: 2
+      authors:
+        - first: Mengzhe
+          last: Geng
+        - first: Patrick
+          last: Littell
+        - first: Aidan
+          last: Pine
+        - first: Robbie
+          last: Jimerson
+        - first: Gilles
+          last: Boulianne
+        - first: Vishwa
+          last: Gupta
+        - first: Rolando
+          last: Coto-Solano
+        - first: Anna
+          last: Kazantseva
+        - first: Marc
+          last: Tessier
+        - first: Delaney
+          last: Lothian
+        - first: Akwiratékha'
+          last: Martin
+        - first: Eric
+          last: Joanis
+        - first: Samuel
+          last: Larkin
+        - first: Roland
+          last: Kuhn
+      title: "Evaluating Speech Foundation Models for Automatic Speech Recognition in the Low-Resource Kanyen’kéha Language"
+      publisher: ISCA
+      type: proceedings
+      conference: Interspeech 2025
+      url: //www.isca-archive.org/interspeech_2025/geng25c_interspeech.html
+      pp: 2063-2067
+    - order: 3
+      authors:
+        - first: Aidan
+          last: Pine
+        - first: David
+          last: Huggins-Daines
+        - first: Carmen
+          last: Leeming
+        - first: Patrick
+          last: Littell
+        - first: Timothy
+          last: Montler
+        - first: Heather
+          last: Souter
+        - first: Mark
+          last: Turin
+      title: "Zero-Shot Query Generation for Approximate Search Algorithm Evaluation"
+      publisher: ACL
+      type: proceedings
+      conference: ComputEL-8 2025
+      url: //aclanthology.org/2025.computel-main.7/
+      pp: 65–73
+    - order: 4
+      authors:
+        - first: Aidan
+          last: Pine
+        - first: Delaney
+          last: Lothian
+        - first: Sonya
+          last: Bird
+        - first: Marion
+          last: Caldecott
+        - first: MENEŦIYE
+          last: 
+        - first: PENÁĆ
+          last: 
+        - first: Korin
+          last: Richmond
+        - first: Tye
+          last: Swallow
+        - first: SX̱EDŦELISIYE
+          last: 
+        - first: Cassia
+          last: Valentini-Botinhao
+        - first: Dan
+          last: Wells
+        - first: Patrick
+          last: Littell
+      title: "Practical & Contextual Speech Synthesis Evaluation"
+      publisher: ISCA
+      type: proceedings
+      conference: Speech Synthesis Workshop 2025
+      url: //www.isca-archive.org/ssw_2025/pine25_ssw.html
+      pp: 76-82
+    - order: 5
+      authors:
+        - first: Aidan
+          last: Pine
+        - first: Erica
+          last: Cooper
+        - first: David
+          last: Guzmán
+        - first: Eric
+          last: Joanis
+        - first: Ross
+          last: Krekoski
+        - first: Roland
+          last: Kuhn
+        - first: Samuel
+          last: Larkin
+        - first: Patrick
+          last: Littell
+        - first: Delaney
+          last: Lothian
+        - first: Akwiratékha'
+          last: Martin
+        - first: Korin
+          last: Richmond
+        - first: Marc
+          last: Tessier
+        - first: Cassia
+          last: Valentini-Botinhao
+        - first: Dan
+          last: Wells
+        - first: Junichi
+          last: Yamagishi
+      title: "Speech Generation for Indigenous Language Education"
+      booktitle: Computer Speech & Language
+      type: journal
+      url: //www.sciencedirect.com/science/article/pii/S0885230824001062
     
 languages:
   - name: Danish
