@@ -6,22 +6,22 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - name: Set up Python
-        uses: actions/setup-python@v4
+      - uses: actions/checkout@v4
+      - name: Set up uv
+        uses: astral-sh/setup-uv@v6
         with:
-          python-version: "3.9"
+          python-version: "3.11"
       - name: Install dependencies
+        run: uv sync --frozen --no-dev
+      - name: Freeze site
+        run: uv run fab freeze
+      - name: Verify output
         run: |
-          python -m pip install --upgrade pip
-          pip install -r requirements.txt
-          pip install flask
-          pip install -e .
-      - name: build site
-        run: fab freeze
-      - name: Deploy 🚀
-        uses: JamesIves/github-pages-deploy-action@v4.2.3
+          test -f docs/index.html          || (echo "MISSING docs/index.html" && exit 1)
+          test -f docs/projects/index.html || (echo "MISSING docs/projects/index.html" && exit 1)
+          echo "Both pages generated successfully."
+      - name: Deploy
+        uses: JamesIves/github-pages-deploy-action@v4
         with:
-          branch: gh-pages # The branch the action should deploy to.
-          folder: docs # The folder the action should deploy.
-
+          branch: gh-pages
+          folder: docs

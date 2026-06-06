@@ -37,14 +37,14 @@
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <link rel="stylesheet" href="{{ url_for('static', filename='cv/dist/css/normalize.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='cv/dist/css/skeleton.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='cv/css/custom.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='cv/dist/css/custom.css') }}">
 
     <!-- Scripts
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <link rel="stylesheet" href="{{ url_for('static', filename='cv/css/github-prettify-theme.css') }}">
     <script src="{{ url_for('static', filename='cv/js/site.js') }}"></script>
-
+    <script defer src="{{ url_for('static', filename='cv/dist/js/main.js') }}"></script>
 
     <!-- Favicon
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -55,131 +55,395 @@
 
 </head>
 
-<body class="code-snippets-visible">
+{% from '_nav.html' import render_nav %}
 
-    <!-- Primary Page Layout
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+{# ─── Template-scope helpers ──────────────────────────────────────────────── #}
+
+{# Research themes are defined in cv.yml under research_themes:.
+   Each entry has: slug, title, color (teal/purple/coral/amber),
+   description, and order.  The template loops over data.research_themes
+   directly — add or rename a theme in cv.yml and it updates everywhere. #}
+
+{# Gantt year range.  Start is fixed at 2017 (first pub year).
+   End is the latest publication year found in the data.
+   TODO: extend gantt_end to the current calendar year by injecting
+   `now().year` via a Flask context processor. #}
+{% set gantt_start = 2017 %}
+{% set gantt_end   = (publications | sort(attribute="year") | last).year %}
+{% set gantt_span  = gantt_end - gantt_start %}
+
+<body class="has-subnav">
+
+{{ render_nav('research') }}
+
+
+<main>
+
+<!-- ═══════════════════════════════════════════════════════════════════════════
+     ABOUT
+     ═══════════════════════════════════════════════════════════════════════════ -->
+<section id="about" class="section section--about">
     <div class="container">
-        <section class="header">
-            <h2 class="title">Aidan Pine</h2>
-            <hr>
+        <div class="row about__row">
 
-            <h5>Linguist & Developer</h5>
+            <div class="seven columns">
+                <h6 id="greeting" class="section__name docs-header">
+                </h6>
 
-            <div class="value-props row">
-                <!-- <div class="twelve columns value-prop">
-          Linguist
-        </div> -->
+                <p>My name is Aidan Pine. I'm a settler of European ancestry
+                    born in Victoria, B.C. and I developed this
+                    site in order to bring together the
+                    various themes of my research as well as the language revitalization and open-source software
+                    projects that I am involved in.</p>
+
+                <p>I fell in love with language revitalization work as a way of
+                    combining my interests in language, linguistics,
+                    anti-colonial/decolonial methodologies, and computer
+                    science.</p>
+
+                <p>I am a full-time researcher at the Canadian National Research
+                    Council, where I was most recently technical lead for the
+                    <a href="https://nrc.canada.ca/en/research-development/research-collaboration/programs/speech-generation-indigenous-language-education"
+                       target="_blank" rel="noopener noreferrer">Speech
+                    Generation for Indigenous Language Education</a> project (2022-2025).
+                    I am also the founder and lead developer of
+                    <a href="//mothertongues.org" target="_blank"
+                       rel="noopener noreferrer">Mother Tongues</a>, and former
+                    technology consultant for the First Peoples' Cultural
+                    Council, and the University of British Columbia.</p>
             </div>
-        </section>
 
-        <div class="navbar-spacer"></div>
-        <nav class="navbar">
-            <div class="container">
-                <ul class="navbar-list">
-                    <li class="navbar-item">
-                        <a class="navbar-link" href="#intro">About</a>
-                    </li>
-                    <li class="navbar-item">
-                        <a class="navbar-link" href="#publications">Publications</a>
-                    </li>
-                    <!--
-          <li class="navbar-item">
-            <a class="navbar-link" href="#projects">Projects</a>
-          </li>
-          -->
-                    <li class="navbar-item">
-                        <a class="navbar-link" href="#presentations">Presentations</a>
-                    </li>
-                    <!-- <li class="navbar-item">
-              <a class="navbar-link" href="#">Code</a>
-            </li> -->
-                    <li class="navbar-item">
-                        <a class="navbar-link" href="#contact">Contact</a>
-                    </li>
-                    <li class="navbar-item">
-                        <a class="navbar-link" href="{{ url_for( 'static', filename='cv/pdfs/cv-gen.pdf' ) }}">CV</a>
-                    </li>
-                </ul>
+            <div class="five columns">
+                <img class="bio-photo"
+                     src="{{ url_for('static', filename='cv/images/cv-portrait.jpg') }}"
+                     alt="Photo of {{ data.personal.first_name }} {{ data.personal.last_name }}">
             </div>
-        </nav>
 
-        <!-- Hello -->
-        <div class="docs-section" id="intro">
-
-            <h6 id="greeting" class="docs-header">Hello!</h6>
-            <div class="row">
-
-                <div class="six columns">
-                    <p>My name is Aidan Pine. I'm a settler of European ancestry born in Victoria, B.C. and I developed this
-                        <a href="#site">site</a> in order to bring together the various language revitalization and open-source software projects that I am involved in.</p>
-                    <p> I fell in love with language revitalization work as a way of combining my interests in language, linguistics, anti-colonial/decolonial methodologies, and computer science.
-                    </p>
-                    <p> I am a full-time researcher at the Canadian National Research Council, where I am currently technical lead for the <a href="https://nrc.canada.ca/en/research-development/research-collaboration/programs/speech-generation-indigenous-language-education"
-                            target="_blank">Speech Generation for Indigenous Language Education</a> project. I am also the founder and lead developer of
-                        <a href="//mothertongues.org" target="_blank">
-              Mother Tongues</a>, and former technology consultant for the First Peoples' Cultural Council, and the University of British Columbia.
-                    </p>
-                    <!-- Mother Tongues has supported the development of around 30 digital dictionaries, including the
-          <a href="https://firstvoices.com/content/apps/">First Voices</a> mobile apps. I have taught instructional workshops on developing dictionaries with Mother Tongues
-          software at the University of British Columbia, the University of Florida, the National Institute for Japanese
-          Language and Linguistics in Tokyo as well as an upcoming workshop at ICLDC 2019 at the Univeristy of Hawai'i. -->
-                </div>
-                <img class="bio six columns" src="{{ url_for( 'static', filename='cv/images/cv.png' ) }}" />
-            </div>
-            <!-- <iframe src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwww.getskeleton.com&amp;width&amp;layout=button_count&amp;action=like&amp;show_faces=false&amp;share=true&amp;height=21&amp;appId=151131931646052
-   " scrolling="no" frameborder="0" style="border:none; overflow:hidden; height:21px; width:140px" allowTransparency="true"></iframe> -->
-            <!-- <iframe src="http://ghbtns.com/github-btn.html?user=dhg&repo=Skeleton&type=watch&count=true
-   " allowtransparency="true" frameborder="0" scrolling="0" width="110" height="20"></iframe>
-      <iframe src="http://ghbtns.com/github-btn.html?user=dhg&repo=Skeleton&type=fork&count=true" allowtransparency="true
-   " frameborder="0" scrolling="0" width="110" height="20"></iframe> -->
         </div>
+    </div>
+</section>
 
 
+<!-- ═══════════════════════════════════════════════════════════════════════════
+     RESEARCH THEMES
+     TODO: Move theme labels, descriptions, and slug mappings into a data
+     source (e.g. a `themes:` block in cv.yml or a standalone themes.yml)
+     so they can be edited without touching the template.
+     ═══════════════════════════════════════════════════════════════════════════ -->
+<section id="themes" class="section section--themes">
+    <div class="container">
+        <h2 class="section__heading">Research Themes</h2>
 
-        <!-- Publications -->
-        <div class="docs-section" id="publications">
-            <h6 class="docs-header">Publications</h6>
-            <div class="row docs-example">
-                <div class="twelve columns">
-                    <ul>
-                        {% for k, v in data.publications.items() | reverse %} {% for p in v | sort(attribute="order", reverse=True) %} {% if p.booktitle %}
+        <div class="theme-grid">
 
-                        <li>{% if p.url %}
-                            <a href="{{ p.url }}" target="_blank">{{ p.title }}</a>{% else %}{{ p.title }}{% endif %}.
-                            <em>{{p.booktitle}}</em>.
-                            <br>{% for a in p.authors %} {% if a.last == 'Pine' or a.last == 'Gitksan Research Lab' %}
-                            <strong>{{ a.last }},
-                {% if a.first %}{{ a.first[0] }}.{%endif %}{% if not loop.last %},{% endif %}</strong> {% else %} {{ a.last }}, {% if a.first %} {{ a.first[0] }}.{% endif %}{% if not loop.last %},{% endif %} {% endif %} {%
-                            endfor %} {{ k }}. {% if p.publisher %}{{p.publisher}}.{% endif %} </li>
-                        {% elif p.conference %}
-                        <li>{% if p.url %}
-                            <a href="{{ p.url }}" target="_blank">{{ p.title }}</a>{% else %}{{ p.title }}{% endif %}. In proceedings of
-                            <em>{{p.conference}}</em>.
-                            <br>{% for a in p.authors %} {% if a.last == 'Pine' or a.last == 'Gitksan Research Lab' %}
-                            <strong>{{ a.last }}, {% if a.first %}
-                {{ a.first[0] }}.{%endif %}{% if not loop.last %},{% endif %}</strong> {% else %} {{ a.last }}, {% if a.first %}{{ a.first[0] }}.{% endif %}{% if not loop.last %},{% endif %} {% endif %} {% endfor %} {{ k }}.
-                            {% if p.publisher %}{{p.publisher}}.{% endif %} </li>
+            {% for theme in data.research_themes %}
+
+            {# Count publications whose keywords list contains this theme's slug. #}
+            {% set ns = namespace(count=0) %}
+            {% for p in publications if theme.slug in p.keywords %}
+                {% set ns.count = ns.count + 1 %}
+            {% endfor %}
+
+            <article class="theme-card theme-card--{{ theme.color }}"
+                     data-theme="{{ theme.slug }}"
+                     style="border-top-color: var(--color-theme-{{ theme.color }})">
+
+                <h3 class="theme-card__title">{{ theme.title }}</h3>
+
+                {% if theme.slug == 'language-revitalization' %}
+                <p class="theme-card__body">
+                    I have been engaged in language revitalization work since 2013...
+                </p>
+                {% elif theme.slug == 'speech-technology' %}
+                <p class="theme-card__body">
+                    I became interested in speech technology...
+                </p>
+                {% elif theme.slug == 'digital-lexicography' %}
+                <p class="theme-card__body">
+                    Building digital dictionaries was my first introduction to the world of computer science. As a First Nations' Languages and Linguistics major during my undergraduate degree, I was...
+                </p>
+                {% elif theme.slug == 'foundational-lang-tech' %}
+                <p class="theme-card__body">
+                    Speech synthesis and other cutting edge technologies are cool and all, but if the language in question doesn't have reliable access to a Unicode input system/keyboard, then what use is text-to-speech? There's a surprising amount of foundational language technology that is required to build other language technologies. Many NLP researchers working on languages like English take Unicode, keyboards, phonemizers, and forced alignment for granted, but these present real challenges. One thread of my research is building tools that are either directly requested by communities (like orthography converters), or prerequisites to other desired digital technologies.
+                </p>
+                {% endif %}
+                <!-- <span class="theme-card__count"
+                      style="color: var(--color-theme-{{ theme.color }})">
+                    {{ ns.count }}&nbsp;publication{{ 's' if ns.count != 1 else '' }}
+                </span> -->
+
+            </article>
+
+            {% endfor %}
+
+        </div>{# /.theme-grid #}
+    </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════════════════════
+     RESEARCH TIMELINE (GANTT)
+     ═══════════════════════════════════════════════════════════════════════════ -->
+<section id="timeline" class="section section--timeline">
+    <div class="container">
+        <h2 class="section__heading">Research Publication Timeline</h2>
+
+        <div>
+            <p>
+                The timeline below shows my academic publishing record according to the above themes. While Language Revitalization work has remained constant throughout my career, other themes follow a different pattern. For example, I only start working on Speech Technology after completing my M.Sc. in Speech & Language Processing at the University of Edinburgh in 2021.
+            </p>
+        </div>
+        
+        <div class="gantt-container">
+
+            <div class="gantt" role="img" aria-label="Publication timeline {{ gantt_start }}–{{ gantt_end }}">
+
+                {# ── Year markers: empty col-1 spacer + col-2 track ── #}
+                <div aria-hidden="true"></div>
+                <div class="gantt__years" aria-hidden="true">
+                    {% for yr in range(gantt_start, gantt_end + 1) %}
+                    <span class="gantt__year-mark"
+                          style="left: {{ ((yr - gantt_start) / gantt_span * 100) | round(1) }}%">{{ yr }}</span>
+                    {% endfor %}
+                </div>
+
+                {# ── One row per research theme (driven by data.research_themes in cv.yml) ── #}
+                {% for theme in data.research_themes %}
+                <div class="gantt__row" data-theme="{{ theme.slug }}">
+
+                    <span class="gantt__row-label"
+                          style="color: var(--color-theme-{{ theme.color }})">{{ theme.title }}</span>
+
+                    {# Collect pubs for this theme; track year range for the background bar #}
+                    {% set row_ns = namespace(pubs=[], min_yr=9999, max_yr=0) %}
+                    {% for p in publications if theme.slug in p.keywords %}
+                        {% set row_ns.pubs = row_ns.pubs + [p] %}
+                        {% if p.year < row_ns.min_yr %}{% set row_ns.min_yr = p.year %}{% endif %}
+                        {% if p.year > row_ns.max_yr %}{% set row_ns.max_yr = p.year %}{% endif %}
+                    {% endfor %}
+
+                    <div class="gantt__track">
+
+                        {# Build list of unique pub years for this theme — used for
+                           has_prev / has_next adjacency checks on each cluster dot. #}
+                        {% set yr_list = [] %}
+                        {% for yg in row_ns.pubs | groupby('year') %}
+                            {% set _ = yr_list.append(yg.grouper) %}
+                        {% endfor %}
+                        {# Half a year expressed as a percentage of the total gantt span #}
+                        {% set half_pct = (50.0 / gantt_span) | round(2) %}
+
+                        {# Continuous background track — spans earliest to latest pub year #}
+                        {% if row_ns.max_yr > 0 %}
+                        {% set bar_left  = ((row_ns.min_yr - gantt_start) / gantt_span * 100) | round(1) %}
+                        {% set bar_width = ((row_ns.max_yr - row_ns.min_yr) / gantt_span * 100) | round(1) %}
+                        <div class="gantt-bar"
+                             style="left: {{ bar_left }}%; width: {{ bar_width }}%; background: var(--color-theme-{{ theme.color }})"></div>
+                        {% endif %}
+
+                        {# One cluster dot per year, each flanked by left/right half-segments.
+                           Segments are solid when an adjacent year also has pubs (forming a
+                           continuous bridge), or fade in/out at the outer 25% otherwise. #}
+                        {% for year_group in row_ns.pubs | groupby('year') %}
+                        {% set yr       = year_group.grouper %}
+                        {% set yr_pubs  = year_group.list %}
+                        {% set yr_count = yr_pubs | length %}
+                        {% set dot_left = ((yr - gantt_start) / gantt_span * 100) | round(2) %}
+                        {% set has_prev = (yr - 1) in yr_list %}
+                        {% set has_next = (yr + 1) in yr_list %}
+
+                        {# Left half-segment — omitted for the gantt_start year (would extend before the track) #}
+                        {% if dot_left >= half_pct %}
+                        {% if has_prev %}
+                        <div class="gantt-segment"
+                             style="left: {{ (dot_left - half_pct) | round(2) }}%; width: {{ half_pct }}%;
+                                    background: var(--color-theme-{{ theme.color }})"></div>
                         {% else %}
-                        <li>{% if p.url %}
-                            <a href="{{ p.url }}" target="_blank">{{ p.title }}</a>{% else %}{{ p.title }}{% endif %}. In
-                            <em>{{ p.type }}</em>.
-                            <br>{% for a in p.authors %} {% if a.last == 'Pine' or a.last == 'Gitksan Research Lab' %}
-                            <strong>{{ a.last }}, {% if a.first %}
-                {{ a.first[0] }}.{%endif %}{% if not loop.last %},{% endif %}</strong> {% else %} {{ a.last }}, {% if a.first %}{{ a.first[0] }}.{% endif %}{% if not loop.last %},{% endif %} {% endif %} {% endfor %} {{ k }}.
-                            {% if p.publisher %}{{p.publisher}}.{% endif %} </li>
-                        {% endif %} {% endfor %} {% endfor %}
-                    </ul>
-                </div>
-            </div>
-        </div>
+                        <div class="gantt-segment"
+                             style="left: {{ (dot_left - half_pct) | round(2) }}%; width: {{ half_pct }}%;
+                                    background: linear-gradient(to right, transparent, var(--color-theme-{{ theme.color }}) 25%)"></div>
+                        {% endif %}
+                        {% endif %}
 
-        <!-- Presentations -->
-        <div class="docs-section" id="presentations">
-            <h6 class="docs-header">Presentations</h6>
-            <p>Below are some guest lectures, workshops and other presentations I have given. The list is scrollable.</p>
-            <div class="docs-example limit">
-                <table class="u-full-width">
+                        {# Right half-segment #}
+                        {% if has_next %}
+                        <div class="gantt-segment"
+                             style="left: {{ dot_left }}%; width: {{ half_pct }}%;
+                                    background: var(--color-theme-{{ theme.color }})"></div>
+                        {% else %}
+                        <div class="gantt-segment"
+                             style="left: {{ dot_left }}%; width: {{ half_pct }}%;
+                                    background: linear-gradient(to right, var(--color-theme-{{ theme.color }}) 75%, transparent)"></div>
+                        {% endif %}
+
+                        {# Build the data-pubs JSON payload for this dot's tooltip #}
+                        {% set pubs_data = [] %}
+                        {% for p in yr_pubs %}
+                            {% set other_themes = [] %}
+                            {% for t in data.research_themes if t.slug != theme.slug and t.slug in p.keywords %}
+                                {% set _ = other_themes.append({'color': t.color, 'title': t.title}) %}
+                            {% endfor %}
+                            {% set _ = pubs_data.append({
+                                'title':       p.title  | default('') | string,
+                                'venue':       p.venue  | default('') | string,
+                                'year':        p.year,
+                                'pdf':         p.pdf    | default('') | string,
+                                'doi':         p.doi    | default('') | string,
+                                'url':         p.url    | default('') | string,
+                                'featured':    p.featured | default(false),
+                                'otherThemes': other_themes
+                            }) %}
+                        {% endfor %}
+
+                        {% set yr_featured = yr_pubs | selectattr('featured') | list | length > 0 %}
+                        <span class="gantt-dot{% if yr_count > 1 %} gantt-dot--cluster{% elif yr_featured %} gantt-dot--featured{% endif %}"
+                              data-count="{{ yr_count }}"
+                              data-pubs='{{ pubs_data | tojson }}'
+                              style="left: {{ dot_left }}%"
+                              tabindex="0"
+                              role="button"
+                              aria-label="{{ yr_count }} publication{{ 's' if yr_count > 1 else '' }} ({{ yr }})">
+                        </span>
+                        {% endfor %}
+
+                    </div>
+
+                </div>{# /.gantt__row #}
+                {% endfor %}
+
+            </div>{# /.gantt #}
+        </div>{# /.gantt-container #}
+    </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════════════════════
+     PUBLICATIONS
+     TODO: Add JS to wire up .pub-filter__btn clicks so that clicking a theme
+     button shows only .pub-item elements whose data-themes attribute contains
+     that slug, and hides the rest.  The "All" button resets visibility.
+     ═══════════════════════════════════════════════════════════════════════════ -->
+<section id="publications" class="section section--publications">
+    <div class="container">
+        <h2 class="section__heading">
+            Publications
+            <span class="section__count">({{ publications | length }})</span>
+        </h2>
+
+        {# ── Filter bar ── #}
+        <div class="pub-filter" role="group" aria-label="Filter publications by theme">
+
+            <button class="pub-filter__btn pub-filter__btn--active"
+                    data-theme="all"
+                    aria-pressed="true">All</button>
+
+            {% for theme in data.research_themes %}
+            <button class="pub-filter__btn pub-filter__btn--{{ theme.color }}"
+                    data-theme="{{ theme.slug }}"
+                    aria-pressed="false">{{ theme.title }}</button>
+            {% endfor %}
+
+        </div>{# /.pub-filter #}
+
+        {# ── Publication list ──
+           Sorted year-descending, then by citekey, by parse_publications().
+           data-themes carries a space-separated list of keyword slugs for
+           the JS filter to match against. #}
+        <ul class="pub-list">
+
+            {% for p in publications %}
+            {% set _pub_meta = {'authors': p.authors, 'year': p.year, 'title': p.title, 'venue': p.venue, 'doi': p.doi} %}
+            <li class="pub-item{% if p.featured %} pub-item--featured{% endif %}"
+                data-themes="{{ p.keywords | join(' ') }}"
+                data-key="{{ p.key }}"
+                data-bibtex='{{ p.bibtex | tojson }}'
+                data-pub='{{ _pub_meta | tojson }}'
+                id="pub-{{ p.key }}">
+
+                {% if p.featured %}
+                <span class="pub-item__star" aria-label="Featured publication" title="Featured">★</span>
+                {% endif %}
+
+                <div class="pub-item__body">
+
+                    {# Title — linked to proceedings/project page when url is present #}
+                    <span class="pub-item__title">
+                        {%- if p.url -%}
+                        <a href="{{ p.url }}" target="_blank" rel="noopener noreferrer">{{ p.title }}</a>
+                        {%- else -%}
+                        {{ p.title }}
+                        {%- endif -%}
+                    </span>
+
+                    {# Authors: "Last, F." abbreviated; Pine bolded #}
+                    <span class="pub-item__authors">
+                        {%- for a in p.authors -%}
+                            {%- if a.last == 'Pine' -%}
+                                <strong class="pub-item__author pub-item__author--self"
+                                >{{ a.last }}{% if a.first %},&thinsp;{{ a.first[0] }}.{% endif %}</strong>
+                            {%- else -%}
+                                <span class="pub-item__author"
+                                >{{ a.last }}{% if a.first %},&thinsp;{{ a.first[0] }}.{% endif %}</span>
+                            {%- endif -%}
+                            {%- if not loop.last %},&ensp;{% endif -%}
+                        {%- endfor -%}
+                    </span>
+
+                    {# Year and venue #}
+                    <span class="pub-item__meta">
+                        <span class="pub-item__year">{{ p.year }}</span>.
+                        <em class="pub-item__venue">{{ p.venue }}</em>.
+                    </span>
+
+                </div>{# /.pub-item__body #}
+
+                {# Link buttons #}
+                <div class="pub-item__links">
+                    {% if p.pdf %}
+                    <a class="pub-link pub-link--pdf"
+                       href="{{ p.pdf }}"
+                       target="_blank"
+                       rel="noopener noreferrer">PDF</a>
+                    {% endif %}
+                    {% if p.doi %}
+                    <a class="pub-link pub-link--doi"
+                       href="https://doi.org/{{ p.doi }}"
+                       target="_blank"
+                       rel="noopener noreferrer">DOI</a>
+                    {% endif %}
+                    {% if p.project %}
+                    <a class="pub-link pub-link--project"
+                       href="{{ p.project }}"
+                       target="_blank"
+                       rel="noopener noreferrer">Project</a>
+                    {% endif %}
+                    <a class="pub-link pub-link--cite" type="button">Cite</a>
+                </div>{# /.pub-item__links #}
+
+            </li>
+            {% endfor %}
+
+        </ul>{# /.pub-list #}
+    </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════════════════════
+     PRESENTATIONS
+     Wrapped in <details> so the long table is collapsed by default.
+     The existing table structure and Jinja2 iteration are preserved exactly.
+     ═══════════════════════════════════════════════════════════════════════════ -->
+<section id="presentations" class="section section--presentations">
+    <div class="container">
+
+        <details class="presentations-details">
+            <summary class="presentations-details__summary">
+                Presentations
+                <span class="presentations-details__count">({{ data.presentations | length }})</span>
+            </summary>
+
+            <div class="presentations-details__body">
+                <table class="u-full-width presentations-table">
                     <thead>
                         <tr>
                             <th>Title</th>
@@ -193,12 +457,12 @@
                         {% for p in data.presentations | reverse %}
                         <tr>
                             <td>{{ p.title }}</td>
-                            <td>{{ p.audience }}
-                                <br>
-                                <strong>{{ p.location }}</strong>
+                            <td>
+                                {{ p.audience if p.audience else '' }}
+                                {% if p.audience and p.location %}<br>{% endif %}
+                                {% if p.location %}<strong>{{ p.location }}</strong>{% endif %}
                             </td>
-                            <td>{% for pp in p.presenters %} {{ pp.last }}, {% if pp.first %} {{ pp.first[0] }}.{% endif %} {% if not loop.last %}
-                                <br>{% endif %} {% endfor %}</td>
+                            <td>{% for pp in p.presenters %}{{ pp.last }},{% if pp.first %}&thinsp;{{ pp.first[0] }}.{% endif %}{% if not loop.last %}<br>{% endif %}{% endfor %}</td>
                             <td>{{ p.type.capitalize() }}</td>
                             <td>{{ p.year }}</td>
                         </tr>
@@ -207,130 +471,20 @@
                 </table>
             </div>
 
-        </div>
-
-        <!-- Projects -->
-        <!--
-    <div class="docs-section" id="projects">
-      <h6 class="docs-header">Projects</h6>
-      <p>Below are some of the various software projects I have been involved in.</p>
-      <div class="docs-example">
-        <div class='container projects'>
-          {% for project in data.projects %}
-          <div class='row project'>
-            {% if 'links' in project %}
-            {% if loop.index % 2 %}
-            <div class='seven columns project__img'>
-              <img src="{{ url_for( 'static', filename='cv/images/' + (project['title']|slug) + '.png' ) }}"></div>
-            <div class='five columns project__text'>
-              <h6><b>{{ project.title }}</b></h6>
-              <p>{{ project.description }}</p>
-
-              {% if project.links.keys() %}
-              <h6>Links:</h6>
-               <ul>
-              {% for link in project.links.keys() %}
-             <li><a href='{{ project.links[link] }}'>{{ link }}</a></li>
-              {% endfor %}
-              </ul>
-              {% endif %}
-              {% if 'badges' in project %}
-              {% for badge in project['badges'] %}
-              <img src={{badge}}>
-              {% endfor %}
-              {% endif %}
-            </div>
-            {% else %}
-            <div class='five columns project__text'>
-              <h6><b>{{ project.title }}</b></h6>
-              <p>{{ project.description }}</p>
-
-              {% if project.links.keys() %}
-              <h6>Links:</h6>
-               <ul>
-              {% for link in project.links.keys() %}
-             <li><a href='{{ project.links[link] }}'>{{ link }}</a></li>
-              {% endfor %}
-              </ul>
-              {% endif %}
-              {% if 'badges' in project %}
-              {% for badge in project['badges'] %}
-              <img src={{badge}}>
-              {% endfor %}
-              {% endif %}
-            </div>
-            <div class='seven columns project__img'>
-              <img src="{{ url_for( 'static', filename='cv/images/' + (project['title']|slug) + '.png' ) }}"></div>
-            {% endif %}
-            {% else %}
-            <div class='four columns project__title'>
-              <h6><b>{{ project.title }}</b></h6>
-              {% if 'badges' in project %}
-              {% for badge in project['badges'] %}
-              <img src=badge>
-              {% endfor %}
-              {% endif %}
-            </div>
-            <div class='eight columns project__text'>
-              <p>{{ project.description }}</p>
-            </div>
-            {% endif %}
-
-          </div>
-          {% endfor %}
-        </div>
-
-      </div>
+        </details>
 
     </div>
-    -->
-        <!-- This site -->
-        <div class="docs-section" id="site">
-            <div class="row">
-                <div class="twelve columns">
-                    <h6 class="docs-header">This site</h6>
-                    <p>There were a lot of really cool CV templates and things out there, but I ended up building my own because I wanted something that was:
-                        <br>
-                        <br> a) static, so I could host for free on GitHub Pages
-                        <br> b) able to generate LaTeX
-                        <br> c) pulled from simple markup like yaml</p>
-                    <p>So, I wrote my CV data in yaml, and use Flask, Frozen-Flask, Jinja2, Skeleton and Fabric to generate a static site and LaTeX CV. I host for free on GitHub, use Cloudflare for free SSL and Mailgun for free email. I slapped an MIT license
-                        on the
-                        <a href="//github.com/roedoejet/cv" target="_blank">code</a>, so if you think it would be useful to you, go for it!</p>
-                    <p>Update: Waaaay back in the day, like 3 years ago (🤦) <a href='https://jamstack.org/'>Jamstack</a> was really only just starting to gain popularity, and so building a custom static-site generator like this seemed reasonable. If I was
-                        starting now, I probably wouldn't build this site this way. I'd probably use something like <a href="https://gohugo.io/">Hugo</a> instead.</p>
-                </div>
-            </div>
-        </div>
+</section>
 
-        <!-- <div class="docs-section" id="code">
-      <h6 class="docs-header">Code</h6>
-      <p>I'm interested in all manner of open source language revitalization software.
-      </p>
-      <p>Here are some open-source web and software projects I have been a part of.</p>
-      {% for c in data.code %}
-      <iframe src="{{ c.count }}" allowtransparency="true" frameborder="0" scrolling="0" width="110" height="20"></iframe>
-      {% endfor %}
 
-    </div> -->
+</main>{# /main #}
 
-        <!-- Contact -->
-        <div class="docs-section" id="contact">
+{% include '_contact.html' %}
 
-            <div class="row">
-                <div class="six columns">
-                    <h6 class="docs-header">Contact</h6>
-                    <p> {{ data.personal.email }}</p>
-                    <p> GitHub: {{ data.personal.github }}</p>
-
-                </div>
-            </div>
-        </div>
-
-        <!-- End Document
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+<!-- ═══════════════════════════════════════════════════════════════════════════
+     END DOCUMENT
+     ═══════════════════════════════════════════════════════════════════════════ -->
 </body>
-
 
 <script>
     var now = new Date()

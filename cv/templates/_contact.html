@@ -1,0 +1,17 @@
+{# _contact.html — Shared contact footer section.
+   Requires `data` (cv.yml dict) in the calling template's context. #}
+
+<section id="contact" class="section section--contact">
+    <div class="container">
+        <h2 class="section__heading">Contact</h2>
+        <p>
+            <a href="mailto:{{ data.personal.email }}">{{ data.personal.email }}</a>
+        </p>
+        <p>
+            GitHub:
+            <a href="https://github.com/{{ data.personal.github | replace('@', '') }}"
+               target="_blank"
+               rel="noopener noreferrer">{{ data.personal.github }}</a>
+        </p>
+    </div>
+</section>

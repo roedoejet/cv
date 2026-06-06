@@ -1,0 +1,38 @@
+[project]
+name = "cv"
+version = "1.0"
+description = "Personal CV website — aidanpine.ca"
+requires-python = ">=3.9"
+dependencies = [
+    "Flask==2.2.5",
+    "Werkzeug>=2.2.2,<3.0",
+    "Frozen-Flask==0.18",
+    "Fabric==1.15.0",
+    "python-slugify==8.0.1",
+    "PyYAML==6.0",
+    "bibtexparser>=1.4.0,<2.0.0",
+]
+
+[dependency-groups]
+dev = [
+    # test suite
+    "pytest>=7.0",
+    "requests>=2.28",
+    # screenshot generation (screenshot_gen.py)
+    "selenium==4.8.2",
+    "Pillow==9.4.0",
+    # LaTeX CV pipeline (fab latex)
+    "pylatexenc==2.10",
+    # legacy test infrastructure (tests/test_log.py)
+    "coloredlogs==15.0.1",
+]
+
+[build-system]
+requires = ["setuptools>=61", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["cv*", "latex*"]
+
+[tool.setuptools]
+include-package-data = true

@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <meta charset="utf-8">
+    <title>Projects — {{ data.personal.first_name }} {{ data.personal.last_name }}</title>
+    <meta name="author" content="">
+    <script>
+        document.write('<base href="' + document.location + '" />');
+    </script>
+
+    <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="title" content="Projects — Aidan Pine">
+    <meta name="og:title" content="Projects — Aidan Pine">
+    <meta name="description" content="Open-source language revitalization tools and software projects by Aidan Pine.">
+    <meta name="og:description" content="Open-source language revitalization tools and software projects by Aidan Pine.">
+    <meta name="robots" content="index,follow">
+    <meta name="og:image" content="/static/cv/images/cv.png">
+    <meta name="og:url" content="https://aidanpine.ca/projects">
+    <meta name="og:type" content="website">
+    <meta name="twitter:card" content="summary_large">
+    <meta name="twitter:image:alt" content="Aidan Pine">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link href='//fonts.googleapis.com/css?family=Raleway:400,300,600' rel='stylesheet' type='text/css'>
+
+    <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='cv/dist/css/normalize.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='cv/dist/css/skeleton.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='cv/dist/css/custom.css') }}">
+
+    <!-- Scripts
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='cv/css/github-prettify-theme.css') }}">
+    <script src="{{ url_for('static', filename='cv/js/site.js') }}"></script>
+    <script defer src="{{ url_for('static', filename='cv/dist/js/main.js') }}"></script>
+
+    <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link rel='shortcut icon' type='image/x-icon' href="{{ url_for('static', filename='cv/images/favicon.ico') }}" />
+
+    <!-- Plausible Analytics -->
+    <script defer data-domain="aidanpine.ca" src="https://plausible.io/js/script.js"></script>
+
+</head>
+
+{% from '_nav.html' import render_nav %}
+
+{# ─── Template-scope helpers ──────────────────────────────────────────────── #}
+
+{# Colour tokens cycle in this order for platform cards. #}
+{% set theme_cycle = ['teal', 'purple', 'coral', 'amber'] %}
+
+{# Separate projects into three buckets:
+     platform_children  — have a `platform` field → shown only as deployments
+     major_platforms    — no platform field, has description AND active links
+     other_projects     — everything else at the top level
+   Note: `selectattr`/`rejectattr` without a test checks truthiness.
+         Missing keys resolve to Jinja2 Undefined, which is falsy. #}
+{% set platform_children = data.projects | selectattr('platform') | list %}
+{% set top_level         = data.projects | rejectattr('platform') | list %}
+{% set major_platforms   = top_level | selectattr('description') | selectattr('links') | list %}
+{% set other_projects    = top_level | rejectattr('description') | list
+                         + top_level | selectattr('description') | rejectattr('links') | list %}
+
+<body>
+
+{{ render_nav('projects') }}
+
+<main>
+
+<!-- ═══════════════════════════════════════════════════════════════════════════
+     MAJOR PLATFORMS
+     Projects that are substantive tools or platforms (have a description and
+     at least one active link).  Colour stripe cycles through the four theme
+     tokens.  Deployment children are listed inside each card.
+     ═══════════════════════════════════════════════════════════════════════════ -->
+<section id="platforms" class="section section--platforms">
+    <div class="container">
+        <h2 class="section__heading">Major platforms</h2>
+
+        {% for project in major_platforms %}
+
+        {# Cycle through the four colour tokens by index. #}
+        {% set color_cls = theme_cycle[loop.index0 % 4] %}
+
+        {# Find publications whose `projects` list names this platform. #}
+        {% set ns = namespace(pub_count=0) %}
+        {% for pub in publications if project.title in pub.projects %}
+            {% set ns.pub_count = ns.pub_count + 1 %}
+        {% endfor %}
+
+        {# Find child deployments whose `platform` field equals this project's title. #}
+        {% set children = platform_children | selectattr('platform', 'equalto', project.title) | list %}
+        {% set preview_count = 7 %}
+        {% set overflow      = children | length - preview_count %}
+
+        <div class="project-card project-card--{{ color_cls }}"
+             id="project-{{ project.title | slug }}">
+
+            {# ── Header ── #}
+            <div class="project-card__header">
+                <h3 class="project-card__title">{{ project.title }}</h3>
+
+                <div class="project-card__tags">
+                    {% if project.links and project.links.repo %}
+                    <span class="project-card__tag project-card__tag--oss">Open source</span>
+                    {% endif %}
+                </div>
+            </div>
+
+            {# ── Link buttons ── #}
+            <div class="project-card__links">
+                {% if project.links and project.links.web %}
+                <a class="project-card__link"
+                   href="{{ project.links.web }}"
+                   target="_blank"
+                   rel="noopener noreferrer">Web ↗</a>
+                {% endif %}
+                {% if project.links and project.links.repo %}
+                <a class="project-card__link"
+                   href="{{ project.links.repo }}"
+                   target="_blank"
+                   rel="noopener noreferrer">Repo ↗</a>
+                {% endif %}
+                {# Publication count button — only rendered when there are matches.
+                   Pub–project linking requires `projects` fields in publications.bib
+                   to be populated. #}
+                {% if ns.pub_count > 0 %}
+                <a class="project-card__link project-card__link--pubs"
+                   href="/?filter={{ project.title | slug }}#publications">
+                    {{ ns.pub_count }}&nbsp;related
+                    publication{{ 's' if ns.pub_count != 1 else '' }} ↗
+                </a>
+                {% endif %}
+            </div>
+
+            {# ── Description ── #}
+            <p class="project-card__desc">{{ project.description }}</p>
+
+            {# ── Collaborators ── #}
+            {% if project.collaborators %}
+            <p class="project-card__collaborators">
+                <span class="project-card__collaborators-label">With: </span>
+                {% for c in project.collaborators %}
+                    {%- if c.link or c.links %}
+                    <a href="{{ c.link or c.links }}"
+                       class="project-card__collaborator"
+                       target="_blank"
+                       rel="noopener noreferrer">{{ c.name }}</a>
+                    {%- else %}
+                    <span class="project-card__collaborator">
+                        {{- c.name }}
+                        {%- if c.affiliation %}
+                        ({% if c.affiliation is string %}{{ c.affiliation }}{% else %}{{ c.affiliation | join(', ') }}{% endif %})
+                        {%- endif -%}
+                    </span>
+                    {%- endif %}
+                    {%- if not loop.last %},{% endif %}
+                {% endfor %}
+            </p>
+            {% endif %}
+
+            {# ── Deployments ──
+               Shown only when there are platform children.
+               The preview shows the first 7 as pill links; an overflow "+N more"
+               pill expands to the full mini-card grid.
+               TODO: JS to wire up the expand/collapse toggle using
+                     data-deployments-id and the hidden .deployments-expanded. #}
+            {% if children %}
+            {% set dep_id = 'dep-' ~ (project.title | slug) %}
+            <div class="deployments" data-deployments-id="{{ dep_id }}">
+
+                <h4 class="deployments__heading">
+                    Deployments
+                    <span class="deployments__count">({{ children | length }})</span>
+                </h4>
+
+                {# Preview pills — first 7 #}
+                <div class="deployments-preview">
+                    {% for child in children[:preview_count] %}
+                    <a class="deployments-preview__pill"
+                       {% if child.links and child.links.web %}
+                       href="{{ child.links.web }}"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       {% else %}
+                       role="button"
+                       {% endif %}>{{ child.title | replace(' Dictionary', '') }}</a>
+                    {% endfor %}
+                    {% if overflow > 0 %}
+                    <button class="deployments-preview__pill deployments-preview__pill--overflow"
+                            aria-expanded="false"
+                            aria-controls="{{ dep_id }}">+{{ overflow }} more</button>
+                    {% endif %}
+                </div>
+
+                {# Expanded view — all children as mini-cards.
+                   Hidden by default; toggled by JS via aria-expanded above. #}
+                <div class="deployments-expanded"
+                     id="{{ dep_id }}"
+                     hidden>
+                    {% for child in children %}
+                    <div class="deployment-card">
+                        <span class="deployment-card__title">
+                            {{ child.title | replace(' Dictionary', '') }}
+                        </span>
+                        <span class="deployment-card__links">
+                            {% if child.links and child.links.web %}
+                            <a class="deployment-card__link"
+                               href="{{ child.links.web }}"
+                               target="_blank"
+                               rel="noopener noreferrer">Web</a>
+                            {% endif %}
+                            {% if child.links and child.links.ios %}
+                            <a class="deployment-card__link"
+                               href="{{ child.links.ios }}"
+                               target="_blank"
+                               rel="noopener noreferrer">iOS</a>
+                            {% endif %}
+                            {% if child.links and child.links.android %}
+                            <a class="deployment-card__link"
+                               href="{{ child.links.android }}"
+                               target="_blank"
+                               rel="noopener noreferrer">Android</a>
+                            {% endif %}
+                        </span>
+                    </div>
+                    {% endfor %}
+                </div>
+
+            </div>{# /.deployments #}
+            {% endif %}
+
+        </div>{# /.project-card #}
+        {% endfor %}
+
+    </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════════════════════
+     OTHER PROJECTS
+     Smaller one-off tools and experiments that are not platforms.
+     Displayed as a 3-column grid of compact cards.
+     ═══════════════════════════════════════════════════════════════════════════ -->
+{% if other_projects %}
+<section id="other-projects" class="section section--other-projects">
+    <div class="container">
+        <h2 class="section__heading">Other projects</h2>
+
+        <div class="project-grid">
+
+            {% for project in other_projects %}
+
+            {# Find related publications for this project too. #}
+            {% set ns2 = namespace(pub_count=0) %}
+            {% for pub in publications if project.title in pub.projects %}
+                {% set ns2.pub_count = ns2.pub_count + 1 %}
+            {% endfor %}
+
+            {# Resolve links from either `links` or the legacy singular `link` key. #}
+            {% set proj_links = project.links if project.links is defined and project.links
+                                else (project.link if project.link is defined and project.link else {}) %}
+
+            <div class="project-card project-card--small"
+                 id="project-{{ project.title | slug }}">
+
+                <div class="project-card__header">
+                    <h3 class="project-card__title">{{ project.title }}</h3>
+                    {% if proj_links.repo %}
+                    <span class="project-card__tag project-card__tag--oss">Open source</span>
+                    {% endif %}
+                </div>
+
+                {% if proj_links %}
+                <div class="project-card__links">
+                    {% if proj_links.web %}
+                    <a class="project-card__link"
+                       href="{{ proj_links.web }}"
+                       target="_blank"
+                       rel="noopener noreferrer">Web ↗</a>
+                    {% endif %}
+                    {% if proj_links.repo %}
+                    <a class="project-card__link"
+                       href="{{ proj_links.repo }}"
+                       target="_blank"
+                       rel="noopener noreferrer">Repo ↗</a>
+                    {% endif %}
+                    {% if ns2.pub_count > 0 %}
+                    <a class="project-card__link project-card__link--pubs"
+                       href="/?filter={{ project.title | slug }}#publications">
+                        {{ ns2.pub_count }}&nbsp;related
+                        publication{{ 's' if ns2.pub_count != 1 else '' }} ↗
+                    </a>
+                    {% endif %}
+                </div>
+                {% endif %}
+
+                {% if project.description %}
+                <p class="project-card__desc">{{ project.description }}</p>
+                {% endif %}
+
+                {% if project.collaborators %}
+                <p class="project-card__collaborators">
+                    <span class="project-card__collaborators-label">With: </span>
+                    {% for c in project.collaborators %}
+                        <span class="project-card__collaborator">
+                            {{- c.name }}
+                            {%- if c.affiliation %}
+                            ({% if c.affiliation is string %}{{ c.affiliation }}{% else %}{{ c.affiliation | join(', ') }}{% endif %})
+                            {%- endif -%}
+                        </span>
+                        {%- if not loop.last %}, {% endif %}
+                    {% endfor %}
+                </p>
+                {% endif %}
+
+            </div>{# /.project-card.project-card--small #}
+            {% endfor %}
+
+        </div>{# /.project-grid #}
+    </div>
+</section>
+{% endif %}
+
+
+</main>{# /main #}
+
+{% include '_contact.html' %}
+
+<!-- ═══════════════════════════════════════════════════════════════════════════
+     END DOCUMENT
+     ═══════════════════════════════════════════════════════════════════════════ -->
+</body>
+
+</html>

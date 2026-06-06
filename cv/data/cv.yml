@@ -20,6 +20,7 @@ education:
 
 projects:
   - title: "Kawennón:nis: The wordmaker for Kanyen'kéha"
+    platform: WordWeaver
     links:
       web: https://kawennonnis.ca
     description: A collaboration between NRC and Onkwawenna Kentyohkwa immersion school. This is an instance of the WordWeaver software.
@@ -49,6 +50,7 @@ projects:
     badges:
       - https://img.shields.io/pypi/v/mothertongues.svg
   - title: Gitksan Dictionary
+    platform: Mother Tongues
     links:
       web: https://mothertongues.org/gitksan
       android: https://play.google.com/store/apps/details?id=org.mothertongues.gitksan
@@ -57,16 +59,19 @@ projects:
       - name: UBC
         links: https://blogs.ubc.ca/gitksanlab/about/
   - title: Mohawk Verb Quiz
+    platform: WordWeaver
     link:
       web: https://mohverbquiz.herokuapp.com/
     description: This is a website to assist teacher Zoe Hopkins in teaching Mohawk to online learners. The site uses the Google Sheets API so that Zoe can add verbs into a Google Sheet and have the site automatically updated. I built it in half a day on Zoe's request, so there are likely some bugs/areas for improvement!
   - title: Ayajuthem Dictionary
+    platform: Mother Tongues
     links:
       web: https://mothertongues.org/ayajuthem
       android: https://play.google.com/store/apps/details?id=org.mothertongues.ayajuthem
     collaborators:
       - name: UBC
   - title: Ucwalmícwts Dictionary
+    platform: Mother Tongues
     description: This app was built for FirstVoices using Mother Tongues Dictionaries.
     links:
       web: https://mothertongues.org/lilwat
@@ -75,6 +80,7 @@ projects:
     collaborators:
       - name: FPCC
   - title: Halq'eméylem Dictionary
+    platform: Mother Tongues
     description: This app was built for FirstVoices using Mother Tongues Dictionaries.
     links:
       web: https://mothertongues.org/stolo
@@ -83,6 +89,7 @@ projects:
     collaborators:
       - name: FPCC
   - title: SENĆOŦEN Dictionary
+    platform: Mother Tongues
     description: This app was built for FirstVoices using Mother Tongues Dictionaries.
     links:
       web: https://mothertongues.org/sencoten
@@ -91,12 +98,14 @@ projects:
     collaborators:
       - name: FPCC
   - title: Nisga'a Dictionary
+    platform: Mother Tongues
     description: This app was built for FirstVoices using Mother Tongues Dictionaries.
     links:
       web: https://mothertongues.org/nisga
       android: https://play.google.com/store/apps/details?id=com.firstvoices.nisga
       ios: https://itunes.apple.com/ca/app/nisgaa/id490034233?mt=8
   - title: Ehattesaht Dictionary
+    platform: Mother Tongues
     description: This app was built for FirstVoices using Mother Tongues Dictionaries.
     links:
       web: https://mothertongues.org/ehattesaht
@@ -105,6 +114,7 @@ projects:
     collaborators:
       - name: FPCC
   - title: Kwak'wala Dictionary
+    platform: Mother Tongues
     description: This app was built for FirstVoices using Mother Tongues Dictionaries.
     links:
       web: https://mothertongues.org/kwakwala/
@@ -113,6 +123,7 @@ projects:
     collaborators:
       - name: FPCC
   - title: Skidegate Haida Dictionary
+    platform: Mother Tongues
     description: This app was built for FirstVoices using Mother Tongues Dictionaries.
     links:
       web: https://mothertongues.org/skidegate
@@ -121,6 +132,7 @@ projects:
     collaborators:
       - name: FPCC
   - title: Secwepemc Dictionary
+    platform: Mother Tongues
     description: This app was built for FirstVoices using Mother Tongues Dictionaries.
     links:
       web: https://mothertongues.org/sces
@@ -129,6 +141,7 @@ projects:
     collaborators:
       - name: FPCC
   - title: Sliammon Dictionary
+    platform: Mother Tongues
     description: This app was built for FirstVoices using Mother Tongues Dictionaries.
     links:
       web: https://mothertongues.org/sliammon
@@ -137,6 +150,7 @@ projects:
     collaborators:
       - name: FPCC
   - title: Ktunaxa Dictionary
+    platform: Mother Tongues
     description: This app was built for FirstVoices using Mother Tongues Dictionaries.
     links:
       web: https://mothertongues.org/ktunaxa
@@ -145,6 +159,7 @@ projects:
     collaborators:
       - name: FPCC
   - title: Northern St'at'imcets Dictionary
+    platform: Mother Tongues
     description: This app was built for FirstVoices using Mother Tongues Dictionaries.
     links:
       web: https://mothertongues.org/nstat
@@ -153,6 +168,7 @@ projects:
     collaborators:
       - name: FPCC
   - title: Xeni Gwet'in Dictionary
+    platform: Mother Tongues
     description: This app was built for FirstVoices using Mother Tongues Dictionaries.
     links:
       web: https://mothertongues.org/xeni
@@ -161,6 +177,7 @@ projects:
     collaborators:
       - name: FPCC
   - title: Híɫzaqv Dictionary
+    platform: Mother Tongues
     description: This dictionary uses data from the HDD and was developed through the Heiltsuk Language and Culture Mobilization Partnership
     links:
       web: https://mothertongues.org/heiltsuk
@@ -168,6 +185,7 @@ projects:
       - name: Heiltsuk Language and Culture Mobilization Partnership
         link: https://heiltsuk.arts.ubc.ca/
   - title: Nazko Dakelh Dictionary
+    platform: Mother Tongues
     description: This app was built for FirstVoices using Mother Tongues Dictionaries.
     links:
       android: https://play.google.com/store/apps/details?id=com.firstvoices.dakelh&hl=en
@@ -252,538 +270,6 @@ projects:
   # - title: Keyboards
   # - title: TTS
 
-publications:
-  2017:
-    - order: 1
-      authors:
-        - first: Aidan
-          last: Pine
-        - first: Mark
-          last: Turin
-      title: Language Revitalization
-      booktitle: Oxford Research Encylopedia of Linguistics
-      publisher: Oxford University Press
-      editor: Mark Aronoff
-      type: bookchapter
-      url: //doi.org/10.1093/acrefore/9780199384655.013.8
-
-    - order: 2
-      authors:
-        - first: Patrick
-          last: Littell
-        - first: Aidan
-          last: Pine
-        - first: Henry
-          last: Davis
-      title: "Waldayu and Waldayu Mobile: Modern digital dictionary interfaces for endangered languages"
-      conference: "ComputEL-2: The 2nd Workshop on Computational Methods for Endangered Languages"
-      publisher:
-      type: proceedings
-      url: //roedoejet.github.io/cv/static/cv/pdfs/computel.pdf
-
-    - order: 3
-      authors:
-        - first: Clarissa
-          last: Forbes
-        - first: Henry
-          last: Davis
-        - first: Michael
-          last: Schwan
-        - last: Gitksan Research Lab
-      title: Three Gitksan texts
-      booktitle: "University of British Columbia Working Papers in Linguistics"
-      publisher: University of British Columbia
-      type: journal
-      vol: 45
-      pp: 47-90
-      url: //roedoejet.github.io/cv/static/cv/pdfs/gitlab.pdf
-
-  2018:
-    - order: 1
-      authors:
-        - first: Kathleen
-          last: Hall
-        - first: Aidan
-          last: Pine
-        - first: Michael
-          last: Schwan
-      title: Doing Phonological Corpus Analysis in a Fieldwork Context
-      booktitle: "Wa7 xweysás i nqwaluttenhíha: He loves the peoples' languages. Essays in honour of Henry Davis"
-      publisher: University of British Columbia
-      type: bookchapter
-      url: //roedoejet.github.io/cv/static/cv/pdfs/hall.pdf
-
-    - order: 2
-      authors:
-        - first: Aidan
-          last: Pine
-        - first: Mark
-          last: Turin
-      title: "Seeing the Heiltsuk Orthography from Font Encoding through to Unicode: A Case Study Using Convertextract"
-      conference: "CCURL 2018: The 3rd Workshop on Collaboration and Computing for Under-Resourced Languages"
-      publisher: European Language Resources Association
-      type: proceedings
-      url: //roedoejet.github.io/cv/static/cv/pdfs/Pine-Turin-Convertextract-2018.pdf
-
-    - order: 4
-      authors:
-        - first: Patrick
-          last: Littell
-        - first: Anna
-          last: Kazantseva
-        - first: Roland
-          last: Kuhn
-        - first: Aidan
-          last: Pine
-        - first: Antti
-          last: Arppe
-        - first: Christopher
-          last: Cox
-        - first: Marie-Odile
-          last: Junker
-      title: "Indigenous language technologies in Canada: Assessment, challenges, and successes"
-      conference: "COLING: The 27th International Conference on Computational Linguistics"
-      publisher:
-      type: proceedings
-      url: //roedoejet.github.io/cv/static/cv/pdfs/coling.pdf
-
-    - order: 3
-      authors:
-        - first: Anna
-          last: Kazantseva
-        - first: Brian
-          last: Maracle
-        - first: Ronkwe'tiyohstha
-          last: Maracle
-        - first: Aidan
-          last: Pine
-      title: "Kawennón:nis: the Wordmaker for Kanyen'kéha (Ohsweken Mohawk)"
-      conference: "COLING: The 27th International Conference on Computational Linguistics"
-      publisher:
-      type: proceedings
-      url: //roedoejet.github.io/cv/static/cv/pdfs/kawe.pdf
-
-  2019:
-    - order: 1
-      authors:
-        - first: Mark
-          last: Turin
-        - first: Aidan
-          last: Pine
-      title: "Using technology to help revitalize Indigenous languages"
-      publisher: Oxford University Press
-      type: the Oxford University Press Blog
-      url: https://blog.oup.com/2019/06/using-technology-help-revitalize-indigenous-languages/
-
-  2020:
-    - order: 2
-      authors:
-        - first: Roland
-          last: Kuhn
-        - first: Fineen
-          last: Davis
-        - first: Alain
-          last: Désilets
-        - first: Eric
-          last: Joanis
-        - first: Anna
-          last: Kazantseva
-        - first: Rebecca
-          last: Knowles
-        - first: Patrick
-          last: Littell
-        - first: Delaney
-          last: Lothian
-        - first: Aidan
-          last: Pine
-        - first: Caroline
-          last: Running Wolf
-        - first: Eddie
-          last: Santos
-        - first: Darlene
-          last: Stewart
-        - first: Gilles
-          last: Boulianne
-        - first: Gupta
-          last: Vishwa
-        - first: Owennatekha Brian
-          last: Maracle
-        - first: Akwiratékha
-          last: Martin
-        - first: Christopher
-          last: Cox
-        - first: Marie-Odile
-          last: Junker
-        - first: Olivia
-          last: Sammons
-        - first: Delasie
-          last: Torkornoo
-        - first: Nathan Thanyehténhas
-          last: Brinklow
-        - first: Sara
-          last: Child
-        - first: Benoît
-          last: Farley
-        - first: David
-          last: Huggins-Daines
-        - first: Daisy
-          last: Rosenblum
-        - first: Heather
-          last: Souter
-      publisher: National Research Council Canada
-      title: "The Indigenous Languages Technology Project at NRC Canada: an empowerment-oriented approach to developing language software"
-      booktitle: Technical Report
-      type: bookchapter
-      url: https://nrc-publications.canada.ca/eng/view/object/?id=d4f10144-c711-43c5-b80b-5ace7df5e68b
-    - order: 1
-      authors:
-        - first: Nathan Thanyehtenhas
-          last: Brinklow
-        - first: Patrick
-          last: Littell
-        - first: Delaney
-          last: Lothian
-        - first: Aidan
-          last: Pine
-        - first: Heather
-          last: Souter
-      title: "Indigenous Language Technologies & Language Reclamation in Canada"
-      publisher: UNESCO
-      type: proceedings
-      conference: "International Conference Language Technologies for All (LT4All): Enabling Linguistic Diversity and Multilingualism Worldwide"
-      url: //lt4all.elra.info/proceedings/lt4all2019/pdf/2019.lt4all-1.100.pdf
-
-  2022:
-    - order: 1
-      authors:
-        - first: Aidan
-          last: Pine
-        - first: Dan
-          last: Wells
-        - first: Nathan Thanyehtenhas
-          last: Brinklow
-        - first: Patrick
-          last: Littell
-        - first: Korin
-          last: Richmond
-      title: "Requirements and motivations of low-resource speech synthesis for language revitalization"
-      publisher: ACL 2022
-      type: proceedings
-      conference: "60th Annual Meeting of the Association for Computational Linguistics"
-      url: //roedoejet.github.io/cv/static/cv/pdfs/acl2022.pdf
-      pp: 7346-7359
-    - order: 2
-      authors:
-        - first: Aidan
-          last: Pine
-        - first: Patrick
-          last: Littell
-        - first: Eric
-          last: Joanis
-        - first: David
-          last: Huggins-Daines
-        - first: Christopher
-          last: Cox
-        - first: Fineen
-          last: Davis
-        - first: Eddie
-          last: Santos
-        - first: Shankhalika
-          last: Srikanth
-        - first: Delasie
-          last: Torkornoo
-        - first: Sabrina
-          last: Yu
-      title: "Gᵢ2Pᵢ: Rule-based, index-preserving grapheme-to-phoneme transformations"
-      publisher: ComputEl-5
-      type: proceedings
-      pp: 52-60
-      conference: "5th Workshop on the Use of Computational Methods in the Study of Endangered Languages"
-      url: //roedoejet.github.io/cv/static/cv/pdfs/g2p-submitted.pdf
-    - order: 3
-      authors:
-        - first: Patrick
-          last: Littell
-        - first: Eric
-          last: Joanis
-        - first: Aidan
-          last: Pine
-        - first: Marc
-          last: Tessier
-        - first: David
-          last: Huggins-Daines
-        - first: Delasie
-          last: Torkornoo
-      title: "ReadAlong Studio: Practical Zero-Shot Text-Speech Alignment for Indigenous Language Audiobooks"
-      publisher: European Language Resources Association (ELRA)
-      type: proceedings
-      conference: "SIGUL2022 @ LREC2022"
-      url: http://www.lrec-conf.org/proceedings/lrec2022/workshops/SIGUL/pdf/2022.sigul-1.4.pdf
-      pp: 23-32
-  2023:
-    - order: 1
-      authors:
-        - first: Aidan
-          last: Pine
-        - first: David
-          last: Huggins-Daines
-        - first: Eric
-          last: Joanis
-        - first: Patrick
-          last: Littell
-        - first: Marc
-          last: Tessier
-        - first: Delasie
-          last: Torkornoo
-        - first: Rebecca
-          last: Knowles
-        - first: Roland
-          last: Kuhn
-        - first: Delaney
-          last: Lothian
-      title: "ReadAlong Studio Web Interface for Digital Interactive Storytelling"
-      publisher: ACL 2023
-      type: proceedings
-      conference: "8th Workshop on Innovative Use of NLP for Building Educational Applications"
-      url: //aclanthology.org/2023.bea-1.14/
-      pp: 163-172
-  2024:
-    - order: 1
-      authors:
-        - first: Dan
-          last: Wells
-        - first: Andrea Lorena Aldana
-          last: Blanco
-        - first: Cassia
-          last: Valentini
-        - first: Erica
-          last: Cooper
-        - first: Aidan
-          last: Pine
-        - first: Junichi
-          last: Yamagishi
-        - first: Korin
-          last: Richmond
-      title: "Experimental evaluation of MOS, AB and BWS listening test designs"
-      publisher: ISCA
-      type: proceedings
-      conference: "Interspeech 2024"
-      url: https://www.isca-archive.org/interspeech_2024/wells24_interspeech.html
-      pp: 2695-2699
-    - order: 2
-      authors:
-        - first: Miku
-          last: Nishihara
-        - first: Dan
-          last: Wells
-        - first: Korin
-          last: Richmond
-        - first: Aidan
-          last: Pine
-      title: "Low-dimensional Style Token Control for Hyperarticulated Speech Synthesis"
-      publisher: ISCA
-      type: proceedings
-      conference: "Interspeech 2024"
-      url: https://www.isca-archive.org/interspeech_2024/nishihara24_interspeech.html
-      pp: 3385--3389
-    - order: 3
-      authors:
-        - first: Cheng
-          last: Gong
-        - first: Erica
-          last: Cooper
-        - first: Xin
-          last: Wang
-        - first: Chunyu
-          last: Qiang
-        - first: Mengzhe
-          last: Geng
-        - first: Dan
-          last: Wells
-        - first: Longbiao
-          last: Wang
-        - first: Jianwu
-          last: Dang
-        - first: Marc
-          last: Tessier
-        - first: Aidan
-          last: Pine
-        - first: Korin
-          last: Richmond
-        - first: Junichi
-          last: Yamagishi
-      title: "An Initial Investigation of Language Adaptation for TTS Systems under Low-resource Scenarios"
-      publisher: ISCA
-      type: proceedings
-      conference: "Interspeech 2024"
-      url: https://www.isca-archive.org/interspeech_2024/gong24c_interspeech.html
-      pp: 4963--4967
-    - order: 4
-      authors:
-        - first: Patrick
-          last: Littell
-        - first: Darlene
-          last: Stewart
-        - first: Fineen
-          last: Davis
-        - first: Aidan
-          last: Pine
-        - first: Roland
-          last: Kuhn
-      title: "Gramble: A Tabular Programming Language for Collaborative Linguistic Modeling"
-      publisher: ACL
-      type: proceedings
-      conference: LREC-COLING 2024
-      url: //aclanthology.org/2024.lrec-main.697/
-      pp: 7913–7925
-  2025:
-    - order: 1
-      authors:
-        - first: Mengzhe
-          last: Geng
-        - first: Patrick
-          last: Littell
-        - first: Aidan
-          last: Pine
-        - first: PENÁĆ
-          last: 
-        - first: Marc
-          last: Tessier
-        - first: Roland
-          last: Kuhn
-      title: "Supporting SENĆOŦEN Language Documentation Efforts with Automatic Speech Recognition"
-      publisher: ACL
-      type: proceedings
-      conference: ComputEL-8 2025
-      url: //aclanthology.org/2025.computel-main.4/
-      pp: 29-39
-    - order: 2
-      authors:
-        - first: Mengzhe
-          last: Geng
-        - first: Patrick
-          last: Littell
-        - first: Aidan
-          last: Pine
-        - first: Robbie
-          last: Jimerson
-        - first: Gilles
-          last: Boulianne
-        - first: Vishwa
-          last: Gupta
-        - first: Rolando
-          last: Coto-Solano
-        - first: Anna
-          last: Kazantseva
-        - first: Marc
-          last: Tessier
-        - first: Delaney
-          last: Lothian
-        - first: Akwiratékha'
-          last: Martin
-        - first: Eric
-          last: Joanis
-        - first: Samuel
-          last: Larkin
-        - first: Roland
-          last: Kuhn
-      title: "Evaluating Speech Foundation Models for Automatic Speech Recognition in the Low-Resource Kanyen’kéha Language"
-      publisher: ISCA
-      type: proceedings
-      conference: Interspeech 2025
-      url: //www.isca-archive.org/interspeech_2025/geng25c_interspeech.html
-      pp: 2063-2067
-    - order: 3
-      authors:
-        - first: Aidan
-          last: Pine
-        - first: David
-          last: Huggins-Daines
-        - first: Carmen
-          last: Leeming
-        - first: Patrick
-          last: Littell
-        - first: Timothy
-          last: Montler
-        - first: Heather
-          last: Souter
-        - first: Mark
-          last: Turin
-      title: "Zero-Shot Query Generation for Approximate Search Algorithm Evaluation"
-      publisher: ACL
-      type: proceedings
-      conference: ComputEL-8 2025
-      url: //aclanthology.org/2025.computel-main.7/
-      pp: 65–73
-    - order: 4
-      authors:
-        - first: Aidan
-          last: Pine
-        - first: Delaney
-          last: Lothian
-        - first: Sonya
-          last: Bird
-        - first: Marion
-          last: Caldecott
-        - first: MENEŦIYE
-          last: 
-        - first: PENÁĆ
-          last: 
-        - first: Korin
-          last: Richmond
-        - first: Tye
-          last: Swallow
-        - first: SX̱EDŦELISIYE
-          last: 
-        - first: Cassia
-          last: Valentini-Botinhao
-        - first: Dan
-          last: Wells
-        - first: Patrick
-          last: Littell
-      title: "Practical & Contextual Speech Synthesis Evaluation"
-      publisher: ISCA
-      type: proceedings
-      conference: Speech Synthesis Workshop 2025
-      url: //www.isca-archive.org/ssw_2025/pine25_ssw.html
-      pp: 76-82
-    - order: 5
-      authors:
-        - first: Aidan
-          last: Pine
-        - first: Erica
-          last: Cooper
-        - first: David
-          last: Guzmán
-        - first: Eric
-          last: Joanis
-        - first: Ross
-          last: Krekoski
-        - first: Roland
-          last: Kuhn
-        - first: Samuel
-          last: Larkin
-        - first: Patrick
-          last: Littell
-        - first: Delaney
-          last: Lothian
-        - first: Akwiratékha'
-          last: Martin
-        - first: Korin
-          last: Richmond
-        - first: Marc
-          last: Tessier
-        - first: Cassia
-          last: Valentini-Botinhao
-        - first: Dan
-          last: Wells
-        - first: Junichi
-          last: Yamagishi
-      title: "Speech Generation for Indigenous Language Education"
-      booktitle: Computer Speech & Language
-      type: journal
-      url: //www.sciencedirect.com/science/article/pii/S0885230824001062
-    
 languages:
   - name: Danish
     competency: Fluent
@@ -1557,3 +1043,21 @@ code:
     count: //ghbtns.com/github-btn.html?user=roedoejet&repo=convertextract&type=watch&count=true
   - title: My CV
     count: //ghbtns.com/github-btn.html?user=roedoejet&repo=cv&type=watch&count=true
+
+research_themes:
+  - slug: language-revitalization
+    title: Language Revitalization
+    color: teal
+    order: 1
+  - slug: speech-technology
+    title: Speech Technology
+    color: purple
+    order: 2
+  - slug: digital-lexicography
+    title: Digital Lexicography
+    color: coral
+    order: 3
+  - slug: foundational-lang-tech
+    title: Foundational Language Technology
+    color: amber
+    order: 4

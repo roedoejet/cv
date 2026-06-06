@@ -1,0 +1,44 @@
+{# _nav.html — Shared site navigation macro.
+   Usage:
+     {% from '_nav.html' import render_nav %}
+     {{ render_nav('research') }}   {# or 'projects' #}
+
+   When active == 'research' the subnav row is rendered and the calling
+   template should add class="has-subnav" to <body>.
+#}
+
+{% macro render_nav(active='research') %}
+<header class="site-nav" role="banner">
+
+    <div class="site-nav__bar">
+        <span class="site-nav__logo">Aidan Pine | Researcher · Linguist · Developer</span>
+
+        <!-- <nav class="site-nav__links" aria-label="Site sections">
+            <a href="/"
+               class="site-nav__link{% if active == 'research' %} site-nav__link--active{% endif %}"
+               {% if active == 'research' %}aria-current="page"{% endif %}>Research</a>
+            <a href="/projects"
+               class="site-nav__link{% if active == 'projects' %} site-nav__link--active{% endif %}"
+               {% if active == 'projects' %}aria-current="page"{% endif %}>Projects</a>
+        </nav> -->
+
+        <a href="{{ url_for('static', filename='cv/pdfs/cv-gen.pdf') }}"
+           class="site-nav__cv"
+           target="_blank"
+           rel="noopener noreferrer">CV ↗</a>
+    </div>
+
+    {# Subnav is only shown on the Research page.
+       Active link is updated by IntersectionObserver — see TODO in site.js. #}
+    {% if active == 'research' %}
+    <nav class="subnav" aria-label="Page sections">
+        <a href="#about"         class="subnav__link">About</a>
+        <a href="#themes"        class="subnav__link">Themes</a>
+        <a href="#timeline"      class="subnav__link">Timeline</a>
+        <a href="#publications"  class="subnav__link">Publications</a>
+        <a href="#presentations" class="subnav__link">Presentations</a>
+    </nav>
+    {% endif %}
+
+</header>
+{% endmacro %}
