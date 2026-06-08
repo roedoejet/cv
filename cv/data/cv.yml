@@ -1049,15 +1049,27 @@ research_themes:
     title: Language Revitalization
     color: teal
     order: 1
+    key_pubs:
+      - pine2017langrev
+      - brinklow2020indigenous
   - slug: speech-technology
     title: Speech Technology
     color: purple
     order: 2
+    key_pubs:
+      - pine2022requirements
+      - pine2025speech
   - slug: digital-lexicography
     title: Digital Lexicography
     color: coral
     order: 3
+    key_pubs:
+      - littell2017waldayu
   - slug: foundational-lang-tech
     title: Foundational Language Technology
     color: amber
     order: 4
+    key_pubs:
+      - pine2022g2p
+      - littell2022readalong
+      - littell2024gramble

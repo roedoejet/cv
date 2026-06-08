@@ -152,7 +152,13 @@
 
                 {% if theme.slug == 'language-revitalization' %}
                 <p class="theme-card__body">
-                    I have been engaged in language revitalization work since 2013...
+                    I have loved language ever since I was a child. But, it wasn't until I was an adult that I learned that the linguistic reality of the place I grew up in had been hidden from me.
+                    <br>
+                    <br>
+                    I learned that this attempted erasure was the result of myriad colonial policies aimed at replacing Indigenous languages with English or French and removing Indigenous people from their lands.
+                    <br>
+                    <br>
+                    Being able to direct my passion and interest for language into something that supports language revitalization and reclammation efforts has been an endlessly fulfilling pursuit.
                 </p>
                 {% elif theme.slug == 'speech-technology' %}
                 <p class="theme-card__body">
@@ -160,17 +166,41 @@
                 </p>
                 {% elif theme.slug == 'digital-lexicography' %}
                 <p class="theme-card__body">
-                    Building digital dictionaries was my first introduction to the world of computer science. As a First Nations' Languages and Linguistics major during my undergraduate degree, I was...
+                    As a First Nations' Languages and Linguistics major during my undergraduate degree, I worked to support the Gitksan Dictionary Project where I worked with elders and speakers of the language to document words and phrases for an online dictionary. The final step of turning the carefully documented dictionary data into something accessible to learners was expensive and challenging. Many web development companies at the time developed products that didn't propely render symbols in Indigenous languages, and the search algorithms they used were designed around English.
+                    <br>
+                    <br>
+                    There are many reasons a learner might not spell a word exactly as it exists in the dictionary (e.g. not having the keyboard, using a different writing system, or simply not knowing how to spell the word). Search algorithms for Indigenous languages have to anticipate these types of predictable misspellings. Otherwise, a frustrating experience emerges for learners - they know that a particular word <i>should</i> be in the dictionary but they can't access it without knowing exactly how to spell it.
+                    <br>
+                    <br>
+                    This became the focus of my undergraduate honours thesis, and later led to the Mother Tongues dictionary creation platform; a free, open source tool which allows for customizable approximate search and has been used for dozens of Indigenous languages world-wide. 
+
                 </p>
                 {% elif theme.slug == 'foundational-lang-tech' %}
                 <p class="theme-card__body">
                     Speech synthesis and other cutting edge technologies are cool and all, but if the language in question doesn't have reliable access to a Unicode input system/keyboard, then what use is text-to-speech? There's a surprising amount of foundational language technology that is required to build other language technologies. Many NLP researchers working on languages like English take Unicode, keyboards, phonemizers, and forced alignment for granted, but these present real challenges. One thread of my research is building tools that are either directly requested by communities (like orthography converters), or prerequisites to other desired digital technologies.
                 </p>
                 {% endif %}
-                <!-- <span class="theme-card__count"
-                      style="color: var(--color-theme-{{ theme.color }})">
-                    {{ ns.count }}&nbsp;publication{{ 's' if ns.count != 1 else '' }}
-                </span> -->
+                {% set key_pub_keys = theme.key_pubs | default([]) %}
+                {% if key_pub_keys %}
+                <footer class="theme-card__footer">
+                    <span class="theme-card__footer-label"
+                          style="color: var(--color-theme-{{ theme.color }})">
+                        Key Publication{{ 's' if key_pub_keys | length > 1 else '' }}
+                    </span>
+                    {% for key in key_pub_keys %}
+                        {% set pub_matches = publications | selectattr('key', 'equalto', key) | list %}
+                        {% if pub_matches %}
+                        {% set pub = pub_matches[0] %}
+                        {% set href = ('https://doi.org/' + pub.doi) if pub.doi else pub.url %}
+                        <a class="theme-card__key-pub"
+                           {% if href %}href="{{ href }}" target="_blank" rel="noopener noreferrer"{% endif %}>
+                            <span class="theme-card__key-pub-title">{{ pub.title }}</span>
+                            <span class="theme-card__key-pub-year">{{ pub.year }}</span>
+                        </a>
+                        {% endif %}
+                    {% endfor %}
+                </footer>
+                {% endif %}
 
             </article>
 

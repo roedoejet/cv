@@ -338,6 +338,68 @@ body.has-subnav {
   /* Colour is set inline via style="color: var(--color-theme-*)" in template */
 }
 
+/* Push footer to the bottom by making the card a flex column */
+.theme-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.theme-card__body {
+  flex: 1;
+}
+
+.theme-card__footer {
+  margin-top: var(--space-md);
+  padding-top: var(--space-sm);
+  border-top: 1px solid var(--color-border);
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.theme-card__footer-label {
+  font-size: 1.0rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  margin-bottom: var(--space-xs);
+  /* color set inline via style= in template */
+}
+
+.theme-card__key-pub {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-sm);
+  text-decoration: none;
+  padding: 2px 0;
+}
+
+.theme-card__key-pub-title {
+  font-size: 1.2rem;
+  color: var(--color-text-primary);
+  line-height: 1.4;
+  flex: 1;
+  /* Ellipsis on overflow so long titles don't wrap across many lines */
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.theme-card__key-pub:hover .theme-card__key-pub-title {
+  color: var(--color-link);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.theme-card__key-pub-year {
+  font-size: 1.1rem;
+  color: var(--color-text-muted);
+  white-space: nowrap;
+  flex-shrink: 0;
+  font-variant-numeric: tabular-nums;
+}
+
 
 /* ── 4. GANTT ────────────────────────────────────────────────── */
 
