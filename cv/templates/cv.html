@@ -37,14 +37,14 @@
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <link rel="stylesheet" href="{{ url_for('static', filename='cv/dist/css/normalize.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='cv/dist/css/skeleton.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='cv/dist/css/custom.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='cv/dist/css/custom.css') }}?v={{ css_v }}">
 
     <!-- Scripts
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <link rel="stylesheet" href="{{ url_for('static', filename='cv/css/github-prettify-theme.css') }}">
     <script src="{{ url_for('static', filename='cv/js/site.js') }}"></script>
-    <script defer src="{{ url_for('static', filename='cv/dist/js/main.js') }}"></script>
+    <script defer src="{{ url_for('static', filename='cv/dist/js/main.js') }}?v={{ js_v }}"></script>
 
     <!-- Favicon
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
