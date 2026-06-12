@@ -46,7 +46,7 @@ projects:
   - title: Mother Tongues
     links:
       web: https://mothertongues.org
-    description: Mother Tongues is an organization the releases open-source software for language revitalization. Most notable is Mother Tongues Dictionaries (MTD). MTD is the only dictionary app that is free and open-source, can be used for any language, has customizeable approximate search, and is available for the Web, Android & iOS.
+    description: Mother Tongues is an organization the releases open-source software for language revitalization. Most notable is Mother Tongues Dictionaries (MTD). MTD is the only dictionary app that is free and open-source, can be used for any language, has customizable approximate search, and is available for the Web, Android & iOS.
     badges:
       - https://img.shields.io/pypi/v/mothertongues.svg
   - title: Gitksan Dictionary
@@ -646,7 +646,7 @@ presentations:
       - first: Aidan
         last: Pine
     title: "UBC Alumni Panel"
-    audience: "50th Anniversay of the UBC Linguistics Department"
+    audience: "50th Anniversary of the UBC Linguistics Department"
     type: panel discussion
     location: University of British Columbia
 
@@ -979,7 +979,7 @@ employment:
     end:
       month: 1
       year: 2017
-    description: Lead programmer for the development of a number of orthography conversion tools fo Heiltsuk and Tsilhqot'in languages. Independent contract through Mother Tongues
+    description: Lead programmer for the development of a number of orthography conversion tools for Heiltsuk and Tsilhqot'in languages. Independent contract through Mother Tongues
 
   - title: Software Developer
     employer: University of British Columbia
@@ -1070,6 +1070,6 @@ research_themes:
     color: amber
     order: 4
     key_pubs:
+      - pine2023readalong
       - pine2022g2p
-      - littell2022readalong
-      - littell2024gramble
+      

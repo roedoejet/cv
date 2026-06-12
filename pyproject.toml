@@ -25,6 +25,8 @@ dev = [
     "pylatexenc==2.10",
     # legacy test infrastructure (tests/test_log.py)
     "coloredlogs==15.0.1",
+    # spell-checking
+    "codespell>=2.3",
 ]
 
 [build-system]
@@ -36,3 +38,12 @@ include = ["cv*", "latex*"]
 
 [tool.setuptools]
 include-package-data = true
+
+[tool.codespell]
+# Words to ignore — add domain-specific terms here if codespell flags them.
+# Comma-separated, case-insensitive.
+ignore-words-list = "hart,aline,tye,wil"
+# hart  — middle name (Aidan Hart Ray Pine)
+# aline — editor name (Aline Villavicencio)
+# tye   — co-author surname (Tye Swallow)
+# wil   — word in an Indigenous language title
