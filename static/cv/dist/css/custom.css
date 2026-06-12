@@ -1,0 +1,1333 @@
+/*
+ * custom.css — site design tokens and base overrides
+ * Loads after skeleton.css; do not modify skeleton.css.
+ *
+ * REM CONVENTION
+ * Skeleton sets `html { font-size: 62.5% }` so that 1rem = 10px.
+ * All rem values in this file follow that convention:
+ *   1.0rem = 10px   1.4rem = 14px   1.6rem = 16px   2.4rem = 24px
+ * Use rems (not px) for anything that should scale with the root font size.
+ */
+
+
+/* ==========================================================================
+   DESIGN TOKENS
+   Change the four --color-theme-* values to recolour the entire site.
+   ========================================================================== */
+
+:root {
+
+  /* --- Research theme colours -------------------------------------------- */
+  --color-theme-teal:   #0F7A58;
+  --color-theme-purple: #5147B8;
+  --color-theme-coral:  #B34020;
+  --color-theme-amber:  #8F5810;
+  /* --color-theme-teal:   #1D9E75;
+  --color-theme-purple: #7F77DD;
+  --color-theme-coral:  #D85A30;
+  --color-theme-amber:  #BA7517; */
+
+  /* --- Neutral palette ---------------------------------------------------- */
+  --color-text-primary:   #222222;
+  --color-text-secondary: #666666;
+  --color-text-muted:     #999999;
+
+  --color-border:        #E1E1E1;
+  --color-border-strong: #BBBBBB;
+
+  --color-surface:        #FFFFFF;
+  --color-surface-subtle: #F8F8F8;
+
+  /* --- Links -------------------------------------------------------------- */
+  /* Defaults to teal; override here if the link colour ever diverges. */
+  --color-link:       #1D9E75;
+  --color-link-hover: #0F6E56;
+
+  /* --- Navigation heights ------------------------------------------------- */
+  --nav-height:    52px;
+  --subnav-height: 32px;
+
+  /* --- Spacing scale ------------------------------------------------------ */
+  --space-xs: 0.4rem;   /*  4px */
+  --space-sm: 0.8rem;   /*  8px */
+  --space-md: 1.6rem;   /* 16px */
+  --space-lg: 2.4rem;   /* 24px */
+  --space-xl: 4.0rem;   /* 40px */
+
+  /* --- Border radii ------------------------------------------------------- */
+  --radius-sm: 4px;
+  --radius-md: 6px;
+  --radius-lg: 10px;
+}
+
+
+/* ==========================================================================
+   BASE OVERRIDES
+   Targeted overrides of Skeleton defaults. No component styles here.
+   ========================================================================== */
+
+/* Smooth scrolling for in-page anchor links */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Override Skeleton's default link colour (#1EAEDB / #0FA0CE) */
+a {
+  color: var(--color-link);
+}
+a:hover {
+  color: var(--color-link-hover);
+}
+
+/*
+ * Body offset — prevents content from sliding under the sticky nav.
+ * +1px accounts for .site-nav's border-bottom, which adds to the nav's
+ * rendered height even though it isn't included in --nav-height.
+ * The Research page adds .has-subnav to <body> to also account for the
+ * secondary navigation bar.
+ */
+body {
+  padding-top: calc(var(--nav-height) + 1px);
+}
+body.has-subnav {
+  padding-top: calc(var(--nav-height) + var(--subnav-height) + 1px);
+}
+
+/*
+ * Scroll margin — gives section anchors breathing room below the sticky nav
+ * so that the target heading isn't hidden behind it when jumped to.
+ * Applied to every element that can serve as an anchor target.
+ */
+[id] {
+  scroll-margin-top: calc(var(--nav-height) + var(--subnav-height) + var(--space-md));
+}
+
+
+/* ============================================================
+   COMPONENT STYLES
+   All custom properties are defined in the :root block above.
+   Base overrides (scroll-behaviour, body padding, link colours)
+   are also above.  This section adds component-level styles.
+   ============================================================ */
+
+
+/* ── 1. STICKY NAV ──────────────────────────────────────────── */
+
+.site-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  background: var(--color-surface);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.site-nav__bar {
+  height: var(--nav-height);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 var(--space-lg);
+}
+
+.site-nav__logo {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  letter-spacing: 0.02em;
+}
+
+.site-nav__links {
+  display: flex;
+  gap: var(--space-md);
+}
+
+.site-nav__link {
+  font-size: 1.4rem;
+  color: var(--color-text-secondary);
+  text-decoration: none;
+  padding: 0.4rem 0.8rem;
+  border-radius: var(--radius-sm);
+  transition: color 0.15s ease, background 0.15s ease;
+}
+
+.site-nav__link:hover {
+  color: var(--color-text-primary);
+  background: var(--color-surface-subtle);
+  text-decoration: none;
+}
+
+.site-nav__link--active {
+  color: var(--color-primary, var(--color-link));
+  font-weight: 500;
+}
+
+/* PDF CV link — styled as a small bordered chip */
+.site-nav__cv {
+  font-size: 1.3rem;
+  color: var(--color-text-muted);
+  text-decoration: none;
+  padding: 0.4rem 1.0rem;
+  border: 1px solid var(--color-border-strong);
+  border-radius: var(--radius-sm);
+  transition: color 0.15s ease, border-color 0.15s ease;
+}
+
+.site-nav__cv:hover {
+  color: var(--color-text-primary);
+  border-color: var(--color-text-secondary);
+  text-decoration: none;
+}
+
+/* Subnav — shown only on the Research page.
+   Template uses .subnav / .subnav__link; the spec uses .site-subnav variants.
+   Both selector groups are included for forward-compatibility.
+   border-top creates the internal divider between bar and subnav;
+   .site-nav's border-bottom closes the bottom of the whole nav. */
+.subnav,
+.site-subnav {
+  height: var(--subnav-height);
+  display: flex;
+  align-items: center;
+  gap: var(--space-lg);
+  padding: 0 var(--space-lg);
+  border-top: 1px solid var(--color-border);
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.subnav__link,
+.site-subnav__link {
+  font-size: 1.2rem;
+  color: var(--color-text-muted);
+  text-decoration: none;
+  white-space: nowrap;
+  transition: color 0.15s ease;
+}
+
+.subnav__link:hover,
+.site-subnav__link:hover {
+  color: var(--color-text-primary);
+  text-decoration: none;
+}
+
+.subnav__link--active,
+.site-subnav__link--active {
+  color: var(--color-link);
+  font-weight: 500;
+}
+
+
+/* ── 2. SECTION LABELS ──────────────────────────────────────── */
+
+.section {
+  padding: var(--space-xl) 0;
+}
+
+/* Small overline label (e.g. "MAJOR PLATFORMS" above a content block) */
+.section-label {
+  display: block;
+  font-size: 1.0rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-text-muted);
+  border-bottom: 1px solid var(--color-border);
+  padding-bottom: var(--space-sm);
+  margin-bottom: var(--space-md);
+  margin-top: 0;
+}
+
+/* h2 within sections — Skeleton sets h2 at 3.6rem; we tighten it */
+.section__heading {
+  font-size: 2.4rem;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  margin-top: 0;
+  margin-bottom: var(--space-md);
+}
+
+.section__count {
+  font-size: 1.8rem;
+  font-weight: 400;
+  color: var(--color-text-muted);
+}
+
+/* h1 on the About / Research page */
+.section__name {
+  font-size: 3.2rem;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  margin-top: 0;
+  margin-bottom: var(--space-md);
+}
+
+/* Vertically center the photo column with the bio text */
+.about__row {
+  display: flex;
+  align-items: center;
+}
+
+.bio-photo {
+  width: 100%;
+  max-width: 28rem;
+  display: block;
+  border-radius: var(--radius-md);
+  margin: 0 auto;
+}
+
+
+/* ── 3. THEME CARDS ─────────────────────────────────────────── */
+
+/* 2-column grid on desktop, 1-column on mobile (see breakpoint below).
+   Template uses .theme-grid; spec uses .theme-cards-grid — both work. */
+.theme-cards-grid,
+.theme-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-md);
+  margin-top: var(--space-md);
+}
+
+.theme-card {
+  position: relative;
+  padding: var(--space-md);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+
+/* Coloured top stripe via ::before.
+   Extends 1px above/sideways so it covers the card's neutral border-top. */
+.theme-card::before {
+  content: "";
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  right: -1px;
+  height: 5px;
+  border-radius: var(--radius-md) var(--radius-md) 0 0;
+}
+
+.theme-card--teal::before   { background: var(--color-theme-teal); }
+.theme-card--purple::before { background: var(--color-theme-purple); }
+.theme-card--coral::before  { background: var(--color-theme-coral); }
+.theme-card--amber::before  { background: var(--color-theme-amber); }
+
+.theme-card__title {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  margin-top: var(--space-sm);
+  margin-bottom: var(--space-sm);
+}
+
+/* Template uses __body; spec uses __description — both supported */
+.theme-card__description,
+.theme-card__body {
+  font-size: 1.4rem;
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+  margin-bottom: var(--space-sm);
+}
+
+.scholar-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 1.3rem;
+  font-weight: 400;
+  color: var(--color-text-muted);
+  text-decoration: none;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  padding: 0.3rem 0.8rem;
+  margin-left: var(--space-sm);
+  vertical-align: middle;
+  transition: color 0.15s ease, border-color 0.15s ease;
+}
+
+.scholar-link:hover {
+  color: var(--color-link);
+  border-color: var(--color-link);
+  text-decoration: none;
+}
+
+.scholar-link__icon {
+  width: 1.3rem;
+  height: 1.3rem;
+  flex-shrink: 0;
+}
+
+.theme-card__count {
+  font-size: 1.2rem;
+  /* Colour is set inline via style="color: var(--color-theme-*)" in template */
+}
+
+/* Push footer to the bottom by making the card a flex column */
+.theme-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.theme-card__body {
+  flex: 1;
+}
+
+.theme-card__footer {
+  margin-top: var(--space-md);
+  padding-top: var(--space-sm);
+  border-top: 1px solid var(--color-border);
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.theme-card__footer-label {
+  font-size: 1.0rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  margin-bottom: var(--space-xs);
+  /* color set inline via style= in template */
+}
+
+.theme-card__key-pub {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-sm);
+  text-decoration: none;
+  padding: 2px 0;
+}
+
+.theme-card__key-pub-title {
+  font-size: 1.2rem;
+  color: var(--color-text-primary);
+  line-height: 1.4;
+  flex: 1;
+  /* Ellipsis on overflow so long titles don't wrap across many lines */
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.theme-card__key-pub:hover .theme-card__key-pub-title {
+  color: var(--color-link);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.theme-card__key-pub-year {
+  font-size: 1.1rem;
+  color: var(--color-text-muted);
+  white-space: nowrap;
+  flex-shrink: 0;
+  font-variant-numeric: tabular-nums;
+}
+
+
+/* ── 4. GANTT ────────────────────────────────────────────────── */
+
+.gantt-container {
+  margin-top: var(--space-md);
+}
+
+
+/* Two-column grid: 14rem label column + 1fr track column.
+   row-gap provides vertical rhythm between theme rows. */
+.gantt {
+  display: grid;
+  grid-template-columns: 14rem 1fr;
+  row-gap: var(--space-sm);
+  align-items: center;
+}
+
+/* Year-marker row sits only in the track column (column 2).
+   A sibling spacer div occupies column 1 so that left:N% on year marks
+   uses the same reference width as left:N% on gantt-dot elements. */
+.gantt__years {
+  grid-column: 2;
+  position: relative;
+  height: 1.8rem;
+  margin-bottom: var(--space-xs);
+}
+
+.gantt__year-mark {
+  position: absolute;
+  font-size: 1.0rem;
+  color: var(--color-text-muted);
+  transform: translateX(-50%);
+  line-height: 1;
+  top: 0;
+}
+
+/* display:contents lets each row's children (label + track) participate
+   directly in the parent grid's two-column layout.
+   Template uses .gantt__row; spec uses .gantt-row — both work. */
+.gantt-row,
+.gantt__row {
+  display: contents;
+}
+
+.gantt-row__label,
+.gantt__row-label {
+  font-size: 1.2rem;
+  font-weight: 500;
+  padding-right: var(--space-sm);
+  line-height: 1.2;
+  /* Colour is set inline via style="color: var(--color-theme-*)" in template */
+}
+
+.gantt-row__track,
+.gantt__track {
+  position: relative;
+  height: 2.4rem;
+  background: var(--color-surface-subtle);
+  border-radius: var(--radius-sm);
+}
+
+/* Continuous colour track spanning earliest to latest pub year — background context
+   for the half-segments; sits below segments and above the grey track background. */
+.gantt-bar {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 8px;
+  border-radius: 4px;
+  opacity: 0.2;
+  z-index: 0;
+}
+
+/* Per-year half-segments — one left + one right per cluster dot, rendered behind dots.
+   Background and gradient are set inline by the template based on adjacency:
+   solid when the neighbouring year also has pubs, fade-in/out otherwise.
+   Fade covers the outer 25% of each half-segment (inner 75% stays solid). */
+.gantt-segment {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 8px;
+  opacity: 0.35;
+  z-index: 0;
+}
+
+/* Publication dot — positioned horizontally by year via inline left:N% */
+.gantt-dot {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 0.8rem;
+  height: 0.8rem;
+  border-radius: 50%;
+  background: var(--color-link);
+  border: 1.5px solid var(--color-surface);
+  cursor: pointer;
+  z-index: 1;
+  transition: transform 0.1s ease, box-shadow 0.1s ease;
+}
+
+.gantt-dot:hover,
+.gantt-dot:focus {
+  transform: translate(-50%, -50%) scale(1.5);
+  box-shadow: 0 0 0 2px var(--color-link);
+  outline: none;
+  z-index: 10;
+}
+
+.gantt-dot--featured {
+  width: 1.2rem;
+  height: 1.2rem;
+  background: var(--color-theme-amber);
+  border-color: var(--color-surface);
+  border-width: 2px;
+}
+
+/* Cluster dot — multiple publications in the same year for this theme.
+   Slightly larger than a single dot; count shown above via ::after. */
+.gantt-dot--cluster {
+  width: 1.2rem;
+  height: 1.2rem;
+}
+
+.gantt-dot--cluster::after {
+  content: attr(data-count);
+  position: absolute;
+  bottom: calc(100% + 2px);
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0.8rem;
+  font-weight: 700;
+  line-height: 1;
+  color: var(--color-link);
+  pointer-events: none;
+}
+
+/* Tooltip — created and positioned entirely by JS (initGanttTooltips).
+   JS appends it to <body>, sets position:fixed, and computes left/top
+   via getBoundingClientRect().  Do NOT set bottom/left/transform here
+   — those would conflict with JS positioning and shift the tooltip ~110px
+   left (transform) or collapse its height to 0 (bottom vs top constraint).
+   z-index: 200 keeps it above the sticky nav (z-index: 100). */
+.gantt-tooltip {
+  position: fixed;
+  width: 22rem;
+  padding: var(--space-sm) var(--space-md);
+  background: var(--color-text-primary);
+  color: var(--color-surface);
+  border-radius: var(--radius-sm);
+  font-size: 1.2rem;
+  line-height: 1.4;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.15s ease;
+  white-space: normal;
+  z-index: 200;
+}
+
+.gantt-tooltip--visible {
+  opacity: 1;
+  pointer-events: auto; /* allow cursor to enter tooltip and click links */
+}
+
+
+/* ── 5. PUBLICATIONS ─────────────────────────────────────────── */
+
+/* Filter bar */
+.pub-filter {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-md);
+}
+
+.pub-filter__btn {
+  font-family: inherit;
+  font-size: 1.2rem;
+  color: var(--color-text-secondary);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border-strong);
+  border-radius: var(--radius-sm);
+  padding: 0.4rem 1.2rem;
+  cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+}
+
+.pub-filter__btn:hover {
+  background: var(--color-surface-subtle);
+  border-color: var(--color-text-secondary);
+}
+
+.pub-filter__btn--active {
+  background: var(--color-link);
+  border-color: var(--color-link);
+  color: var(--color-surface);
+  font-weight: 500;
+}
+
+/* Theme-coloured active states for per-theme filter buttons */
+.pub-filter__btn--teal.pub-filter__btn--active   { background: var(--color-theme-teal);   border-color: var(--color-theme-teal); }
+.pub-filter__btn--purple.pub-filter__btn--active { background: var(--color-theme-purple); border-color: var(--color-theme-purple); }
+.pub-filter__btn--coral.pub-filter__btn--active  { background: var(--color-theme-coral);  border-color: var(--color-theme-coral); }
+.pub-filter__btn--amber.pub-filter__btn--active  { background: var(--color-theme-amber);  border-color: var(--color-theme-amber); }
+
+/* Active buttons keep their filled appearance on hover/focus.
+   .pub-filter__btn:hover (0,2,0) overwrites background; Skeleton's
+   button:focus (0,1,1) resets color. Both beaten by these (0,2,1) rules. */
+.pub-filter__btn--active:focus,
+.pub-filter__btn--active:hover {
+  background: var(--color-link);
+  border-color: var(--color-link);
+  color: var(--color-surface);
+}
+.pub-filter__btn--teal.pub-filter__btn--active:focus,
+.pub-filter__btn--teal.pub-filter__btn--active:hover   { background: var(--color-theme-teal);   border-color: var(--color-theme-teal); }
+.pub-filter__btn--purple.pub-filter__btn--active:focus,
+.pub-filter__btn--purple.pub-filter__btn--active:hover { background: var(--color-theme-purple); border-color: var(--color-theme-purple); }
+.pub-filter__btn--coral.pub-filter__btn--active:focus,
+.pub-filter__btn--coral.pub-filter__btn--active:hover  { background: var(--color-theme-coral);  border-color: var(--color-theme-coral); }
+.pub-filter__btn--amber.pub-filter__btn--active:focus,
+.pub-filter__btn--amber.pub-filter__btn--active:hover  { background: var(--color-theme-amber);  border-color: var(--color-theme-amber); }
+
+/* Publication list */
+.pub-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.pub-item {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-sm);
+  padding: var(--space-md) 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+/* JS filter adds this class to hide non-matching items */
+.pub-item--hidden {
+  display: none;
+}
+
+.pub-item__star {
+  flex-shrink: 0;
+  color: var(--color-theme-amber);
+  font-size: 1.4rem;
+  margin-top: 0.1rem;
+}
+
+/* Body column grows to fill available width */
+.pub-item__body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  min-width: 0;
+}
+
+.pub-item__title {
+  display: block;
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: var(--color-text-primary);
+  line-height: 1.4;
+}
+
+.pub-item__title a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.pub-item__title a:hover {
+  text-decoration: underline;
+}
+
+.pub-item__authors {
+  display: block;
+  font-size: 1.3rem;
+  color: var(--color-text-secondary);
+}
+
+/* Pine's name is wrapped in <strong class="pub-item__author--self"> in template */
+.pub-item__author--self {
+  color: var(--color-text-primary);
+}
+
+.pub-item__meta {
+  display: block;
+  font-size: 1.3rem;
+  color: var(--color-text-muted);
+}
+
+/* Link chips (PDF, DOI, Project) — sit to the right of the body column */
+.pub-item__links {
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+  align-items: flex-end;
+}
+
+.pub-link {
+  display: inline-block;
+  font-size: 1.1rem;
+  color: var(--color-text-secondary);
+  text-decoration: none;
+  padding: 0.2rem 0.8rem;
+  border: 1px solid var(--color-border-strong);
+  border-radius: var(--radius-sm);
+  white-space: nowrap;
+  transition: color 0.15s ease, border-color 0.15s ease, background 0.15s ease;
+}
+
+.pub-link:hover {
+  color: var(--color-link);
+  border-color: var(--color-link);
+  text-decoration: none;
+}
+
+.pub-link--pdf {
+  color: var(--color-theme-coral);
+  border-color: var(--color-theme-coral);
+}
+
+.pub-link--pdf:hover {
+  background: var(--color-theme-coral);
+  color: var(--color-surface);
+  border-color: var(--color-theme-coral);
+}
+
+.pub-link--doi {
+  color: var(--color-theme-amber);
+  border-color: var(--color-theme-amber);
+}
+
+.pub-link--doi:hover {
+  background: var(--color-theme-amber);
+  color: var(--color-surface);
+  border-color: var(--color-theme-amber);
+}
+
+.pub-link--project {
+  color: var(--color-theme-teal);
+  border-color: var(--color-theme-teal);
+}
+
+.pub-link--project:hover {
+  background: var(--color-theme-teal);
+  color: var(--color-surface);
+  border-color: var(--color-theme-teal);
+}
+
+/* Cite button — same chip style as the anchor pub-links */
+.pub-link--cite {
+  font-family: inherit;
+  cursor: pointer;
+  background: var(--color-surface);
+  color: var(--color-theme-purple);
+  border-color: var(--color-theme-purple);
+}
+
+.pub-link--cite:hover {
+  background: var(--color-theme-purple);
+  color: var(--color-surface);
+  border-color: var(--color-theme-purple);
+}
+
+/* ── Cite modal ──────────────────────────────────────────── */
+
+.cite-modal-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  z-index: 300;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-md);
+}
+
+.cite-modal-overlay--visible {
+  display: flex;
+}
+
+.cite-modal {
+  background: var(--color-surface);
+  border-radius: var(--radius-md);
+  width: 100%;
+  max-width: 62rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.18);
+  overflow: hidden;
+}
+
+.cite-modal__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-sm) var(--space-md);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.cite-modal__tabs {
+  display: flex;
+  gap: var(--space-xs);
+}
+
+.cite-modal__tab {
+  font-family: inherit;
+  font-size: 1.3rem;
+  color: var(--color-text-secondary);
+  background: none;
+  border: 1px solid transparent;
+  border-radius: var(--radius-sm);
+  padding: 0.3rem 1.0rem;
+  cursor: pointer;
+  transition: color 0.15s ease, background 0.15s ease, border-color 0.15s ease;
+}
+
+.cite-modal__tab:hover {
+  color: var(--color-text-primary);
+  background: var(--color-surface-subtle);
+}
+
+.cite-modal__tab--active {
+  color: var(--color-link);
+  border-color: var(--color-link);
+  font-weight: 500;
+}
+
+.cite-modal__close {
+  font-family: inherit;
+  font-size: 2.0rem;
+  line-height: 1;
+  color: var(--color-text-muted);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.2rem 0.5rem;
+  border-radius: var(--radius-sm);
+  transition: color 0.15s ease, background 0.15s ease;
+}
+
+.cite-modal__close:hover {
+  color: var(--color-text-primary);
+  background: var(--color-surface-subtle);
+}
+
+.cite-modal__body {
+  padding: var(--space-md);
+}
+
+.cite-modal__pre {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: var(--color-text-primary);
+  background: var(--color-surface-subtle);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  padding: var(--space-sm) var(--space-md);
+  white-space: pre-wrap;
+  word-break: break-word;
+  margin: 0 0 var(--space-sm) 0;
+  max-height: 28rem;
+  overflow-y: auto;
+}
+
+.cite-modal__copy {
+  font-family: inherit;
+  font-size: 1.3rem;
+  color: var(--color-surface);
+  background: var(--color-link);
+  border: 1px solid var(--color-link);
+  border-radius: var(--radius-sm);
+  padding: 0.5rem 1.8rem;
+  cursor: pointer;
+  transition: background 0.15s ease, border-color 0.15s ease;
+}
+
+.cite-modal__copy:hover {
+  background: var(--color-link-hover);
+  border-color: var(--color-link-hover);
+}
+
+
+/* ── 6. PROJECT CARDS ────────────────────────────────────────── */
+
+.project-card {
+  position: relative;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-md);
+  background: var(--color-surface);
+  overflow: hidden;
+  margin-bottom: var(--space-md);
+}
+
+/* Coloured top stripe — same pattern as .theme-card */
+.project-card::before {
+  content: "";
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  right: -1px;
+  height: 5px;
+  border-radius: var(--radius-md) var(--radius-md) 0 0;
+}
+
+.project-card--teal::before   { background: var(--color-theme-teal); }
+.project-card--purple::before { background: var(--color-theme-purple); }
+.project-card--coral::before  { background: var(--color-theme-coral); }
+.project-card--amber::before  { background: var(--color-theme-amber); }
+
+.project-card__header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--space-sm);
+  flex-wrap: wrap;
+  margin-top: var(--space-xs);
+  margin-bottom: var(--space-sm);
+}
+
+.project-card__title {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  margin: 0;
+}
+
+.project-card__tags {
+  display: flex;
+  gap: var(--space-xs);
+  flex-wrap: wrap;
+}
+
+.project-card__tag {
+  font-size: 1.1rem;
+  color: var(--color-text-muted);
+  border: 1px solid var(--color-border-strong);
+  border-radius: var(--radius-sm);
+  padding: 0.1rem 0.6rem;
+}
+
+.project-card__tag--oss {
+  color: var(--color-link);
+  border-color: var(--color-link);
+}
+
+/* Link chips row */
+.project-card__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-xs);
+  margin-bottom: var(--space-sm);
+}
+
+.project-card__link {
+  display: inline-block;
+  font-size: 1.2rem;
+  color: var(--color-text-secondary);
+  text-decoration: none;
+  padding: 0.3rem 1.0rem;
+  border: 1px solid var(--color-border-strong);
+  border-radius: var(--radius-sm);
+  transition: color 0.15s ease, border-color 0.15s ease;
+}
+
+.project-card__link:hover {
+  color: var(--color-link);
+  border-color: var(--color-link);
+  text-decoration: none;
+}
+
+.project-card__link--pubs {
+  color: var(--color-link);
+  border-color: var(--color-link);
+}
+
+/* Template uses __desc; spec uses __description — both supported */
+.project-card__description,
+.project-card__desc {
+  font-size: 1.4rem;
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+  margin-bottom: var(--space-sm);
+}
+
+.project-card__collaborators {
+  font-size: 1.3rem;
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-sm);
+}
+
+.project-card__collaborators-label {
+  font-weight: 500;
+}
+
+.project-card__collaborator {
+  color: var(--color-text-secondary);
+}
+
+/* Deployments sub-section within a platform card */
+.deployments {
+  border-top: 1px solid var(--color-border);
+  margin-top: var(--space-md);
+  padding-top: var(--space-sm);
+}
+
+.deployments__heading {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-top: 0;
+  margin-bottom: var(--space-sm);
+}
+
+.deployments__count {
+  font-weight: 400;
+}
+
+/* Preview pill row */
+.deployments-preview {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-xs);
+  margin-bottom: var(--space-sm);
+}
+
+/* Template uses .deployments-preview__pill; spec uses .deployment-pill —
+   both selectors are included. */
+.deployment-pill,
+.deployments-preview__pill {
+  display: inline-block;
+  font-size: 1.2rem;
+  color: var(--color-text-secondary);
+  text-decoration: none;
+  padding: 0.2rem 0.8rem;
+  border: 1px solid var(--color-border-strong);
+  border-radius: var(--radius-sm);
+  background: var(--color-surface);
+  cursor: pointer;
+  font-family: inherit;
+  transition: color 0.15s ease, border-color 0.15s ease, background 0.15s ease;
+}
+
+.deployment-pill:hover,
+.deployments-preview__pill:hover {
+  color: var(--color-link);
+  border-color: var(--color-link);
+  text-decoration: none;
+}
+
+/* "+N more" overflow pill */
+.deployment-pill--overflow,
+.deployments-preview__pill--overflow {
+  color: var(--color-link);
+  border-color: var(--color-link);
+  border-style: dashed;
+}
+
+/* Expanded deployment grid — shown by JS removing the [hidden] attribute */
+.deployments-expanded:not([hidden]) {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));
+  gap: var(--space-sm);
+  margin-top: var(--space-sm);
+}
+
+.deployment-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: var(--space-sm);
+  padding: var(--space-sm) var(--space-md);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  background: var(--color-surface-subtle);
+}
+
+.deployment-card__title {
+  font-size: 1.3rem;
+  color: var(--color-text-primary);
+  font-weight: 500;
+}
+
+.deployment-card__links {
+  display: flex;
+  gap: var(--space-xs);
+  flex-shrink: 0;
+}
+
+.deployment-card__link {
+  font-size: 1.1rem;
+  color: var(--color-text-muted);
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+
+.deployment-card__link:hover {
+  color: var(--color-link);
+  text-decoration: none;
+}
+
+/* Compact card variant used in the "other projects" 3-column grid */
+.project-card--small {
+  padding: var(--space-sm) var(--space-md);
+  margin-bottom: 0;
+}
+
+.project-card--small::before {
+  display: none;
+}
+
+.project-card--small .project-card__title {
+  font-size: 1.5rem;
+}
+
+/* 3-column grid for other projects.
+   Template uses .project-grid; spec uses .projects-grid — both work. */
+.projects-grid,
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-md);
+  margin-top: var(--space-md);
+}
+
+
+/* ── 7. PRESENTATIONS ────────────────────────────────────────── */
+
+/* <details> wrapper — template uses .presentations-details.
+   Also matches the spec's bare details.presentations selector. */
+details.presentations,
+.presentations-details {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+
+/* <summary> — acts as the collapsed heading row */
+details.presentations > summary,
+.presentations-details > .presentations-details__summary {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  padding: var(--space-md) var(--space-lg);
+  font-size: 2.0rem;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  background: var(--color-surface);
+  cursor: pointer;
+  list-style: none;
+  user-select: none;
+}
+
+details.presentations > summary::-webkit-details-marker,
+.presentations-details > .presentations-details__summary::-webkit-details-marker {
+  display: none;
+}
+
+/* Disclosure triangle via ::before */
+details.presentations > summary::before,
+.presentations-details > .presentations-details__summary::before {
+  content: "▶";
+  font-size: 1.0rem;
+  color: var(--color-text-muted);
+  transition: transform 0.2s ease;
+  flex-shrink: 0;
+}
+
+details.presentations[open] > summary::before,
+.presentations-details[open] > .presentations-details__summary::before {
+  transform: rotate(90deg);
+}
+
+.presentations-details__count {
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: var(--color-text-muted);
+}
+
+.presentations-details__body {
+  padding: var(--space-md) var(--space-lg);
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.presentations-table {
+  font-size: 1.3rem;
+}
+
+.presentations-table th {
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-text-muted);
+  border-bottom: 2px solid var(--color-border-strong);
+}
+
+.presentations-table td {
+  color: var(--color-text-secondary);
+  vertical-align: top;
+  border-bottom: 1px solid var(--color-border);
+}
+
+
+/* ── 8. RESPONSIVE — max-width 750px ────────────────────────── */
+
+@media (max-width: 750px) {
+
+  /* About — tighten photo on mid-size screens */
+  .bio-photo {
+    max-width: 24rem;
+  }
+
+  /* Nav — tighten horizontal padding */
+  .site-nav__bar {
+    padding: 0 var(--space-md);
+  }
+
+  .site-nav__logo {
+    font-size: 1.4rem;
+  }
+
+  .subnav,
+  .site-subnav {
+    gap: var(--space-md);
+    padding: 0 var(--space-md);
+  }
+
+  /* Theme cards — single column */
+  .theme-cards-grid,
+  .theme-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Gantt — narrow label column to fit smaller screens */
+  .gantt {
+    grid-template-columns: 9rem 1fr;
+  }
+
+  .gantt-row__label,
+  .gantt__row-label {
+    font-size: 1.1rem;
+  }
+
+  .gantt__year-mark {
+    font-size: 0.9rem;
+  }
+
+  /* Publications — stack link chips below body on narrow screens */
+  .pub-item {
+    flex-wrap: wrap;
+  }
+
+  .pub-item__links {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    width: 100%;
+    margin-top: var(--space-xs);
+  }
+
+  /* Project grids — single column */
+  .projects-grid,
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Deployment expanded grid — looser minmax on small screens */
+  .deployments-expanded:not([hidden]) {
+    grid-template-columns: repeat(auto-fill, minmax(14rem, 1fr));
+  }
+
+}
+
+/* ── 9. RESPONSIVE — max-width 550px (Skeleton column collapse) ─ */
+
+@media (max-width: 550px) {
+
+  /* About — show photo above the bio text, centered at a compact size */
+  .about__row {
+    flex-direction: column-reverse;
+  }
+
+  .about__row > .seven.columns,
+  .about__row > .five.columns {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .bio-photo {
+    width: 55%;
+    max-width: 20rem;
+    margin: 0 auto var(--space-md);
+  }
+
+}
