@@ -368,9 +368,11 @@
      ═══════════════════════════════════════════════════════════════════════════ -->
 <section id="publications" class="section section--publications">
     <div class="container">
-        <h2 class="section__heading">
-            Publications
-            <span class="section__count">({{ publications | length }})</span>
+        <div class="section__heading-row">
+            <h2 class="section__heading">
+                Publications
+                <span class="section__count">({{ publications | length }})</span>
+            </h2>
             <a class="scholar-link"
                href="https://scholar.google.com/citations?user=Nb0nXzsAAAAJ"
                target="_blank" rel="noopener noreferrer"
@@ -380,7 +382,7 @@
                 </svg>
                 Google Scholar
             </a>
-        </h2>
+        </div>
 
         {# ── Filter bar ── #}
         <div class="pub-filter" role="group" aria-label="Filter publications by theme">

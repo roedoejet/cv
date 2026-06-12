@@ -333,6 +333,19 @@ body.has-subnav {
   margin-bottom: var(--space-sm);
 }
 
+/* Flex row: heading text left, Scholar chip right, baseline-aligned */
+.section__heading-row {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-md);
+}
+
+.section__heading-row .section__heading {
+  margin-bottom: 0;
+}
+
 .scholar-link {
   display: inline-flex;
   align-items: center;
@@ -344,8 +357,7 @@ body.has-subnav {
   border: 1px solid var(--color-border);
   border-radius: var(--radius-sm);
   padding: 0.3rem 0.8rem;
-  margin-left: var(--space-sm);
-  vertical-align: middle;
+  /* no margin-left or vertical-align needed — parent flex handles alignment */
   transition: color 0.15s ease, border-color 0.15s ease;
 }
 
@@ -407,11 +419,9 @@ body.has-subnav {
   color: var(--color-text-primary);
   line-height: 1.4;
   flex: 1;
-  /* Ellipsis on overflow so long titles don't wrap across many lines */
+  /* Cap at 2 lines (2 × 1.2rem × 1.4 = 3.36rem) without conflicting with flex */
+  max-height: 3.36rem;
   overflow: hidden;
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
 }
 
 .theme-card__key-pub:hover .theme-card__key-pub-title {
