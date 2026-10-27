@@ -1,0 +1,346 @@
+%-------------------------
+% Resume in Latex
+% Author : Sidratul Muntaha Ahmed
+% License : MIT
+%
+% Jinja template rendered by `fab resume` from the `resume` section of
+% cv/data/cv.yml and cv/data/publications.bib. Edit the data, not resume.tex.
+% Compile with xelatex: data is typeset as Unicode in New Computer Modern.
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{newcomputermodern}
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+% One employer with several positions: \resumeOrgHeading, then \resumeRole per
+% position. The trailing space lines role dates up with the heading tabulars.
+\newcommand{\resumeOrgHeading}[2]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeRole}[2]{
+  \item\small{#1 \hfill #2\hspace*{\dimexpr0.03\textwidth-0.15in\relax}}\vspace{-2pt}
+}
+
+% Wraps long text automatically, unlike the original tabular* version.
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabularx}{0.97\textwidth}{>{\raggedright\arraybackslash}X@{\hspace{1em}}r}
+      \small#1 & #2 \\
+    \end{tabularx}\vspace{-7pt}
+}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+% RESUME STARTS HERE
+
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+    \textbf{\Huge Aidan Hart Ray Pine} \\ \vspace{1pt}
+    \href{mailto:hello@aidanpine.ca}{\underline{hello@aidanpine.ca}} $|$
+    \href{https://aidanpine.ca}{\underline{aidanpine.ca}} $|$
+    \href{https://github.com/roedoejet}{\underline{github.com/roedoejet}}
+\end{center}
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {University of Edinburgh}{Edinburgh, UK}
+      {M.Sc. Speech \& Language Processing}{September 2020 – September 2021}
+      \resumeItemListStart
+        \resumeItem{Dissertation title: ``Low Resource Speech Synthesis''}
+        \resumeItem{Distinction (80\% coursework average, 90\% Dissertation grade)}
+        \resumeItem{Saltire Scholarship (£8,000)}
+      \resumeItemListEnd
+    \resumeSubheading
+      {University of British Columbia}{Vancouver, BC}
+      {B.A. Honours Linguistics, Minor in First Nations' Languages}{September 2012 – April 2016}
+      \resumeItemListStart
+        \resumeItem{4.21 GPA (90.2\% Average)}
+        \resumeItem{Sole recipient, Dean's Leadership Award for Outstanding Academic Contributions to the Faculty of Arts}
+        \resumeItem{1st Place Oral Presentation at UBC Multidisciplinary Undergraduate Research Conference 2016}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+  \resumeSubHeadingListStart
+    \resumeOrgHeading{National Research Council Canada}{Victoria, BC}
+      \resumeItemListStart
+        \resumeRole{Associate Research Scientist}{July 2024 – present}
+        \resumeRole{Assistant Research Scientist}{July 2023 – July 2024}
+        \resumeRole{Indigenous Languages Technologist}{January 2022 – July 2023}
+        \resumeRole{Application Development Specialist}{January 2018 – January 2022}
+      \resumeItemListEnd
+      \vspace{4pt}
+    \resumeSubheading
+      {Software Developer \& DevOps Engineer}{October 2016 – June 2020}
+      {First Peoples' Heritage and Language Council of Canada}{Victoria, BC}
+      \resumeItemListStart
+        \resumeItem{Developed 18 digital dictionary apps for iOS and Android, custom approximate search algorithms and continuous deployment devops architecture with fastlane}
+      \resumeItemListEnd
+    \resumeSubheading
+      {Software Developer}{November 2016 – June 2019}
+      {University of British Columbia}{Vancouver, BC}
+      \resumeItemListStart
+        \resumeItem{Lead programmer for the development of four digital `talking' dictionaries for web, iOS, and Android, including language-customized approximate search algorithms}
+      \resumeItemListEnd
+    \resumeSubheading
+      {Software Developer}{August 2016 – January 2017}
+      {Simon Fraser University}{Vancouver, BC}
+      \resumeItemListStart
+        \resumeItem{Lead developer for development of orthography conversion tools for Haíɫzaqv and Tsilhqot'in}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+%-----------COMMUNITY, LEADERSHIP \& SERVICE-----------
+\section{Community, Leadership \& Service}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Member, ISO/IEC JTC 1/SC 2 (Coded Character Sets)}{April 2024 – present}
+      {Standards Council of Canada}{Remote}
+      \resumeItemListStart
+        \resumeItem{Canadian mirror committee member providing input to ISO/IEC 10646, the international standard counterpart to Unicode}
+        \resumeItem{Advocates for the character encoding needs of Indigenous languages, a prerequisite for any written language to be used digitally}
+      \resumeItemListEnd
+    \resumeSubheading
+      {Volunteer Developer}{May 2016 – present}
+      {Various}{Remote Work}
+      \resumeItemListStart
+        \resumeItem{Volunteer supporting a variety of online open-source projects including:}
+        \resumeItem{Squamish Dictionary project, Peter Jacobs, Simon Fraser University}
+        \resumeItem{Inupiaq Dictionary project, Myles Creed, University of Victoria}
+        \resumeItem{Designed and built Chrome OS keyboard for SENĆOŦEN language}
+      \resumeItemListEnd
+    \resumeSubheading
+      {Reviewer}{Periodically since 2018}
+      {Various}{Remote Work}
+      \resumeItemListStart
+        \resumeItem{Transactions on Audio, Speech and Language Processing (TASLP)}
+        \resumeItem{Computer Speech \& Language (CS\&L)}
+        \resumeItem{Journal of Medical Internet Research (JMIR)}
+        \resumeItem{Expert Systems With Applications (ESWA)}
+        \resumeItem{Native American and Indigenous Studies Journal (NAIS)}
+        \resumeItem{Association for Computational Linguistics (ACL)}
+        \resumeItem{ELRA Language Resources and Evaluation Conference (LREC)}
+        \resumeItem{The Use of Computational Methods in the Study of Endangered Languages Workshop (ComputEL)}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+%-----------PAPERS-----------
+\section{Selected Publications}
+  \resumeSubHeadingListStart
+    \resumeProjectHeading
+      {Tse, T., Zhu, J., \textbf{Pine, A.}, Geng, M. \newline AudioNoisePrints: Model-free audio watermarking using spatial correlation in flow matching TTS. \newline
+       Proceedings of \emph{Interspeech 2026}.
+      }{2026}
+    \resumeProjectHeading
+      {\textbf{Pine, A.}, Lothian, D., Bird, S., Caldecott, M., MENEŦIYE, PENÁĆ, Richmond, K., Swallow, T., SX̱EDŦELISIYE, et al. \newline Practical and Contextual Speech Synthesis Evaluation. \newline
+       Proceedings of \emph{Speech Synthesis Workshop 2025}.
+      }{2025}
+    \resumeProjectHeading
+      {\textbf{Pine, A.}, Cooper, E., Guzmán, D., Joanis, E., Krekoski, R., Kuhn, R., Larkin, S., Littell, P., Lothian, D., et al. \newline Speech Generation for Indigenous Language Education. \newline
+       \emph{Computer Speech and Language}.
+      }{2025}
+    \resumeProjectHeading
+      {Littell, P., Joanis, E., \textbf{Pine, A.}, Tessier, M., Huggins-Daines, D., Torkornoo, D. \newline ReadAlong Studio: Practical Zero-Shot Text-Speech Alignment for Indigenous Language Audiobooks. \newline
+       Proceedings of \emph{SIGUL 2022}. Marseille, France.
+      }{2022}
+    \resumeProjectHeading
+      {\textbf{Pine, A.}, Littell, P., Joanis, E., Huggins-Daines, D., Cox, C., Davis, F., Santos, E., Srikanth, S., Torkornoo, D., et al. \newline Gᵢ2Pᵢ: Rule-based, index-preserving grapheme-to-phoneme transformations. \newline
+       Proceedings of \emph{ComputEL-5}. Dublin, Ireland.
+      }{2022}
+    \resumeProjectHeading
+      {\textbf{Pine, A.}, Wells, D., Brinklow, N., Littell, P., Richmond, K. \newline Requirements and motivations of low-resource speech synthesis for language revitalization. \newline
+       Proceedings of \emph{ACL 2022}. Dublin, Ireland.
+       \newline \textbf{*Awarded `Best Theme Paper'}
+      }{2022}
+    \resumeProjectHeading
+      {Brinklow, N., Littell, P., Lothian, D., \textbf{Pine, A.}, Souter, H. \newline Indigenous Language Technologies and Language Reclamation in Canada. \newline
+       Proceedings of \emph{International Conference Language Technologies for All (LT4All): Enabling Linguistic Diversity and Multilingualism Worldwide}.
+      }{2020}
+    \resumeProjectHeading
+      {Kazantseva, A., Maracle, B., Maracle, R., \textbf{Pine, A.} \newline Kawennón:nis: the Wordmaker for Kanyen'kéha (Ohsweken Mohawk). \newline
+       Proceedings of \emph{COLING: The 27th International Conference on Computational Linguistics}. Santa Fe, New Mexico, USA.
+      }{2018}
+    \resumeProjectHeading
+      {\textbf{Pine, A.}, Turin, M. \newline Language Revitalization. \newline
+       \emph{Oxford Research Encyclopedia of Linguistics}. Oxford University Press.
+      }{2017}
+  \resumeSubHeadingListEnd
+
+%-----------TEACHING-----------
+\section{Teaching}
+  \resumeSubHeadingListStart
+    \resumeProjectHeading
+      {\textbf{Guest Lectures}}{2015–2024}
+      \resumeItemListStart
+        \resumeItem{Over a dozen guest lectures taught at 1st - 4th year undergraduate classes at the University of British Columbia (FNEL180, 382 \& ASTU402), University of Victoria (LING372), and University of Waterloo (Mohawk 101R)}
+      \resumeItemListEnd
+    \resumeProjectHeading
+      {\textbf{``Watch me Speak!'' Interactive Storytelling using Read-Along Studio}}{2022}
+      \resumeItemListStart
+        \resumeItem{\textbf{Pine, A.}, Huggins-Daines, D., Joanis, E., Littell, P., Tessier, M., Torkornoo, D. ICLDC 8 Workshop. University of Hawaii.}
+      \resumeItemListEnd
+    \resumeProjectHeading
+      {\textbf{How to Make a `Mother Tongues' Digital Dictionary}}{2019}
+      \resumeItemListStart
+        \resumeItem{\textbf{Pine, A.}, Turin, M. ICLDC 6 Workshop. University of Hawaii.}
+      \resumeItemListEnd
+    \resumeProjectHeading
+      {\textbf{Digital Lexicography}}{2018}
+      \resumeItemListStart
+        \resumeItem{\textbf{Pine, A.}, Turin, M. Course taught at CoLang Summer Institute 2018 at the University of Florida.}
+      \resumeItemListEnd
+    \resumeProjectHeading
+      {\textbf{A course in Practical Phonetics}}{2017, 2018}
+      \resumeItemListStart
+        \resumeItem{Invited to teach a series of practical phonetics courses to two Gitksan community language classes in Gitsegukla, BC and Gitanmaax, BC}
+      \resumeItemListEnd
+    \resumeProjectHeading
+      {\textbf{Developing Digital Tools for Language Revitalization: Demystifying Coding, Apps, and Web Platforms}}{2018}
+      \resumeItemListStart
+        \resumeItem{\textbf{Pine, A.}, Turin, M. Invited multi-day workshop at the National Institute for Japanese Language and Linguistics. Tokyo.}
+      \resumeItemListEnd
+    \resumeProjectHeading
+      {\textbf{Python for Lexicographers Workshop Series}}{2016}
+      \resumeItemListStart
+        \resumeItem{Taught basic Python and programming skills to undergraduate, graduate and post-graduate lexicographers at the UBC linguistics department}
+      \resumeItemListEnd
+    \resumeProjectHeading
+      {\textbf{Doreen Jensen Memorial Gitksan Class}}{2013–2016}
+      \resumeItemListStart
+        \resumeItem{Teaching assistant. Explained grammatical, phonological and orthographic concepts to students}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+%-----------AWARDS & GRANTS-----------
+\section{Awards \& Grants}
+  \resumeSubHeadingListStart
+    \resumeProjectHeading
+      {Digital Government Community Award, Excellence in Inclusion, Diversity, Equity \& Accessibility (Indigenous Language Technology team award, Treasury Board of Canada Secretariat)}{2026}
+    \resumeProjectHeading
+      {ESRC Impact Acceleration Grant (£29,809 + £38,682 in-kind) \newline \textit{Own Your Voice: Community-Led Solutions for Underrepresented Languages}}{2026}
+    \resumeProjectHeading
+      {Ideation Fund Small Teams Initiative (\$1,875,150) \newline \textit{Speech Generation for Indigenous Language Education}}{2022–2025}
+    \resumeProjectHeading
+      {National Research Council Digital Technology `Value for Canada' Award}{2024}
+    \resumeProjectHeading
+      {NRC IP Achievement Award (as part of Indigenous Language Technology Project) (\$6,000)}{2022}
+    \resumeProjectHeading
+      {ACL2022 Best Special Theme Paper (\$1,000)}{2022}
+    \resumeProjectHeading
+      {National Research Council Digital Technology `Research \& Technology Breakthrough' Award}{2022}
+    \resumeProjectHeading
+      {Scotland's Saltire Scholarship (£8,000)}{2020}
+    \resumeProjectHeading
+      {National Research Council Digital Technology `Value for Canada' Award}{2018}
+    \resumeProjectHeading
+      {Sanderson Family Service Award}{2016}
+    \resumeProjectHeading
+      {1st Place Oral Presentation at UBC Multidisciplinary Undergraduate Research Conference}{2016}
+    \resumeProjectHeading
+      {Dean's Leadership Award for Outstanding Academic Contributions to the Faculty of Arts}{2016}
+    \resumeProjectHeading
+      {Jacobs Research Fund}{2014, 2015 \& 2016}
+    \resumeProjectHeading
+      {UBC Arts Undergraduate Research Award}{2015}
+    \resumeProjectHeading
+      {UBC Student Scholarship in Arts}{2015}
+    \resumeProjectHeading
+      {UBC Arts Undergraduate Research Award}{2014}
+    \resumeProjectHeading
+      {UBC Work Learn}{2013 \& 2014}
+  \resumeSubHeadingListEnd
+
+%-----------TECHNICAL SKILLS-----------
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Machine Learning}{: Speech synthesis, data efficient (low-resource) modelling, grapheme-to-phoneme conversion, text-audio alignment, speech recognition, PyTorch, PyTorch Lightning} \\
+     \textbf{Speech Evaluation}{: listening-test design, qualitative and quantitative methods, statistical analysis} \\
+     \textbf{Programming}{: Python, JavaScript, TypeScript} \\
+     \textbf{Web Development}{: FastAPI, Angular, StencilJS, HTML/CSS/Sass} \\
+     \textbf{Signal Processing}{: Praat, NumPy, librosa, ffmpeg} \\
+     \textbf{Infrastructure}{: CI/CD, Slurm, Hugging Face, Docker} \\
+     \textbf{Mobile Development}{: iOS and Android development with Ionic, fastlane}
+    }}
+ \end{itemize}
+
+%-----------LANGUAGES-----------
+\section{Languages}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Danish}{: Intermediate/Advanced. Prøve i Dansk 3 Fluency Certificate.} \\
+     \textbf{French}{: Intermediate/Advanced. Double Dogwood High School Diploma in English \& French.} \\
+     \textbf{Gitksan}{: Beginner/Intermediate.} \\
+     \textbf{hən̓q̓əmin̓əm}{: Beginner/Intermediate. UBC FNLG 101, 102, 201, 202, \& 301.} \\
+     \textbf{SENĆOŦEN}{: Beginner. UVic LING 159.} \\
+     \textbf{nêhiyawêwin}{: Beginner. UBC FLNG 111.}
+    }}
+ \end{itemize}
+
+%-------------------------------------------
+\end{document}

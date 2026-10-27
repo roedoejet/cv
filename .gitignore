@@ -5,3 +5,7 @@
 /cv/build
 venv
 .vscode
+# LaTeX build artifacts (fab resume)
+latex/*.aux
+latex/*.log
+latex/*.out

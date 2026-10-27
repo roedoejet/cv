@@ -11,11 +11,6 @@ BIBPATH = os.path.join(os.path.dirname(data.__file__), "publications.bib")
 with open(DATAPATH, "r", encoding="utf8") as yml:
     DATA = yaml.safe_load(yml)
 
-# Ensure the template's data.publications reference doesn't crash while the
-# template still uses the old data.publications path.  The new canonical
-# source is the PUBLICATIONS list built below.
-DATA.setdefault("publications", {})
-
 
 import re as _re
 
@@ -111,6 +106,8 @@ def parse_publications(bib_path):
                 "year": int(entry.get("year", 0)),
                 "venue": _clean_field(venue),
                 "venue_type": venue_type,
+                "address": _clean_field(entry.get("address", "")),
+                "publisher": _clean_field(entry.get("publisher", "")),
                 "keywords": _split_csv("keywords"),
                 "projects": _split_csv("projects"),
                 "featured": entry.get("featured", "").lower() == "true",

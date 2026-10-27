@@ -21,8 +21,6 @@ dev = [
     # screenshot generation (screenshot_gen.py)
     "selenium==4.8.2",
     "Pillow==9.4.0",
-    # LaTeX CV pipeline (fab latex)
-    "pylatexenc==2.10",
     # legacy test infrastructure (tests/test_log.py)
     "coloredlogs==15.0.1",
     # spell-checking

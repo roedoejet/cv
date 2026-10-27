@@ -4,19 +4,7 @@ personal:
   last_name: Pine
   email: hello@aidanpine.ca
   github: "@roedoejet"
-
-education:
-  - start: Sept 2012
-    end: May 2016
-    school: University of British Columbia
-    title: B.A. Hon. Linguistics
-    minor: Minor in First Nations Languages
-    etc: 4.21 GPA (90.2% Average)
-  - start: Sept 2020
-    end: Sept 2021
-    school: University of Edinburgh
-    title: M.Sc. Speech & Language Processing
-    minor: 1st Class Honours (80% Coursework Average, 90% Dissertation)
+  website: aidanpine.ca
 
 projects:
   - title: "Kawennón:nis: The wordmaker for Kanyen'kéha"
@@ -270,27 +258,22 @@ projects:
   # - title: Keyboards
   # - title: TTS
 
-languages:
-  - name: Danish
-    competency: Fluent
-    credentials: Prøve i Dansk 3 Fluency Certificate
-
-  - name: French
-    competency: Fluent
-    credentials: Double Dogwood High School Diploma in English & French
-
-  - name: Gitksan
-    competency: "Reading/Writing: literate; Oral: Intermediate"
-
-  - name: "hən̓q̓əmin̓əm"
-    competency: "Intermediate"
-    credentials: UBC FNLG 101, 102, 201, 202, & 301
-
+# Optional `amount` (e.g. "$5,000") is shown after the title on the résumé, and
+# optional `project` (the funded project's title) on an italic line below it.
 grants:
   - year: 2013 & 2014
     title: UBC Work Learn
   - year: 2014, 2015 & 2016
     title: Jacobs Research Fund
+  - year: 2022–2025
+    title: Ideation Fund Small Teams Initiative
+    project: Speech Generation for Indigenous Language Education
+    amount: $1,875,150
+  - year: 2026
+    title: ESRC Impact Acceleration Grant
+    project: "Own Your Voice: Community-Led Solutions for Underrepresented Languages"
+    amount: £29,809 + £38,682 in-kind
+
 
 awards:
   - year: 2014
@@ -304,61 +287,25 @@ awards:
   - year: 2016
     title: 1st Place Oral Presentation at UBC Multidisciplinary Undergraduate Research Conference
   - year: 2016
-    title: Dean's Outstanding Leadership Award for Academic Contribution to the Faculty of Arts
+    title: Dean's Leadership Award for Outstanding Academic Contributions to the Faculty of Arts
   - year: 2018
-    title: National Research Council Digital Technology 'Value for Canada' Award
+    title: National Research Council Digital Technology `Value for Canada' Award
   - year: 2020
     title: Scotland's Saltire Scholarship
+    amount: £8,000
   - year: 2022
     title: NRC IP Achievement Award (as part of Indigenous Language Technology Project)
+    amount: $6,000
   - year: 2022
     title: ACL2022 Best Special Theme Paper
+    amount: $1,000
   - year: 2022
-    title: National Research Council Digital Technology 'Research & Technology Breakthrough' Award
+    title: National Research Council Digital Technology `Research & Technology Breakthrough' Award
   - year: 2024
-    title: National Research Council Digital Technology 'Value for Canada' Award
-
-skills:
-  - name: Mobile development
-    programs:
-      - Ionic
-      - TypeScript
-      - Angular
-      - Sass
-  - name: Web development
-    programs:
-      - HTML
-      - CSS/Sass
-      - Angular
-      - Flask
-      - Stencil
-  - name: API development
-    programs:
-      - Flask
-      - Fastapi
-  - name: Programming
-    programs:
-      - Python
-      - Racket/Scheme
-      - iPython
-      - Pytorch
-  - name: Acoustic Analysis/Editing
-    programs:
-      - Praat
-      - Wavesurfer
-      - Audacity
-      - ffmpeg
-  - name: Speech Synthesis
-    programs:
-      - Festival
-      - FastSpeech2
-      - Tacotron2
-  - name: Typesetting/Graphic design
-    programs:
-      - Photoshop
-      - InDesign
-      - \LaTeX
-      - Balsamiq
+    title: National Research Council Digital Technology `Value for Canada' Award
+  - year: 2026
+    title: Digital Government Community Award, Excellence in Inclusion, Diversity, Equity & Accessibility (Indigenous Language Technology team award, Treasury Board of Canada Secretariat)
+    url: https://factory.cancred.ca/obv3/credentials/b5d72dba30658716defef27856c1a7be16e8b597
 
 presentations:
   - year: 2014
@@ -924,125 +871,31 @@ presentations:
     audience: "Knowledge, Information and Technology Services (KITS)"
     location: Virtual
 
-volunteer:
-  - title: Hesquiaht Dictionary
-    start: June 2017
-    end: present
-    description: Help with data processing, web and mobile app development for the Hesquiaht language dictionary
-  - title: Squamish Dictionary
-    start: May 2016
-    end: September 2020
-    description: Help with publishing online 'talking dictionary' for Squamish language in partnership with Peter Jacobs
-  # - title: Dictionary maintenance
-  #   start: May 2016
-  #   end: present
-  #   description: On www.mothertongues.org I freely host 16 dictionaries for ʔayʔaǰuθəm, Ehattesaht, Gitksan, Halqeméylem, Híɫzaqv, Haida, Ktunaxa, Kwak'wala, Nisga'a, Northern St'at'imcets, Secwepemc, SENĆOŦEN, Squamish, Tla'amin, Ucwalmícwts, Xeni Gwet'in.
-  - title: Python for Lexicographers Workshop Series
-    start: Jan 2016
-    end: May 2016
-    description: Teach basic Python and programming skills to undergraduate, graduate and post-graduate lexicographers at the UBC linguistics department
-  - title: xʷnaʔələmxʷ sχəχi:ls Journal Review
-    start: 2014
-    end: 2016
-    description: UBC Indigenous Studies Submission Reviewer
-  - title: Doreen Jensen Memorial Gitksan Class
-    start: 2013
-    end: 2016
-    description: Assist students by explaining grammatical, phonological and orthographic concepts
-
-employment:
-  - title: Copy Editor & Research Assistant
-    employer: University of British Columbia
-    start:
-      month: 4
-      year: 2013
-    end:
-      month: 1
-      year: 2014
-    description: "Assisted in editing interlinear glossing and linguistics-related texts in the book: Written as I Remember It: Teachings (ʔəms taʔaw) from the Life of a Sliammon Elder."
-
-  - title: Translator and Computational Linguist
-    employer: SmartKYC (Remote Work)
-    start:
-      month: 1
-      year: 2016
-    end:
-      month: 8
-      year: 2017
-    description: Natural language processing, writing regular expressions to capture inflectional morphological rules in French and Danish. Independent contract
-
-  - title: Software Developer
-    employer: Simon Fraser University
-    start:
-      month: 8
-      year: 2016
-    end:
-      month: 1
-      year: 2017
-    description: Lead programmer for the development of a number of orthography conversion tools for Heiltsuk and Tsilhqot'in languages. Independent contract through Mother Tongues
-
-  - title: Software Developer
-    employer: University of British Columbia
-    start:
-      month: 10
-      year: 2016
-    end:
-      month: 6
-      year: 2019
-    description: Lead programmer for the development of four online (web and mobile) dictionaries.
-
-  - title: Juma Food Truck Owner & Operator
-    employer: Self Employed
-    start:
-      month: 5
-      year: 2013
-    end:
-      month: 9
-      year: 2019
-    description: I designed, commissioned to build, own and operate a food truck that runs seasonally on Vancouver Island and employs full time and part time staff
-
-  - title: Technology consultant
-    employer: University of British Columbia
-    start:
-      month: 1
-      year: 2015
-    end:
-      month: 6
-      year: 2019
-    description: Consulting and programming for the First Nations and Endangered Language program.
-
-  - title: Web Developer
-    employer: Self Employed
-    start:
-      month: 5
-      year: 2016
-    end:
-      month: 0
-    description: Freelance website design and development
-
-  - title: Software Developer
-    employer: First Peoples' Heritage and Language Council of Canada
-    start:
-      month: 10
-      year: 2016
-    end:
-      month: 0
-    description: Lead developer for redesigning, engineering and publishing 15 of FPHLCC's mobile dictionary applications for Android and iOS. Independent contract through Mother Tongues
-
-  - title: Application Development Specialist
-    employer: National Research Council Canada
-    start:
-      month: 1
-      year: 2018
-    end:
-      month: 0
-    description: Developer and researcher for NRC Indigenous Language Technology project
-
-code:
-  - title: Orthography Converter
-    count: //ghbtns.com/github-btn.html?user=roedoejet&repo=convertextract&type=watch&count=true
-  - title: My CV
-    count: //ghbtns.com/github-btn.html?user=roedoejet&repo=cv&type=watch&count=true
+# volunteer:
+#   - title: Hesquiaht Dictionary
+#     start: June 2017
+#     end: present
+#     description: Help with data processing, web and mobile app development for the Hesquiaht language dictionary
+#   - title: Squamish Dictionary
+#     start: May 2016
+#     end: September 2020
+#     description: Help with publishing online 'talking dictionary' for Squamish language in partnership with Peter Jacobs
+#   # - title: Dictionary maintenance
+#   #   start: May 2016
+#   #   end: present
+#   #   description: On www.mothertongues.org I freely host 16 dictionaries for ʔayʔaǰuθəm, Ehattesaht, Gitksan, Halqeméylem, Híɫzaqv, Haida, Ktunaxa, Kwak'wala, Nisga'a, Northern St'at'imcets, Secwepemc, SENĆOŦEN, Squamish, Tla'amin, Ucwalmícwts, Xeni Gwet'in.
+#   - title: Python for Lexicographers Workshop Series
+#     start: Jan 2016
+#     end: May 2016
+#     description: Teach basic Python and programming skills to undergraduate, graduate and post-graduate lexicographers at the UBC linguistics department
+#   - title: xʷnaʔələmxʷ sχəχi:ls Journal Review
+#     start: 2014
+#     end: 2016
+#     description: UBC Indigenous Studies Submission Reviewer
+#   - title: Doreen Jensen Memorial Gitksan Class
+#     start: 2013
+#     end: 2016
+#     description: Assist students by explaining grammatical, phonological and orthographic concepts
 
 research_themes:
   - slug: language-revitalization
@@ -1073,3 +926,174 @@ research_themes:
       - pine2023readalong
       - pine2022g2p
       
+
+# ── Résumé (latex/resume_template.tex → `fab resume`) ─────────────────────
+# Plain text is fine here: & and % are escaped, and Unicode (e.g. hən̓q̓əmin̓əm,
+# SENĆOŦEN) is typeset directly by xelatex. Raw LaTeX (e.g. \LaTeX) passes
+# through untouched.
+resume:
+  education:
+    - school: University of Edinburgh
+      location: Edinburgh, UK
+      degree: M.Sc. Speech & Language Processing
+      dates: September 2020 – September 2021
+      items:
+        - "Dissertation title: ``Low Resource Speech Synthesis''"
+        - Distinction (80% coursework average, 90% Dissertation grade)
+        - Saltire Scholarship (£8,000)
+    - school: University of British Columbia
+      location: Vancouver, BC
+      degree: B.A. Honours Linguistics, Minor in First Nations' Languages
+      dates: September 2012 – April 2016
+      items:
+        - 4.21 GPA (90.2% Average)
+        - Sole recipient, Dean's Leadership Award for Outstanding Academic Contributions to the Faculty of Arts
+        - 1st Place Oral Presentation at UBC Multidisciplinary Undergraduate Research Conference 2016
+
+  experience:
+    # Several positions at one employer: list them under `roles` (newest first).
+    # `items` (optional) are shown under the roles.
+    - organization: National Research Council Canada
+      location: Victoria, BC
+      roles:
+        - title: Associate Research Scientist
+          dates: July 2024 – present
+        - title: Assistant Research Scientist
+          dates: July 2023 – July 2024
+        - title: Indigenous Languages Technologist
+          dates: January 2022 – July 2023
+        - title: Application Development Specialist
+          dates: January 2018 – January 2022
+    - title: Software Developer & DevOps Engineer
+      dates: October 2016 – June 2020
+      organization: First Peoples' Heritage and Language Council of Canada
+      location: Victoria, BC
+      items:
+        - Developed 18 digital dictionary apps for iOS and Android, custom approximate search algorithms and continuous deployment devops architecture with fastlane
+    - title: Software Developer
+      dates: November 2016 – June 2019
+      organization: University of British Columbia
+      location: Vancouver, BC
+      items:
+        - Lead programmer for the development of four digital `talking' dictionaries for web, iOS, and Android, including language-customized approximate search algorithms
+    - title: Software Developer
+      dates: August 2016 – January 2017
+      organization: Simon Fraser University
+      location: Vancouver, BC
+      items:
+        - Lead developer for development of orthography conversion tools for Haíɫzaqv and Tsilhqot'in
+
+  community:
+    - title: Member, ISO/IEC JTC 1/SC 2 (Coded Character Sets)
+      dates: April 2024 – present
+      organization: Standards Council of Canada
+      location: Remote
+      items:
+        - Canadian mirror committee member providing input to ISO/IEC 10646, the international standard counterpart to Unicode
+        - Advocates for the character encoding needs of Indigenous languages, a prerequisite for any written language to be used digitally
+    - title: Volunteer Developer
+      dates: May 2016 – present
+      organization: Various
+      location: Remote Work
+      items:
+        - "Volunteer supporting a variety of online open-source projects including:"
+        - Squamish Dictionary project, Peter Jacobs, Simon Fraser University
+        - Inupiaq Dictionary project, Myles Creed, University of Victoria
+        - Designed and built Chrome OS keyboard for SENĆOŦEN language
+    - title: Reviewer
+      dates: Periodically since 2018
+      organization: Various
+      location: Remote Work
+      items:
+        - Transactions on Audio, Speech and Language Processing (TASLP)
+        - Computer Speech & Language (CS&L)
+        - Journal of Medical Internet Research (JMIR)
+        - Expert Systems With Applications (ESWA)
+        - Native American and Indigenous Studies Journal (NAIS)
+        - Association for Computational Linguistics (ACL)
+        - ELRA Language Resources and Evaluation Conference (LREC)
+        - The Use of Computational Methods in the Study of Endangered Languages Workshop (ComputEL)
+
+  # Bib keys from publications.bib, shown newest first. Optional per entry:
+  #   venue — short venue name to use instead of the bib's journal/booktitle
+  #   note  — extra line shown in bold under the citation
+  max_authors: 9
+  publications:
+    - key: tse26_interspeech
+    - key: pine2025practical
+    - key: pine2025speech
+    - key: littell2022readalong
+      venue: SIGUL 2022
+    - key: pine2022g2p
+      venue: ComputEL-5
+    - key: pine2022requirements
+      venue: ACL 2022
+      note: "*Awarded `Best Theme Paper'"
+    - key: brinklow2020indigenous
+    - key: kazantseva2018kawennon
+    - key: pine2017langrev
+
+  # Sorted newest first on the latest year each entry mentions.
+  teaching:
+    - title: "``Watch me Speak!'' Interactive Storytelling using Read-Along Studio"
+      year: "2022"
+      items:
+        - \textbf{Pine, A.}, Huggins-Daines, D., Joanis, E., Littell, P., Tessier, M., Torkornoo, D. ICLDC 8 Workshop. University of Hawaii.
+    - title: How to Make a `Mother Tongues' Digital Dictionary
+      year: "2019"
+      items:
+        - \textbf{Pine, A.}, Turin, M. ICLDC 6 Workshop. University of Hawaii.
+    - title: Digital Lexicography
+      year: "2018"
+      items:
+        - \textbf{Pine, A.}, Turin, M. Course taught at CoLang Summer Institute 2018 at the University of Florida.
+    - title: Guest Lectures
+      year: 2015–2024
+      items:
+        - Over a dozen guest lectures taught at 1st - 4th year undergraduate classes at the University of British Columbia (FNEL180, 382 & ASTU402), University of Victoria (LING372), and University of Waterloo (Mohawk 101R)
+    - title: A course in Practical Phonetics
+      year: 2017, 2018
+      items:
+        - Invited to teach a series of practical phonetics courses to two Gitksan community language classes in Gitsegukla, BC and Gitanmaax, BC
+    - title: "Developing Digital Tools for Language Revitalization: Demystifying Coding, Apps, and Web Platforms"
+      year: "2018"
+      items:
+        - \textbf{Pine, A.}, Turin, M. Invited multi-day workshop at the National Institute for Japanese Language and Linguistics. Tokyo.
+    - title: Python for Lexicographers Workshop Series
+      year: "2016"
+      items:
+        - Taught basic Python and programming skills to undergraduate, graduate and post-graduate lexicographers at the UBC linguistics department
+    - title: Doreen Jensen Memorial Gitksan Class
+      year: 2013–2016
+      items:
+        - Teaching assistant. Explained grammatical, phonological and orthographic concepts to students
+
+  skills:
+    - name: Machine Learning
+      items: Speech synthesis, data efficient (low-resource) modelling, grapheme-to-phoneme conversion, text-audio alignment, speech recognition, PyTorch, PyTorch Lightning
+    - name: Speech Evaluation
+      items: listening-test design, qualitative and quantitative methods, statistical analysis
+    - name: Programming
+      items: Python, JavaScript, TypeScript
+    - name: Web Development
+      items: FastAPI, Angular, StencilJS, HTML/CSS/Sass
+    - name: Signal Processing
+      items: Praat, NumPy, librosa, ffmpeg
+    - name: Infrastructure
+      items: CI/CD, Slurm, Hugging Face, Docker
+    - name: Mobile Development
+      items: iOS and Android development with Ionic, fastlane
+
+  languages:
+    - name: Danish
+      details: Intermediate/Advanced. Prøve i Dansk 3 Fluency Certificate.
+    - name: French
+      details: Intermediate/Advanced. Double Dogwood High School Diploma in English & French.
+    - name: Gitksan
+      details: Beginner/Intermediate.
+    - name: hən̓q̓əmin̓əm
+      details: Beginner/Intermediate. UBC FNLG 101, 102, 201, 202, & 301.
+    - name: SENĆOŦEN
+      details: Beginner. UVic LING 159.
+    - name: nêhiyawêwin
+      details: Beginner. UBC FLNG 111.

@@ -1,5 +1,5 @@
 import os
-from latex import LatexTemplate
+from latex import ResumeTemplate
 from flask_frozen import Freezer
 from cv import app
 from fabric.api import local
@@ -8,11 +8,6 @@ from screenshot_gen import getScreenshots
 
 def screens():
     getScreenshots()
-
-
-def latex():
-    ltx = LatexTemplate()
-    ltx.export()
 
 
 def freeze():
@@ -30,3 +25,13 @@ def freeze():
 
     freezer = Freezer(app)
     freezer.freeze()
+
+
+def resume():
+    """Render latex/resume.tex from cv.yml + publications.bib, compile it with
+    xelatex, and publish the PDF as the site's downloadable CV."""
+    tex = ResumeTemplate().export()
+    latex_dir = os.path.dirname(tex)
+    local(f'cd {latex_dir} && xelatex -interaction=nonstopmode -halt-on-error resume.tex')
+    root = os.path.dirname(os.path.abspath(__file__))
+    local(f'cp {latex_dir}/resume.pdf {root}/cv/static/cv/pdfs/cv-gen.pdf')

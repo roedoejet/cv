@@ -1,0 +1,214 @@
+%-------------------------
+% Resume in Latex
+% Author : Sidratul Muntaha Ahmed
+% License : MIT
+%
+% Jinja template rendered by `fab resume` from the `resume` section of
+% cv/data/cv.yml and cv/data/publications.bib. Edit the data, not resume.tex.
+% Compile with xelatex: data is typeset as Unicode in New Computer Modern.
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{newcomputermodern}
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+% One employer with several positions: \resumeOrgHeading, then \resumeRole per
+% position. The trailing space lines role dates up with the heading tabulars.
+\newcommand{\resumeOrgHeading}[2]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeRole}[2]{
+  \item\small{#1 \hfill #2\hspace*{\dimexpr0.03\textwidth-0.15in\relax}}\vspace{-2pt}
+}
+
+% Wraps long text automatically, unlike the original tabular* version.
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabularx}{0.97\textwidth}{>{\raggedright\arraybackslash}X@{\hspace{1em}}r}
+      \small#1 & #2 \\
+    \end{tabularx}\vspace{-7pt}
+}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+% RESUME STARTS HERE
+
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+    \textbf{\Huge \jvar{ data.personal.first_name } \jvar{ data.personal.middle_name } \jvar{ data.personal.last_name }} \\ \vspace{1pt}
+    \href{mailto:\jvar{ data.personal.email }}{\underline{\jvar{ data.personal.email }}} $|$
+    \href{https://\jvar{ data.personal.website }}{\underline{\jvar{ data.personal.website }}} $|$
+    \href{https://github.com/\jvar{ data.personal.github | replace('@', '') }}{\underline{github.com/\jvar{ data.personal.github | replace('@', '') }}}
+\end{center}
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+\jblock{ for e in resume.education }
+    \resumeSubheading
+      {\jvar{ e.school }}{\jvar{ e.location }}
+      {\jvar{ e.degree }}{\jvar{ e.dates }}
+\jblock{ if e.get('items') }
+      \resumeItemListStart
+\jblock{ for item in e.get('items') }
+        \resumeItem{\jvar{ item }}
+\jblock{ endfor }
+      \resumeItemListEnd
+\jblock{ endif }
+\jblock{ endfor }
+  \resumeSubHeadingListEnd
+
+\jblock{ for heading, entries in [('Experience', resume.experience), ('Community, Leadership & Service', resume.community)] }
+%-----------\jvar{ heading | upper }-----------
+\section{\jvar{ heading }}
+  \resumeSubHeadingListStart
+\jblock{ for e in entries }
+\jblock{ if e.get('roles') }
+    \resumeOrgHeading{\jvar{ e.organization }}{\jvar{ e.location }}
+      \resumeItemListStart
+\jblock{ for r in e.roles }
+        \resumeRole{\jvar{ r.title }}{\jvar{ r.dates }}
+\jblock{ endfor }
+      \resumeItemListEnd
+\jblock{ else }
+    \resumeSubheading
+      {\jvar{ e.title }}{\jvar{ e.dates }}
+      {\jvar{ e.organization }}{\jvar{ e.location }}
+\jblock{ endif }
+\jblock{ if e.get('items') }
+      \resumeItemListStart
+\jblock{ for item in e.get('items') }
+        \resumeItem{\jvar{ item }}
+\jblock{ endfor }
+      \resumeItemListEnd
+\jblock{ else }
+      \vspace{4pt}
+\jblock{ endif }
+\jblock{ endfor }
+  \resumeSubHeadingListEnd
+
+\jblock{ endfor }
+%-----------PAPERS-----------
+\section{Selected Publications}
+  \resumeSubHeadingListStart
+\jblock{ for p in publications }
+    \resumeProjectHeading
+      {\jvar{ p.authors } \newline \jvar{ p.title }. \newline
+\jblock{ if p.venue_type == 'journal' }
+       \emph{\jvar{ p.venue }}.
+\jblock{ elif p.venue_type == 'proceedings' }
+       Proceedings of \emph{\jvar{ p.venue }}.\jblock{ if p.address } \jvar{ p.address }.\jblock{ endif }
+
+\jblock{ else }
+       \emph{\jvar{ p.venue }}.\jblock{ if p.publisher } \jvar{ p.publisher }.\jblock{ endif }
+
+\jblock{ endif }
+\jblock{ if p.note }
+       \newline \textbf{\jvar{ p.note }}
+\jblock{ endif }
+      }{\jvar{ p.year }}
+\jblock{ endfor }
+  \resumeSubHeadingListEnd
+
+%-----------TEACHING-----------
+\section{Teaching}
+  \resumeSubHeadingListStart
+\jblock{ for t in teaching }
+    \resumeProjectHeading
+      {\textbf{\jvar{ t.title }}}{\jvar{ t.year }}
+\jblock{ if t.get('items') }
+      \resumeItemListStart
+\jblock{ for item in t.get('items') }
+        \resumeItem{\jvar{ item }}
+\jblock{ endfor }
+      \resumeItemListEnd
+\jblock{ endif }
+\jblock{ endfor }
+  \resumeSubHeadingListEnd
+
+%-----------AWARDS & GRANTS-----------
+\section{Awards \& Grants}
+  \resumeSubHeadingListStart
+\jblock{ for a in awards }
+    \resumeProjectHeading
+      {\jvar{ a.title }\jblock{ if a.project } \newline \textit{\jvar{ a.project }}\jblock{ endif }}{\jvar{ a.year }}
+\jblock{ endfor }
+  \resumeSubHeadingListEnd
+
+\jblock{ for heading, entries in [('Technical Skills', resume.skills), ('Languages', resume.languages)] }
+%-----------\jvar{ heading | upper }-----------
+\section{\jvar{ heading }}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+\jblock{ for s in entries }
+     \textbf{\jvar{ s.name }}{: \jvar{ s.get('items') or s.details }}\jblock{ if not loop.last } \\\jblock{ endif }
+
+\jblock{ endfor }
+    }}
+ \end{itemize}
+
+\jblock{ endfor }
+%-------------------------------------------
+\end{document}
